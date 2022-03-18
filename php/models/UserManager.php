@@ -15,12 +15,17 @@ class UserManager extends Model
         $req->execute();
 
         if($req->rowCount() == 1){
-            echo "Connection effectuée";
             $_SESSION['email'] = $mail;
+            header('Location: views/viewAcceuil.php');
         }
         else 
         {
-        echo"Connection échoué";
+        ?>
+        <strong class="ConnectionEchoue"> <?php echo"Connection échoué"; ?> </strong>
+        <style>
+            .ConnectionEchoue {position:relative; color:rgb(255, 0, 0);height:50px;}
+        </style>
+        <?php
         }
         /*
         while($data = $req->fetch(PDO::FETCH_ASSOC))

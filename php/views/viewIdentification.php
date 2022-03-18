@@ -1,6 +1,7 @@
 
-
 <!DOCTYPE html>
+
+
 <html lang="en">
 
 <head>
@@ -14,14 +15,7 @@
 
 <body>
 
-    <?php
-        if(isset($_SESSION['email'])){
-            echo"Vous êtes connecté en tant que : ".$_SESSION['email'];
-        }
-        else
-        {
-            ?>
-                <section class="page-container">
+<section class="page-container">
 
 <div class="form-container sign-in-container">
 
@@ -42,9 +36,6 @@
 
 
 </section>
-            <?php
-        }
-    ?>
 
   
 <style> 
