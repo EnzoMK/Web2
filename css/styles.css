@@ -11830,3 +11830,8 @@ footer {
     text-decoration: none;
     color: white;
 }
+
+#buttonEdit a {
+    text-decoration: none;
+    color: white;
+}
