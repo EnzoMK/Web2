@@ -28,7 +28,7 @@ class Router{
                 $controllerClass = "Controller".$controller;
 
                 //variable permettant daller dans le fichier controller
-                $controllerFile = "controllers/".controllerClass.".php";
+                $controllerFile = "controllers/".$controllerClass.".php";
 
                 //Si le fichier existe :
                 if(file_exists($controllerFile))
@@ -43,11 +43,13 @@ class Router{
                 //si le fichier existe pas on a une page introuvable
                     throw new Exception('Page introuvable');
             }
-
-            //Si il n'y pas de get URL alors on ouvre le dossier par défault
-            require_once('controllers/ControllerIdentification.php');
-            //plus de sécuriter
-            $this->_ctrl = new ControllerIdentification($url);
+            else {
+                    //Si il n'y pas de get URL alors on ouvre le dossier par défault
+                    require_once('controllers/ControllerIdentification.php');
+                    //plus de sécuriter
+                    $this->_ctrl = new ControllerIdentification($url);
+            }
+            
         }
 
 

@@ -113,7 +113,7 @@
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <button type="submit" value="submit"
+                                    <button type="submit" value="submitCreate" name="submitCreate"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                                         Création
                                     </button>
