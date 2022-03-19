@@ -46,41 +46,59 @@
                             <div class="card-body p-5">
                                 <h2 class="text-uppercase text-center mb-5">Création d'un compte Etudiant</h2>
 
-                                <form>
+                                <form method="post">
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example1cg">Nom</label>
-                                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                                        <input class="form-control form-control-lg" id="form3Example1cg" name="nom"
+                                               type="text"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example3cg">Prénom</label>
-                                        <input type="text" id="form3Example2cg" class="form-control form-control-lg" />
+                                        <input class="form-control form-control-lg" id="form3Example2cg" name="prenom"
+                                               type="text"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example4cg">Centre</label>
-                                        <input type="text" id="form3Example3cg" class="form-control form-control-lg" />
+                                        <input class="form-control form-control-lg" id="form3Example3cg" name="centre"
+                                               type="text"/>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form3Example4cg">Ville du Centre</label>
+                                        <input class="form-control form-control-lg" id="form3Example3cg"
+                                               name="villeducentre" type="text"/>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form3Example4cg">Code postal du Centre</label>
+                                        <input class="form-control form-control-lg" id="form3Example3cg"
+                                               name="codepostal" type="text"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example4cdg">Promotion</label>
-                                        <input type="text" id="form3Example4cdg" class="form-control form-control-lg" />
+                                        <input class="form-control form-control-lg" id="form3Example4cdg"
+                                               name="promotion" type="text"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example4cdg">Mail</label>
-                                        <input type="email" id="form3Example5cdg" class="form-control form-control-lg" />
+                                        <input class="form-control form-control-lg" id="form3Example5cdg" name="mail"
+                                               type="email"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example3cg">Username</label>
-                                        <input type="text" id="form3Example6cg" class="form-control form-control-lg" />
+                                        <input class="form-control form-control-lg" id="form3Example6cg" name="username"
+                                               type="text"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example4cdg">Mot de passe</label>
-                                        <input type="password" id="form3Example7cdg" class="form-control form-control-lg" />
+                                        <input class="form-control form-control-lg" id="form3Example7cdg"
+                                               name="motdepasse" type="password"/>
                                     </div>
 
                                     <div class="form-check d-flex justify-content-center mb-5">
@@ -91,7 +109,9 @@
                                     </div>
 
                                     <div class="d-flex justify-content-center">
-                                        <button type="reset" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Création</button>
+                                        <button class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                                                type="submit" value="submit">Création
+                                        </button>
                                     </div>
 
                                 </form>
