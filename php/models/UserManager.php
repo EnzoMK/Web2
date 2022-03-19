@@ -16,7 +16,8 @@ class UserManager extends Model
 
         if($req->rowCount() == 1){
             $_SESSION['email'] = $mail;
-            header('Location: views/viewAcceuil.php');
+            ?> <form method=GET> </form><?php
+
         }
         else 
         {
