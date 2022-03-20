@@ -8,10 +8,9 @@
     <meta charset="utf-8">
     <link rel="icon" href="../../assets/img/logo/logo.png" type="image/x-icon">
     <title>SuperStage</title>
-    <link rel="stylesheet" href="authentification.css"/>
     <script src="https://kit.fontawesome.com/3eb9bd2c09.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../../css/authentification.css">
+	<link rel="stylesheet" href="../css/Identification.css"/>
 </head>
 
 <body>
