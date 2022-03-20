@@ -16,13 +16,13 @@ class UserManager extends Model
 
         if($req->rowCount() == 1){
             $_SESSION['email'] = $mail;
-            ?> <form method=GET> </form><?php
+            ?> <form method=GET> <a href="?url=Acceuil" title="C'est GET">Envoyer des données via une url</a> </form><?php
 
         }
         else 
         {
         ?>
-        <strong class="ConnectionEchoue"> <?php echo"Connection échoué"; ?> </strong>
+        <p class="ConnectionEchoue">Connexion echouée</p>
         <style>
             .ConnectionEchoue {position:relative; color:rgb(255, 0, 0);height:50px;}
         </style>

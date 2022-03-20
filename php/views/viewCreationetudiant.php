@@ -11,7 +11,7 @@
     <meta name="author" content=""/>
     <title>SuperStage</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../../assets\img\logo\logo.png"/>
+    <link rel="icon" type="image/x-icon" href="../assets\img\logo\logo.png"/>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -25,7 +25,7 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="#page-top"><img src="../../assets\img\logo\logo.png" alt="..."/></a>
+        <a class="navbar-brand" href="#page-top"><img src="../assets\img\logo\logo.png" alt="..."/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
@@ -36,7 +36,7 @@
                 <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="compte.html">Compte</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="../php/authentification.php">Deconnexion</a></li>
+                <li class="nav-item"><a class="nav-link" href="?url=identification"  >Deconnexion</a></li>
             </ul>
         </div>
     </div>
@@ -191,7 +191,7 @@
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
-<script src="../../js/scripts.js"></script>
+<script src="../js/scripts.js"></script>
 
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
