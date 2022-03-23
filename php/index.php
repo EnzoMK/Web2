@@ -1,5 +1,4 @@
-<?php session_start();
-$_SESSION['prenom'] = 'Pierre';?>
+<?php session_start();?>
 
 <?php
 

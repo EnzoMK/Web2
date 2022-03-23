@@ -28,14 +28,14 @@
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
-        <form method='get'>
+        <form method='POST'>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     
                         <li class="nav-item"><a class="nav-link" href="viewAcceuil.php">Accueil</a></li>
                         <li class="nav-item"><a class="nav-link" href="viewCompte.php">Compte</a></li>
                         <li class="nav-item"><a class="nav-link" href="viewContact.php">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="?identification" name='deconnexion'>Deconnexion</a></li>
+                        <li class="nav-item"><button class="nav-link" name='deconnexion'>Deconnexion</button></li>
                    
                 </ul>
             </div>
