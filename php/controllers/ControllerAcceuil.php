@@ -21,12 +21,13 @@ class ControllerAcceuil
     {
 
         if(isset($_SESSION['email'])){
-
-            if (isset($_POST['go']) AND  $_POST['go']=='envoyer') {
-                echo 'sa marche';
-                
-            }
             require_once('views/viewAcceuil.php');
+            if (isset($_POST['deconnexion']))
+        {
+            unset($_SESSION['email']);
+            header("Location: index.php?url=identification");
+        }
+
         }
         else {
             header("Location: index.php?url=identification");
