@@ -1,9 +1,13 @@
+<?php session_start(); ?>
+
 <?php
 
 class ControllerIdentification
 {
     private $_userManager;
     private $_view;
+
+    	
 
 
 
@@ -19,14 +23,22 @@ class ControllerIdentification
     {
         $this->_userManager = new UserManager;
 
+        if(isset($_SESSION['email'])){
+            require_once('views/viewAcceuil.php');
+        }
+
+        else {
         if (isset($_POST['submit']))
         {
             $users = $this->_userManager->verifUsers($_POST['email'],$_POST['mdp']);
+            $_SESSION['email'] = $users;
+            echo $_SESSION['email'];
+            
+
         }
-
-
-
         require_once('views/viewIdentification.php');
+    }
+        
     }
 }
 

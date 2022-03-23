@@ -14,20 +14,24 @@ class UserManager extends Model
         $req = $this->getBdd()->prepare($sql);
         $req->execute();
 
-        if($req->rowCount() == 1){
-            $_SESSION['email'] = $mail;
-            ?> <form method=GET> <a href="?url=Acceuil" title="C'est GET">Envoyer des données via une url</a> </form><?php
 
-        }
-        else 
-        {
-        ?>
-        <p class="ConnectionEchoue">Connexion echouée</p>
-        <style>
-            .ConnectionEchoue {position:relative; color:rgb(255, 0, 0);height:50px;}
-        </style>
-        <?php
-        }
+            if($req->rowCount() == 1){
+                
+                ?> <form method=GET> <a href="?url=Acceuil" title="C'est GET">Envoyer des données via une url</a> </form><?php
+                return $mail;
+            }
+            else 
+            {
+            ?>
+            <p class="ConnectionEchoue">Connexion echouée</p>
+            <style>
+                .ConnectionEchoue {position:relative; color:rgb(255, 0, 0);height:50px;}
+            </style>
+            <?php
+            }
+
+
+
         /*
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
