@@ -31,18 +31,20 @@
             Menu
             <i class="fas fa-bars ms-1"></i>
         </button>
+        <form method='POST'>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php?url=acceuil">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="compte.html">Compte</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="?url=identification"  >Deconnexion</a></li>
+                <li class="nav-item"><button class="nav-link" name="deconnexion"  >Deconnexion</button></li>
             </ul>
         </div>
+</form>
     </div>
 </nav>
 <section class="bg-image mt-5">
-    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="mask d-flex align-items-center gradient-custom-3">
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6">
