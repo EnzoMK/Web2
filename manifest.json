@@ -1,0 +1,17 @@
+{
+    "name": "SuperStage",
+    "short_name": "SS",
+    "start_url": "/index.html",
+    "background_color": "White",
+    "theme_color": "White",
+    "orientation": "portrait-primary",
+    "icons": [{
+        "src": "assets/img/logo/logo.png",
+        "sizes": "48x48"
+    }, {
+        "src": "assets/img/logo/logo.ico",
+        "sizes": "72x72 96x96 128x128 256x256"
+    }]
+
+
+}
