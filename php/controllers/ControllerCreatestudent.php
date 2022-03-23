@@ -42,6 +42,9 @@ class ControllerCreatestudent
         require_once('views/viewCreationetudiant.php');
 
         }
+        else {
+            header("Location: index.php?url=identification");
+        }
 
         
     }
