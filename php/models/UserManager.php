@@ -17,7 +17,7 @@ class UserManager extends Model
 
             if($req->rowCount() == 1){
                 
-                ?> <form method=GET> <a href="?url=Acceuil" title="C'est GET">Envoyer des données via une url</a> </form><?php
+                header("Location: index.php?url=acceuil");
                 return $mail;
             }
             else 

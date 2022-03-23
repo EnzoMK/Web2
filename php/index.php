@@ -1,3 +1,6 @@
+<?php session_start();
+$_SESSION['prenom'] = 'Pierre';?>
+
 <?php
 
 //lance le routeur 

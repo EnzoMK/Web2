@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 
 <?php
 
@@ -24,7 +24,8 @@ class ControllerIdentification
         $this->_userManager = new UserManager;
 
         if(isset($_SESSION['email'])){
-            require_once('views/viewAcceuil.php');
+           
+           header("Location: index.php?url=acceuil");
         }
 
         else {
@@ -32,8 +33,6 @@ class ControllerIdentification
         {
             $users = $this->_userManager->verifUsers($_POST['email'],$_POST['mdp']);
             $_SESSION['email'] = $users;
-            echo $_SESSION['email'];
-            
 
         }
         require_once('views/viewIdentification.php');

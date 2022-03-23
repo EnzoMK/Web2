@@ -1,3 +1,5 @@
+
+
 <?php
 
 class ControllerAcceuil
@@ -17,11 +19,18 @@ class ControllerAcceuil
 
     private function acceuil()
     {
-        if (isset($_POST['go']) AND  $_POST['go']=='envoyer') {
-            echo 'sa marche';
-            
+
+        if(isset($_SESSION['email'])){
+
+            if (isset($_POST['go']) AND  $_POST['go']=='envoyer') {
+                echo 'sa marche';
+                
+            }
+            require_once('views/viewAcceuil.php');
         }
-        require_once('views/viewAcceuil.php');
+        else {
+            header("Location: index.php?url=identification");
+        }
     }
 }
 

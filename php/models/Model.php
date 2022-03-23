@@ -1,3 +1,4 @@
+
 <?php
 
 //Class commune au autre classe
