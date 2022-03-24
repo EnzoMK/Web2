@@ -8,14 +8,14 @@
     <meta name="author" content="" />
     <title>SuperStage</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../assets\img\logo\logo.png" />
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo/logo.png" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../../css/styles.css" rel="stylesheet"/>
+    <link href="../../css/styles.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -28,7 +28,7 @@
                     <i class="fas fa-bars ms-1"></i>
                 </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="viewAccueil.php">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="viewCompte.php">Compte</a></li>
                     <li class="nav-item"><a class="nav-link" href="viewContact.php">Contact</a></li>
@@ -36,7 +36,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav><br><br>
     <section class="bg-image mt-5">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
             <div class="container h-100">
@@ -44,51 +44,30 @@
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                         <div class="card" style="border-radius: 15px;">
                             <div class="card-body p-5">
-                                <h2 class="text-uppercase text-center mb-5">Création d'une Entreprise</h2>
+                                <h2 class="text-uppercase text-center mb-5">Création</h2>
 
-                                <form method="POST">
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example1cg">Nom Entreprise</label>
-                                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="Nom" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example3cg">Secteur d'activité</label>
-
-                                        <input type="email" id="form3Example2cg" class="form-control form-control-lg" name="Secteur" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example4cg">Localité(s)</label>
-                                        <input type="text" id="form3Example3cg" class="form-control form-control-lg" name="Localite" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example4cg">Code Postal</label>
-                                        <input type="text" id="form3Example4cg" class="form-control form-control-lg" name="CP" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example4cdg">Nombre de stagiaire CESI déjà accepté en stage</label>
-                                        <input type="text" id="form3Example5cdg" class="form-control form-control-lg" name="AncienStagiaire" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example4cdg">Confiance du pilote de promotion</label>
-                                        <input type="text" id="form3Example6cdg" class="form-control form-control-lg" name="Confiance" />
-                                    </div>
-
-                                    <div class="form-check d-flex justify-content-center mb-5">
-                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example20cg" />
-                                        <label class="form-check-label" for="form2Example3g">
-                         Je confirme la création <a href="rechercheAvancé.html" class="text-body"><u></u></a>
-                        </label>
-                                    </div>
+                                <form>
 
                                     <div class="d-flex justify-content-center">
-                                        <button type="submit" value="submitCreate" name="submitCreate" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Création</button>
+                                        <button type="reset" name="viewCreationEntreprise" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationEntreprise.php" style="text-decoration: none; color: black;">Création Entreprise</a></button>
                                     </div>
+                                    <br>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="reset" name="viewCreationOffre" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationOffre.php" style="text-decoration: none; color: black;">Création Offre</a></button>
+                                    </div>
+                                    <br>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="reset" name="viewCreationEtudiant" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationEtudiant.php" style="text-decoration: none; color: black;">Création Etudiant</a></button>
+                                    </div>
+                                    <br>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="reset" name="viewCreationPilote" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationPilote.php" style="text-decoration: none; color: black;">Création Pilote</a></button>
+                                    </div>
+                                    <br>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="reset" name="viewCreationDelegue" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationDelegue.php" style="text-decoration: none; color: black;">Création Délégué</a></button>
+                                    </div>
+                                    <br>
 
                                 </form>
 
