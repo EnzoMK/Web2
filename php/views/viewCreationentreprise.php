@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../../css/styles.css" rel="stylesheet"/>
 </head>
 
 <body id="page-top">
@@ -44,62 +44,45 @@
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                         <div class="card" style="border-radius: 15px;">
                             <div class="card-body p-5">
-                                <h2 class="text-uppercase text-center mb-5">Création d'une Offre</h2>
+                                <h2 class="text-uppercase text-center mb-5">Création d'une Entreprise</h2>
 
                                 <form method="POST">
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example1cg">Nom de l'offre</label>
-                                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="Offre" />
+                                        <label class="form-label" for="form3Example1cg">Nom Entreprise</label>
+                                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="Nom" />
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example1cg">Compétences</label>
-                                        <input type="text" id="form3Example2cg" class="form-control form-control-lg" name="Competence" />
+                                        <label class="form-label" for="form3Example3cg">Secteur d'activité</label>
+
+                                        <input type="email" id="form3Example2cg" class="form-control form-control-lg" name="Secteur" />
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example3cg">Entreprise</label>
-                                        <input type="text" id="form3Example3cg" class="form-control form-control-lg" name="Entreprise" />
+                                        <label class="form-label" for="form3Example4cg">Localité(s)</label>
+                                        <input type="text" id="form3Example3cg" class="form-control form-control-lg" name="Localite" />
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example4cdg">Type de promotion concernées</label>
-                                        <input type="text" id="form3Example4cdg" class="form-control form-control-lg" name="Promotion" />
+                                        <label class="form-label" for="form3Example4cg">Code Postal</label>
+                                        <input type="text" id="form3Example4cg" class="form-control form-control-lg" name="CP" />
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example5cdg">Durée du stage</label>
-                                        <input type="text" id="form3Example5cdg" class="form-control form-control-lg" name="DureeStage" />
+                                        <label class="form-label" for="form3Example4cdg">Nombre de stagiaire CESI déjà accepté en stage</label>
+                                        <input type="text" id="form3Example5cdg" class="form-control form-control-lg" name="AncienStagiaire" />
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example6cdg">Base de rémunération</label>
-                                        <input type="text" id="form3Example6cdg" class="form-control form-control-lg" name="Remuneration" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example7cdg">Date publication de l'offre</label>
-                                        <input type="text" id="form3Example7cdg" class="form-control form-control-lg" name="publication" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example5cdg">Date de début d'offre</label>
-                                        <input type="text" id="form3Example8cdg" class="form-control form-control-lg" name="debutoffre" />
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example5cdg">Date de fin d'offre</label>
-                                        <input type="text" id="form3Example9cdg" class="form-control form-control-lg" name="finoffre" />
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example8cdg">Nombre de places offertes aux étudiants</label>
-                                        <input type="text" id="form3Example10cdg" class="form-control form-control-lg" name="places" />
+                                        <label class="form-label" for="form3Example4cdg">Confiance du pilote de promotion</label>
+                                        <input type="text" id="form3Example6cdg" class="form-control form-control-lg" name="Confiance" />
                                     </div>
 
                                     <div class="form-check d-flex justify-content-center mb-5">
-                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example11cg" />
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
                                         <label class="form-check-label" for="form2Example3g">
-                         Je confirme la création <a href="#!" class="text-body"><u></u></a>
+                         Je confirme la création <a href="rechercheAvancé.html" class="text-body"><u></u></a>
                         </label>
                                     </div>
 
