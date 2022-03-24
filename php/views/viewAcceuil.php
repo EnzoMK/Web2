@@ -35,7 +35,7 @@
                         <li class="nav-item"><a class="nav-link" href="viewAcceuil.php">Accueil</a></li>
                         <li class="nav-item"><a class="nav-link" href="viewCompte.php">Compte</a></li>
                         <li class="nav-item"><a class="nav-link" href="viewContact.php">Contact</a></li>
-                        <li class="nav-item"><button class="nav-link" name='deconnexion'>Deconnexion</button></li>
+                        <li class="nav-item"><button class="btn btn-primary text-uppercase " name='deconnexion'style="background: transparent">Déconnexion</button></li>
                    
                 </ul>
             </div>
