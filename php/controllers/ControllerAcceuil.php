@@ -21,12 +21,14 @@ class ControllerAcceuil
     {
 
         if(isset($_SESSION['email'])){
-            require_once('views/viewAcceuil.php');
+
             if (isset($_POST['deconnexion']))
-        {
-            unset($_SESSION['email']);
-            header("Location: index.php?url=identification");
-        }
+                {
+                    unset($_SESSION['email']);
+                    header("Location: index.php?url=identification");
+                }
+            require_once('views/viewAcceuil.php');
+            
 
         }
         else {
