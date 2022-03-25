@@ -70,9 +70,11 @@
                             <button type="button" class="btn btn-info wrn-btn"> GO !</button>
                         </div>
                         <!-- Aller vers la page de recherche avancée -->
+                        <form method='POST'>
                         <div class="col-lg-3">
-                            <button type="button" class="btn btn-info wrn-btn"><a href="viewRechercheAvance.php" style="text-decoration: none; color: white;">Page recherche avancée</a></button>
+                            <button type="button" name="buttonRechercheAvancee" class="btn btn-info wrn-btn"><a href="?url=rechercheavancee" style="text-decoration: none; color: white;">Page recherche avancée</a></button>
                         </div>
+                        </form>
                     </div>
                 </form>
             </div>
