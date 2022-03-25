@@ -4,7 +4,8 @@
 
 class ControllerCompte
 {
-    private $_compte;
+    private $_user;
+    private $_userLocation;
     private $_view;
 
 
@@ -24,8 +25,9 @@ class ControllerCompte
         if(isset($_SESSION['email'])){
 
     
-            $this->_compte = new UserManager;
-            $users = $this->_compte->getUsers();
+            $this->_user = new UserManager;
+            $users = $this->_user->getUsers();
+            $usersLocation = $this->_user->getUsersLocation();
 
 
             if (isset($_POST['deconnexion']))

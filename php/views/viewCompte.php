@@ -137,18 +137,38 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>Phone</label>
+                                    <label>Nom de société</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>123 456 7890</p>
+                                    <p>
+                                    <?php foreach($usersLocation as $usersLocations): ?>
+                                        <?= $usersLocations->getName_location() ?>
+                                    <?php endforeach; ?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>Profession</label>
+                                    <label>Localisation </label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>Web Developer and Designer</p>
+                                    <p>
+                                    <?php foreach($usersLocation as $usersLocations): ?>
+                                        <?= $usersLocations->getCity_location() ?>
+                                    <?php endforeach; ?>
+                                </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Code postal</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>
+                                    <?php foreach($usersLocation as $usersLocations): ?>
+                                        <?= $usersLocations->getPostal_code_location() ?>
+                                    <?php endforeach; ?>
+                                    </p>
                                 </div>
                             </div>
                         </div>
