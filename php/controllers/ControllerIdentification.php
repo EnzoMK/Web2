@@ -31,7 +31,7 @@ class ControllerIdentification
         else {
         if (isset($_POST['submit']))
         {
-            $mail,$password = $this->_userManager->verifUsers($_POST['email'],$_POST['mdp']);
+            $mail = $this->_userManager->verifUsers($_POST['email'],$_POST['mdp']);
             $_SESSION['email'] = $mail;
 
         }
