@@ -459,9 +459,17 @@
                 
                 <button type='submit' class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button" id="buttonEdit">
                     <a href='?url=home' style="color: white; text-decoration: none;">Menu création</a> 
-</button>
+                </button>
+
+                <button type='submit' class="btn btn-primary btn-xl text-uppercase mt-2" data-bs-dismiss="modal" type="button" id="buttonEdit">
+                    <a href='?url=modifier' style="color: white; text-decoration: none;">Menu modifier</a> 
+                </button>
+                
+               
                 
             </div>
+
+
             </form>
         </div>
 
