@@ -2,7 +2,7 @@
 
 <?php
 
-class ControllerCreatecompany
+class ControllerCreatedelegate
 {
     private $_compte;
     private $_view;
@@ -14,10 +14,10 @@ class ControllerCreatecompany
         /*if (isset($url) && count($url)>1)
             throw new Exception('Page introuvable');
         else */ 
-            $this->createcompany();
+            $this->createdelegate();
     }
 
-    private function createcompany()
+    private function createdelegate()
     {
 
         if(isset($_SESSION['email'])){
@@ -27,7 +27,7 @@ class ControllerCreatecompany
                     unset($_SESSION['email']);
                     header("Location: index.php?url=identification");
                 }
-            require_once('views/viewCreationentreprise.php');
+            require_once('views/viewCreationDelegue.php');
             
 
         }
