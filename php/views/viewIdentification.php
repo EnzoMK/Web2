@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="icon" href="../../assets/img/logo/logo.png" type="image/x-icon">
+    <link rel="icon" href="../assets/img/logo/logo.png" type="image/x-icon">
     <title>SuperStage</title>
     <script src="https://kit.fontawesome.com/3eb9bd2c09.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
