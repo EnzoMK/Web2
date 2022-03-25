@@ -60,7 +60,10 @@
                 <div class="col-md-6">
                     <div class="profile-head">
                         <h5>
-                            Kshiti Ghelani
+                            <?php foreach($users as $user): ?>
+                            <?= $user->getFirst_name() ?>
+                            <?= $user->getLast_name() ?>
+                            <?php endforeach; ?>
                         </h5>
                         <h6>
                             Web Developer and Designer
@@ -100,7 +103,11 @@
                                     <label>User Id</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>Kshiti123</p>
+                                    <p>
+                                    <?php foreach($users as $user): ?>
+                                    <?= $user->getUsername() ?>
+                                    <?php endforeach; ?>
+                                </p>
                                 </div>
                             </div>
                             <div class="row">
@@ -108,7 +115,12 @@
                                     <label>Name</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>Kshiti Ghelani</p>
+                                    <p>
+                                    <?php foreach($users as $user): ?>
+                                        <?= $user->getFirst_name() ?>
+                                        <?= $user->getLast_name() ?>
+                                    <?php endforeach; ?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="row">
@@ -116,7 +128,11 @@
                                     <label>Email</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>kshitighelani@gmail.com</p>
+                                    <p>
+                                    <?php foreach($users as $user): ?>
+                                        <?= $user->getMail() ?>
+                                    <?php endforeach; ?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="row">

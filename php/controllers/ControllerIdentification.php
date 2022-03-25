@@ -31,14 +31,16 @@ class ControllerIdentification
         else {
         if (isset($_POST['submit']))
         {
-            $users = $this->_userManager->verifUsers($_POST['email'],$_POST['mdp']);
-            $_SESSION['email'] = $users;
+            $mail,$password = $this->_userManager->verifUsers($_POST['email'],$_POST['mdp']);
+            $_SESSION['email'] = $mail;
 
         }
         require_once('views/viewIdentification.php');
     }
         
     }
+
+    
 }
 
 ?>

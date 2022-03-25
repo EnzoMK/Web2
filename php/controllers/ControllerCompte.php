@@ -19,7 +19,14 @@ class ControllerCompte
 
     private function compte()
     {
+        
+        
         if(isset($_SESSION['email'])){
+
+    
+            $this->_compte = new UserManager;
+            $users = $this->_compte->getUsers();
+
 
             if (isset($_POST['deconnexion']))
                 {

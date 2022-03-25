@@ -2,18 +2,28 @@
 
 class UserManager extends Model
 {
-    /*
+
     public function getUsers()
     {
-        return $this->getAll('user','Users');
+        $sql = "SELECT * FROM user WHERE mail='".$_SESSION['email']."'" ;
+        $req = $this->getBdd()->prepare($sql);
+        $req->execute();
+
+        $var=[];
+        while($data = $req->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new User($data);
+
+        }
+        return $var;
+        $req->closeCursor();
     }
-    */
+
     public function verifUsers($mail, $password)
     {
         $sql = "SELECT * FROM user WHERE mail='".$mail."' AND password='".$password."'" ;
         $req = $this->getBdd()->prepare($sql);
         $req->execute();
-
 
             if($req->rowCount() == 1){
                 
@@ -31,8 +41,7 @@ class UserManager extends Model
             }
 
 
-
-        /*
+/*
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
             $var[] = new User($data);
