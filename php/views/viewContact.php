@@ -27,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link" href="?url=acceuil">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="?url=compte">Compte</a></li>
                     <li class="nav-item"><a class="nav-link" href="?url=contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="viewIdentification.php">Deconnexion</a></li>
+                    <li class="nav-item"><button style=""><a class="nav-link" href="viewIdentification.php">Deconnexion</a></button></li>
                 </ul>
             </div>
         </div>
