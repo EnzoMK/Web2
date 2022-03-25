@@ -29,9 +29,9 @@
                 </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="viewAccueil.php">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="viewCompte.php">Compte</a></li>
-                    <li class="nav-item"><a class="nav-link" href="viewContact.php">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="?url=acceuil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="?url=compte">Compte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="?url=contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="../index.php">Deconnexion</a></li>
                 </ul>
             </div>
