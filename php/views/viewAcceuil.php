@@ -458,7 +458,7 @@
                 </div>
                 
                 <button type='submit' class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button" id="buttonEdit">
-                    <a href='?url=createstudent' style="color: white; text-decoration: none;">Créer</a> 
+                    <a href='?url=createstudent' style="color: white; text-decoration: none;">Menu création</a> 
 </button>
                 
             </div>
