@@ -8,35 +8,35 @@
     <meta name="author" content="" />
     <title>SuperStage</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../assets\img\logo\logo.png" />
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo/logo.png" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../../css/styles.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="../assets\img\logo\logo.png" alt="..." /></a>
+            <a class="navbar-brand" href="#page-top"><img src="../../assets/img/logo/logo.png" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="compte.html">Compte</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../php/authentification.php">Deconnexion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="viewAccueil.php">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="viewCompte.php">Compte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="viewContact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.php">Deconnexion</a></li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav><br><br>
     <section class="bg-image mt-5">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
             <div class="container h-100">
@@ -44,68 +44,30 @@
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                         <div class="card" style="border-radius: 15px;">
                             <div class="card-body p-5">
-                                <h2 class="text-uppercase text-center mb-5">Création d'une Offre</h2>
+                                <h2 class="text-uppercase text-center mb-5">Création</h2>
 
-                                <form method="POST">
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example1cg">Nom de l'offre</label>
-                                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="Offre" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example1cg">Compétences</label>
-                                        <input type="text" id="form3Example2cg" class="form-control form-control-lg" name="Competence" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example3cg">Entreprise</label>
-                                        <input type="text" id="form3Example3cg" class="form-control form-control-lg" name="Entreprise" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example4cdg">Type de promotion concernées</label>
-                                        <input type="text" id="form3Example4cdg" class="form-control form-control-lg" name="Promotion" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example5cdg">Durée du stage</label>
-                                        <input type="text" id="form3Example5cdg" class="form-control form-control-lg" name="DureeStage" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example6cdg">Base de rémunération</label>
-                                        <input type="text" id="form3Example6cdg" class="form-control form-control-lg" name="Remuneration" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example7cdg">Date publication de l'offre</label>
-                                        <input type="text" id="form3Example7cdg" class="form-control form-control-lg" name="publication" />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example5cdg">Date de début d'offre</label>
-                                        <input type="text" id="form3Example8cdg" class="form-control form-control-lg" name="debutoffre" />
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example5cdg">Date de fin d'offre</label>
-                                        <input type="text" id="form3Example9cdg" class="form-control form-control-lg" name="finoffre" />
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example8cdg">Nombre de places offertes aux étudiants</label>
-                                        <input type="text" id="form3Example10cdg" class="form-control form-control-lg" name="places" />
-                                    </div>
-
-                                    <div class="form-check d-flex justify-content-center mb-5">
-                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example11cg" />
-                                        <label class="form-check-label" for="form2Example3g">
-                         Je confirme la création <a href="#!" class="text-body"><u></u></a>
-                        </label>
-                                    </div>
+                                <form>
 
                                     <div class="d-flex justify-content-center">
-                                        <button type="submit" value="submitCreate" name="submitCreate" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Création</button>
+                                        <button type="reset" name="viewCreationEntreprise" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationEntreprise.php" style="text-decoration: none; color: black;">Création Entreprise</a></button>
                                     </div>
+                                    <br>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="reset" name="viewCreationOffre" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationOffre.php" style="text-decoration: none; color: black;">Création Offre</a></button>
+                                    </div>
+                                    <br>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="reset" name="viewCreationEtudiant" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationEtudiant.php" style="text-decoration: none; color: black;">Création Etudiant</a></button>
+                                    </div>
+                                    <br>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="reset" name="viewCreationPilote" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationPilote.php" style="text-decoration: none; color: black;">Création Pilote</a></button>
+                                    </div>
+                                    <br>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="reset" name="viewCreationDelegue" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationDelegue.php" style="text-decoration: none; color: black;">Création Délégué</a></button>
+                                    </div>
+                                    <br>
 
                                 </form>
 
@@ -178,7 +140,7 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="../js/scripts.js"></script>
+    <script src="../../js/scripts.js"></script>
 
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>

@@ -2,43 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <title>SuperStage</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../../assets\img\logo\logo.png"/>
+    <link rel="icon" type="image/x-icon" href="../assets\img\logo\logo.png" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../../css/styles.css" rel="stylesheet"/>
-
 </head>
 
 <body id="page-top">
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand" href="#page-top"><img src="../assets\img\logo\logo.png" alt="..."/></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ms-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src="../../assets/img/logo/logo.png" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="compte.html">Compte</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="../php/authentification.php">Deconnexion</a></li>
-            </ul>
+                    <li class="nav-item"><a class="nav-link" href="viewAccueil.php">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="viewCompte.php">Compte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="viewContact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.php">Deconnexion</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 <br><br><br>
 <section class=" bg-image">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -71,30 +69,30 @@
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cg">Ville du Centre</label>
-                                    <input type="text" id="form3Example3cg" name="villeducentre"
+                                    <input type="text" id="form3Example4cg" name="villeducentre"
                                            class="form-control form-control-lg"/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cg">Code postal du Centre</label>
-                                    <input type="text" id="form3Example3cg" name="codepostal"
+                                    <input type="text" id="form3Example5cg" name="codepostal"
                                            class="form-control form-control-lg"/>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Promotion assignée(s)</label>
-                                    <input type="text" id="form3Example4cdg" name="promotionassigné"
+                                    <input type="text" id="form3Example6cdg" name="promotionassigné"
                                            class="form-control form-control-lg"/>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Mail</label>
-                                    <input type="email" id="form3Example5cdg" name="mail"
+                                    <input type="email" id="form3Example7cdg" name="mail"
                                            class="form-control form-control-lg"/>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Mot de passe</label>
-                                    <input type="password" id="form3Example7cdg" name="motdepasse"
+                                    <input type="password" id="form3Example8cdg" name="motdepasse"
                                            class="form-control form-control-lg"/>
                                 </div>
 
