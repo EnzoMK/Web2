@@ -49,23 +49,23 @@
                                 <form>
 
                                     <div class="d-flex justify-content-center">
-                                        <button type="reset" name="viewCreationEntreprise" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationEntreprise.php" style="text-decoration: none; color: black;">Création Entreprise</a></button>
+                                        <button type="reset" name="viewCreationEntreprise" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="?url=createcompany" style="text-decoration: none; color: black;">Création Entreprise</a></button>
                                     </div>
                                     <br>
                                     <div class="d-flex justify-content-center">
-                                        <button type="reset" name="viewCreationOffre" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationOffre.php" style="text-decoration: none; color: black;">Création Offre</a></button>
+                                        <button type="reset" name="viewCreationOffre" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="?url=createoffer" style="text-decoration: none; color: black;">Création Offre</a></button>
                                     </div>
                                     <br>
                                     <div class="d-flex justify-content-center">
-                                        <button type="reset" name="viewCreationEtudiant" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationEtudiant.php" style="text-decoration: none; color: black;">Création Etudiant</a></button>
+                                        <button type="reset" name="viewCreationEtudiant" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="?url=createstudent" style="text-decoration: none; color: black;">Création Etudiant</a></button>
                                     </div>
                                     <br>
                                     <div class="d-flex justify-content-center">
-                                        <button type="reset" name="viewCreationPilote" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationPilote.php" style="text-decoration: none; color: black;">Création Pilote</a></button>
+                                        <button type="reset" name="viewCreationPilote" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="?url=createpilot" style="text-decoration: none; color: black;">Création Pilote</a></button>
                                     </div>
                                     <br>
                                     <div class="d-flex justify-content-center">
-                                        <button type="reset" name="viewCreationDelegue" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="viewCreationDelegue.php" style="text-decoration: none; color: black;">Création Délégué</a></button>
+                                        <button type="reset" name="viewCreationDelegue" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="?url=createdelegate" style="text-decoration: none; color: black;">Création Délégué</a></button>
                                     </div>
                                     <br>
 

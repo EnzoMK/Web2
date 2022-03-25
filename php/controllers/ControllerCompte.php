@@ -19,7 +19,6 @@ class ControllerCompte
 
     private function compte()
     {
-
         if(isset($_SESSION['email'])){
 
             if (isset($_POST['deconnexion']))
