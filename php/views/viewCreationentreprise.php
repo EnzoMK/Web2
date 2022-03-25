@@ -2,28 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
     <title>SuperStage</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../assets\img\logo\logo.png" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/logo.png"/>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/styles.css" rel="stylesheet"/>
 </head>
 
 <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="../assets/img/logo/logo.png" alt="..." /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top"><img src="../assets/img/logo/logo.png" alt="..."/></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
@@ -50,33 +51,40 @@
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example1cg">Nom Entreprise</label>
-                                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="Nom" />
+                                        <input type="text" id="form3Example1cg" class="form-control form-control-lg"
+                                               name="Nom"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example3cg">Secteur d'activité</label>
 
-                                        <input type="email" id="form3Example2cg" class="form-control form-control-lg" name="Secteur" />
+                                        <input type="text" id="form3Example2cg" class="form-control form-control-lg"
+                                               name="Secteur"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example4cg">Nom de la Localité(s)</label>
-                                        <input type="text" id="form3Example3cg" class="form-control form-control-lg" name="Nlocalite" />
+                                        <input type="text" id="form3Example3cg" class="form-control form-control-lg"
+                                               name="Nlocalite"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example4cg">Ville de la Localité</label>
-                                        <input type="text" id="form3Example33cg" class="form-control form-control-lg" name="Vlocalite" />
+                                        <input type="text" id="form3Example33cg" class="form-control form-control-lg"
+                                               name="Vlocalite"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example4cg">Code Postal</label>
-                                        <input type="text" id="form3Example4cg" class="form-control form-control-lg" name="CP" />
+                                        <input type="text" id="form3Example4cg" class="form-control form-control-lg"
+                                               name="CP"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example4cdg">Nombre de stagiaire CESI déjà accepté en stage</label>
-                                        <input type="text" id="form3Example5cdg" class="form-control form-control-lg" name="AncienStagiaire" />
+                                        <label class="form-label" for="form3Example4cdg">Nombre de stagiaire CESI déjà
+                                            accepté en stage</label>
+                                        <input type="text" id="form3Example5cdg" class="form-control form-control-lg"
+                                               name="AncienStagiaire"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
@@ -124,7 +132,7 @@
                 <h2>Adresse</h2>
                 <div class="content">
                     <div class="place">
-                        <span class="fas fa-map-marker-alt"></span></a>
+                        <span class="fas fa-map-marker-alt"></span>
                         <span class="text">1 allée du titane - Orléans</span>
                     </div>
                     <div class="phone">

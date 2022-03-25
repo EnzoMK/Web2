@@ -19,19 +19,21 @@ class ControllerCreatecompany
 
     private function createcompany()
     {
+        $this->_createcompany = new Createcompany();
+        if (isset($_POST['submitCreate'])) {
 
-        if(isset($_SESSION['email'])){
-
-            if (isset($_POST['deconnexion']))
-                {
-                    unset($_SESSION['email']);
-                    header("Location: index.php?url=identification");
-                }
-            require_once('views/viewCreationentreprise.php');
-            
-
+            $this->_createcompany->ReqCreateCompany($_POST['Nlocalite'], $_POST['Vlocalite'], $_POST['CP'], $_POST['Nom'], $_POST['Secteur'], $_POST['AncienStagiaire'], $_POST['Confiance']);
         }
-        else {
+        if (isset($_SESSION['email'])) {
+
+            if (isset($_POST['deconnexion'])) {
+                unset($_SESSION['email']);
+                header("Location: index.php?url=identification");
+            }
+            require_once('views/viewCreationentreprise.php');
+
+
+        } else {
             header("Location: index.php?url=identification");
         }
     }

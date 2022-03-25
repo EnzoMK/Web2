@@ -16,7 +16,7 @@ class CreateStudent extends Model
         $requser->execute();
         $requser->closeCursor();
 
-        $sqlheaded = "INSERT into headed(id_user,name_promotion) values ((Select id_user from user where first_name = '" . $first_name . "' and last_name ='" . $last_name . "' and mail = '" . $mail . "' and password = '" . $password . "'),'" . $name_promotion . "')";
+        $sqlheaded = "INSERT into headed(id_user,name_promotion) values ((Select id_user from user where first_name = '" . $first_name . "' and last_name ='" . $last_name . "' and mail = '" . $mail . "' and password = '" . $password . "'limit 1),'" . $name_promotion . "')";
         $reqheaded = $this->getBdd()->prepare($sqlheaded);
         $reqheaded->execute();
         $reqheaded->closeCursor();
