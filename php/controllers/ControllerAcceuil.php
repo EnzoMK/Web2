@@ -27,7 +27,7 @@ class ControllerAcceuil
                     unset($_SESSION['email']);
                     header("Location: index.php?url=identification");
                 }
-            require_once('views/viewAcceuil.php');
+            require_once('views/viewAccueil.php');
             
 
         }
