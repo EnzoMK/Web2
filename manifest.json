@@ -1,7 +1,7 @@
 {
     "name": "SuperStage",
     "short_name": "SS",
-    "start_url": "/index.html",
+    "start_url": "php/views/viewAccueil.php",
     "display": "standalone",
     "background_color": "White",
     "theme_color": "White",
