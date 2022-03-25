@@ -516,11 +516,11 @@
                 </div>
             </div>
         </div>
-        <div class="bottom">
-            <center>
+        <div class="bottom text-center">
+            
                 <span class="credit">Créé par <a href="#">SuperStage</a> | </span>
                 <span class="far fa-copyright"></span><span> 2022 Tout droits réservés</span>
-            </center>
+            
         </div>
     </footer>
     <!-- Bootstrap core JS-->
