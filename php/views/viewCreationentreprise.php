@@ -60,8 +60,13 @@
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example4cg">Localité(s)</label>
-                                        <input type="text" id="form3Example3cg" class="form-control form-control-lg" name="Localite" />
+                                        <label class="form-label" for="form3Example4cg">Nom de la Localité(s)</label>
+                                        <input type="text" id="form3Example3cg" class="form-control form-control-lg" name="Nlocalite" />
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form3Example4cg">Ville de la Localité</label>
+                                        <input type="text" id="form3Example33cg" class="form-control form-control-lg" name="Vlocalite" />
                                     </div>
 
                                     <div class="form-outline mb-4">
