@@ -20,10 +20,16 @@ class ControllerCreatecompany
     private function createcompany()
     {
         $this->_createcompany = new Createcompany();
+
         if (isset($_POST['submitCreate'])) {
 
             $this->_createcompany->ReqCreateCompany($_POST['Nlocalite'], $_POST['Vlocalite'], $_POST['CP'], $_POST['Nom'], $_POST['Secteur'], $_POST['AncienStagiaire'], $_POST['Confiance']);
         }
+
+      
+
+
+
         if (isset($_SESSION['email'])) {
 
             if (isset($_POST['deconnexion'])) {

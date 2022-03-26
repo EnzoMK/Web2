@@ -40,12 +40,14 @@ class ControllerRechercheavancee
         if(isset($_POST['envoyer'])){
             $selected = $_POST['Fruit'];
         if($selected == 'Etudiant') { ?>
+        <div>
             <?php foreach($students as $student): ?>
-                <?= $student->getFirst_name() ?>
-                <?= $student->getLast_name() ?>
-                <?= $student->getMail() ?>
-                <?= $student->getUsername() ?>
-            <?php endforeach; ?><?php 
+                <table><td >
+                <?= $student->getFirst_name() ?></td>
+                <td><?= $student->getLast_name() ?></td>
+                <td><?= $student->getMail() ?></td>
+                <td> <?= $student->getUsername() ?></td></table>
+            <?php endforeach; ?> </div> <?php 
         } 
 
         if($selected == 'Pilote') { ?>

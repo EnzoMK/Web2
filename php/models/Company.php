@@ -2,7 +2,7 @@
 
 //class pour récupérer toute les données de la classe user
 
-class User 
+class Company 
 {
     private $_id_company;
     private $_name_company;
