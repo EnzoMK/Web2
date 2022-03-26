@@ -157,6 +157,68 @@ class UserManager extends Model
         $req->closeCursor();
 }
 
+public function takeRole($mail, $password)
+    {
+        $sql1 = "SELECT id_user FROM user WHERE mail='".$mail."' AND password='".$password."'" ;
+        $req1 = $this->getBdd()->prepare($sql1);
+        $req1->execute();
+
+        $var=[];
+        while($data = $req1->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new User($data);
+
+        }
+        
+        $req1->closeCursor();
+        ?>
+        <?php foreach ($var as $vare): ?>
+            <?php $roleTest = $vare->getId_user() ?>
+        <?php endforeach; ?><?php
+
+        $sql2 = "SELECT * FROM admin WHERE id_user = '".$roleTest."'" ;
+        $req2 = $this->getBdd()->prepare($sql2);
+        $req2->execute();
+
+        if($req2->rowCount() == 1){
+            $role = 1;
+            return $role;
+        }
+        $req2->closeCursor();
+
+        $sql3 = "SELECT * FROM pilot WHERE id_user = '".$roleTest."'" ;
+        $req3 = $this->getBdd()->prepare($sql3);
+        $req3->execute();
+
+        if($req3->rowCount() == 1){
+            $role = 2;
+            return $role;
+        }
+        $req3->closeCursor();
+
+        $sql4 = "SELECT * FROM delegate WHERE id_user = '".$roleTest."'" ;
+        $req4 = $this->getBdd()->prepare($sql4);
+        $req4->execute();
+
+        if($req4->rowCount() == 1){
+            $role = 3;
+            return $role;
+        }
+        $req4->closeCursor();
+
+        $sql5 = "SELECT * FROM delegate WHERE id_user = '".$roleTest."'" ;
+        $req5 = $this->getBdd()->prepare($sql5);
+        $req5->execute();
+
+        if($req5->rowCount() == 1){
+            $role = 4;
+            return $role;
+        }
+        $req5->closeCursor();
+
+
+}
+
     
 }
 ?>
