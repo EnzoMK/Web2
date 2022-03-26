@@ -16,7 +16,7 @@ private function updatepilote(){
 
     
 if (isset($_SESSION['email'])) {
-
+    if($_SESSION['role'] == 1 ){
     if (isset($_POST['deconnexion'])) {
         unset($_SESSION['email']);
         header("Location: index.php?url=identification");
@@ -31,7 +31,11 @@ if (isset($_SESSION['email'])) {
         $this->_updatepilote->ReqDeletePilote($_POST['nomModifier'],$_POST['prenomModifier']);
     }
     require_once('views/viewModifierPilote.php');
-
+}
+else 
+{
+    header("Location: index.php?url=erreur");
+}
 
 } else {
     header("Location: index.php?url=identification");

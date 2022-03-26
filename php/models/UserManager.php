@@ -163,16 +163,16 @@ public function takeRole($mail, $password)
         $req1 = $this->getBdd()->prepare($sql1);
         $req1->execute();
 
-        $var=[];
+        $var1=[];
         while($data = $req1->fetch(PDO::FETCH_ASSOC))
         {
-            $var[] = new User($data);
+            $var1[] = new User($data);
 
         }
         
         $req1->closeCursor();
         ?>
-        <?php foreach ($var as $vare): ?>
+        <?php foreach ($var1 as $vare): ?>
             <?php $roleTest = $vare->getId_user() ?>
         <?php endforeach; ?><?php
 

@@ -21,14 +21,18 @@ class ControllerCreatedelegate
     {
 
         if(isset($_SESSION['email'])){
-
+            if($_SESSION['role'] != 3 ){
             if (isset($_POST['deconnexion']))
                 {
                     unset($_SESSION['email']);
                     header("Location: index.php?url=identification");
                 }
             require_once('views/viewCreationDelegue.php');
-            
+        }
+        else 
+        {
+            header("Location: index.php?url=erreur");
+        }
 
         }
         else {

@@ -39,7 +39,8 @@ class ControllerRechercheavancee
 
         if(isset($_POST['envoyer'])){
             $selected = $_POST['Fruit'];
-        if($selected == 'Etudiant') { ?>
+
+        if($selected == 'Etudiant' && $_SESSION['role']!=3) { ?>
         <div>
             <?php foreach($students as $student): ?>
                 <table><td >
@@ -49,8 +50,12 @@ class ControllerRechercheavancee
                 <td> <?= $student->getUsername() ?></td></table>
             <?php endforeach; ?> </div> <?php 
         } 
+        else 
+    {
+        header("Location: index.php?url=erreur");
+    }
 
-        if($selected == 'Pilote') { ?>
+        if($selected == 'Pilote' && $_SESSION['role']==1) { ?>
             <?php foreach($pilotes as $pilote): ?>
                 <?= $pilote->getFirst_name() ?>
                 <?= $pilote->getLast_name() ?>
@@ -58,8 +63,12 @@ class ControllerRechercheavancee
                 <?= $pilote->getUsername() ?>
             <?php endforeach; ?><?php 
         } 
+        else 
+    {
+        header("Location: index.php?url=erreur");
+    }
 
-        if($selected == 'Delegue') { ?>
+        if($selected == 'Delegue' && $_SESSION['role']!=3) { ?>
             <?php foreach($delegues as $delegue): ?>
                 <?= $delegue->getFirst_name() ?>
                 <?= $delegue->getLast_name() ?>
@@ -67,6 +76,10 @@ class ControllerRechercheavancee
                 <?= $delegue->getUsername() ?>
             <?php endforeach; ?><?php 
         } 
+        else 
+    {
+        header("Location: index.php?url=erreur");
+    }
 
         if($selected == 'Entreprise') { ?>
             <?php foreach($companies as $company): ?>

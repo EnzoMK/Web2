@@ -20,7 +20,7 @@ private function updatestudent(){
 
 
 if (isset($_SESSION['email'])) {
-
+    if($_SESSION['role'] != 3 ){
     if (isset($_POST['deconnexion'])) {
         unset($_SESSION['email']);
         header("Location: index.php?url=identification");
@@ -35,7 +35,11 @@ if (isset($_SESSION['email'])) {
         $this->_updatestudent->ReqDeleteStudent($_POST['nomModifier'],$_POST['prenomModifier']);
     }
     require_once('views/viewModifierEtudiant.php');
-
+}
+else 
+{
+    header("Location: index.php?url=erreur");
+}
 
 } else {
     header("Location: index.php?url=identification");

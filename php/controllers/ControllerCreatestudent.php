@@ -17,7 +17,7 @@ class ControllerCreatestudent
     {
 
         if(isset($_SESSION['email'])){
-
+            if($_SESSION['role'] !=3 ){
 
             $this->_createStudent = new CreateStudent();
             if (isset($_POST['submitCreate'])) {
@@ -40,7 +40,11 @@ class ControllerCreatestudent
                 header("Location: index.php?url=identification");
             }
         require_once('views/viewCreationetudiant.php');
-
+    }
+    else 
+    {
+        header("Location: index.php?url=erreur");
+    }
         }
         else {
             header("Location: index.php?url=identification");
