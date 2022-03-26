@@ -34,6 +34,9 @@ class ControllerRechercheavancee
             $this->_company = new CompanyManager;
             $companies = $this->_company->getAllCompany();
 
+            $this->_offer = new OfferManager;
+            $offers = $this->_offer->getAllOffer();
+
         if(isset($_POST['envoyer'])){
             $selected = $_POST['Fruit'];
         if($selected == 'Etudiant') { ?>
@@ -70,6 +73,20 @@ class ControllerRechercheavancee
                 <?= $company->getActivity_area() ?>
                 <?= $company->getNumber_of_cesi_interns() ?>
                 <?= $company->getConfidence_promotion_Pilot() ?>
+            <?php endforeach; ?><?php 
+        } 
+
+        if($selected == 'Offre') { ?>
+            <?php foreach($offers as $offer): ?>
+                <?= $offer->getId_offer() ?>
+                <?= $offer->getInternship_duration() ?>
+                <?= $offer->getRemuneration() ?>
+                <?= $offer->getNumber_place() ?>
+                <?= $offer->getStart_intership_date() ?>
+                <?= $offer->getEnd_intership_date() ?>
+                <?= $offer->getPublication_date() ?>
+                <?= $offer->getId_company() ?>
+                <?= $offer->getName_offer() ?>
             <?php endforeach; ?><?php 
         } 
 

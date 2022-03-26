@@ -63,6 +63,7 @@
                 <option value="Pilote">Pilote</option>
                 <option value="Delegue">Delegue</option>
                 <option value="Entreprise">Entreprise</option>
+                <option value="Offre">Offre</option>
         </select>
     <input type="submit" name="envoyer" vlaue="Choose options">
     </form>
