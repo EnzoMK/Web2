@@ -36,7 +36,7 @@ $objSmarty = new Smarty();
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationEtudiant"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
-                                                href="?url=createstudent" style="text-decoration: none; color: black;">Modifier
+                                                href="?url=updatestudent" style="text-decoration: none; color: black;">Modifier
                                             Etudiant</a></button>
                                 </div>
                                 <br>

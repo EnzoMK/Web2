@@ -107,6 +107,7 @@ $objSmarty = new Smarty();
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                                         Supprimer
                                     </button>
+</div>
                                 
 
                             </form>

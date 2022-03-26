@@ -154,13 +154,9 @@ class UserManager extends Model
             }
 
 
-/*
-        while($data = $req->fetch(PDO::FETCH_ASSOC))
-        {
-            $var[] = new User($data);
-        }
-        return $var; */
         $req->closeCursor();
 }
+
+    
 }
 ?>
