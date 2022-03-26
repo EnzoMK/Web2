@@ -43,7 +43,7 @@ $objSmarty = new Smarty();
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationPilote"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
-                                                href="?url=createpilot" style="text-decoration: none; color: black;">Modifier
+                                                href="?url=updatepilot" style="text-decoration: none; color: black;">Modifier
                                             Pilote</a></button>
                                 </div>
                                 <br>
