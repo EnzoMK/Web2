@@ -20,7 +20,7 @@ $objSmarty = new Smarty();
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Création d'un compte délégué</h2>
 
-                            <form>
+                            <form  method="POST">
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Nom</label>
@@ -31,20 +31,35 @@ $objSmarty = new Smarty();
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Prénom</label>
 
-                                    <input type="email" id="form3Example2cg" class="form-control form-control-lg"
+                                    <input type="text" id="form3Example2cg" class="form-control form-control-lg"
                                            name="prenom"/>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example4cg">Centre</label>
+                                    <label class="form-label" for="form3Example4cg">Nom du centre</label>
                                     <input type="text" id="form3Example3cg" class="form-control form-control-lg"
-                                           name="centre"/>
+                                           name="namecenter"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cg">Ville</label>
+                                    <input type="text" id="form3Example3cg" class="form-control form-control-lg"
+                                           name="ville"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cg">Code Postal</label>
+                                    <input type="text" id="form3Example3cg" class="form-control form-control-lg"
+                                           name="codepostal"/>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Email</label>
                                     <input type="email" id="form3Example4cdg" class="form-control form-control-lg"
                                            name="email"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cdg">Pseudo</label>
+                                    <input type="text" id="form3Example4cdg" class="form-control form-control-lg"
+                                           name="pseudo"/>
                                 </div>
 
                                 <div class="form-outline mb-4">
@@ -53,8 +68,9 @@ $objSmarty = new Smarty();
                                            name="password"/>
 
                                 </div>
-
+                                
                                 <!-- Default switch -->
+                                
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" name="rechentreprise" class="custom-control-input"
                                            id="customSwitches1">
@@ -91,6 +107,12 @@ $objSmarty = new Smarty();
                                 </div>
                                 <br>
                                 <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="statsentreprise" class="custom-control-input"
+                                           id="customSwitches5">
+                                    <label class="custom-control-label" for="customSwitches">Consulter les stats de l'entreprise</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
                                     <input type="checkbox" name="rechoffre" class="custom-control-input"
                                            id="customSwitches7">
                                     <label class="custom-control-label" for="customSwitches">Rechercher une
@@ -113,6 +135,12 @@ $objSmarty = new Smarty();
                                     <input type="checkbox" name="suppoffre" class="custom-control-input"
                                            id="customSwitches10">
                                     <label class="custom-control-label" for="customSwitches">Supprimer une offre</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="statsoffre" class="custom-control-input"
+                                           id="customSwitches5">
+                                    <label class="custom-control-label" for="customSwitches">Consulter les stats des offres</label>
                                 </div>
                                 <br>
                                 <div class="custom-control custom-switch">
@@ -144,7 +172,7 @@ $objSmarty = new Smarty();
                                 </div>
                                 <br>
                                 <div class="custom-control custom-switch">
-                                    <input type="checkbox" name="rechpilote" class="custom-control-input"
+                                    <input type="checkbox" name="rechdelegue" class="custom-control-input"
                                            id="customSwitches16">
                                     <label class="custom-control-label" for="customSwitches">Rechercher un compte
                                         délégué</label>
@@ -169,6 +197,12 @@ $objSmarty = new Smarty();
                                            id="customSwitches19">
                                     <label class="custom-control-label" for="customSwitches">Supprimer un compte
                                         délégué</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="droitdelegue" class="custom-control-input"
+                                           id="customSwitches19">
+                                    <label class="custom-control-label" for="customSwitches">Assigner des droits à un délègue</label>
                                 </div>
                                 <br>
                                 <div class="custom-control custom-switch">
@@ -198,6 +232,7 @@ $objSmarty = new Smarty();
                                     <label class="custom-control-label" for="customSwitches">Supprimer un compte
                                         étudiant</label>
                                 </div>
+
                                 <br><br>
                                 <div class="form-check d-flex justify-content-center mb-5">
                                     <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg"/>
