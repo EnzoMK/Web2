@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-26 16:11:20
+/* Smarty version 4.1.0, created on 2022-03-26 18:48:58
   from 'C:\xampp\htdocs\Web2\vendors\tpl\head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_623f2d1814bec7_77364273',
+  'unifunc' => 'content_623f520acf3c54_40384896',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '19e7af6fba4fc1cdcd544be1301bd1daea35033a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Web2\\vendors\\tpl\\head.tpl',
-      1 => 1648307474,
+      1 => 1648316935,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_623f2d1814bec7_77364273 (Smarty_Internal_Template $_smarty_tpl) {
+function content_623f520acf3c54_40384896 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,9 +37,13 @@ function content_623f2d1814bec7_77364273 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="../vendors/fontawesome/css/all.min.css">
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/styles.css" rel="stylesheet"/>
+    <link rel="manifest" href="../manifest.json">
+    <meta name="apple-mobile-web-app-status-bar" content="white">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="white">
 </head>
 <?php }
 }
