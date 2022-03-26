@@ -12,7 +12,7 @@
                 <li class="nav-item"><a class="nav-link" href="?url=acceuil">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="?url=compte">Compte</a></li>
                 <li class="nav-item"><a class="nav-link" href="?url=contact">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="../index.php">Deconnexion</a></li>
+                <li class="nav-item"><button style="background:transparent; border-radius: 7px;"><a class="nav-link" href="../index.php">DECONNEXION</a></button></li>
             </ul>
         </div>
 
