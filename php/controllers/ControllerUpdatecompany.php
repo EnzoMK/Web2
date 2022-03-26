@@ -29,6 +29,11 @@ if (isset($_SESSION['email'])) {
 
         $this->_updatecompany->ReqUpdateCompany($_POST['Nlocalite'], $_POST['Vlocalite'], $_POST['CP'], $_POST['Nom'],$_POST['NomModif'], $_POST['Secteur'], $_POST['AncienStagiaire'], $_POST['Confiance']);
         }
+
+    if (isset($_POST['supprimer'])) {
+
+        $this->_updatecompany->ReqSupprimerCompany($_POST['NomModif']);
+    }
     require_once('views/viewModifierEntreprise.php');
 
 

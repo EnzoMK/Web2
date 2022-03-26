@@ -99,9 +99,15 @@ $objSmarty = new Smarty();
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" value="submitUpdate" name="submitUpdate"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
-                                        Création
+                                        Modifier
                                     </button>
-                                </div>
+                                
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" value="submitUpdate" name="supprimer"
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                        Supprimer
+                                    </button>
+                                
 
                             </form>
 

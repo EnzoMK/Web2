@@ -49,5 +49,23 @@ class CompanyManager extends Model{
         $reqcompany->closeCursor();
     }
 
+    public function ReqSupprimerCompany($name_modif)
+    {
+        $sqllocation = "DELETE FROM place WHERE id_company = (SELECT id_company FROM Company WHERE name_company='".$name_modif."')";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $reqlocation->closeCursor();
+
+        $sqllocation = "DELETE FROM location WHERE id_location = (Select id_location FROM place WHERE id_company = (SELECT id_company FROM Company WHERE name_company='".$name_modif."'))";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $reqlocation->closeCursor();
+
+        $sqlcompany = "DELETE FROM company WHERE name_company = '".$name_modif."'";
+        $reqcompany = $this->getBdd()->prepare($sqlcompany);
+        $reqcompany->execute();
+        $reqcompany->closeCursor();
+    }
+
     }
 ?>
