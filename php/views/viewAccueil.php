@@ -13,7 +13,7 @@ $objSmarty = new Smarty();
 <header class="masthead">
     <div class="container">
         <div class="masthead-subheading">Trouvez un stage maintenant !</div>
-        <div class="masthead-heading text-uppercase">Bienvenue dans l'arène !</div>
+        <div class="masthead-heading text-uppercase">Bienvenue dans l'arèneuh !</div>
         <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">Let's go</a>
     </div>
 </header>
