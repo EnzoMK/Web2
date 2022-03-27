@@ -50,7 +50,7 @@ $objSmarty = new Smarty();
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationDelegue"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
-                                                href="?url=createdelegate" style="text-decoration: none; color: black;">Modifier
+                                                href="?url=updatedelegate" style="text-decoration: none; color: black;">Modifier
                                             Délégué</a></button>
                                 </div>
                                 <br>

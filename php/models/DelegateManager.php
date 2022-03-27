@@ -200,7 +200,41 @@ class DelegateManager extends Model {
 
     }
 
+    public function ReqUpdateDelegate($last_name_modif,$first_name_modif,$last_name, $first_name, $mail, $username, $password, $city_location, $name_location, $postal_code)
+    {
 
+        $sqllocation = "UPDATE location SET name_location='" . $name_location . "',city_location='" . $city_location . "',postal_code_location='" . $postal_code . "' WHERE id_location = (SELECT id_location FROM user WHERE first_name='".$first_name_modif."' AND last_name='".$last_name_modif."')";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $reqlocation->closeCursor();
+
+        $sqluser = " UPDATE user first_name='" . $first_name . "',last_name='" . $last_name . "',mail='" . $mail . "',username='" . $username . "',password='" . $password . "',id_location= (SELECT id_location FROM location WHERE city_location= '" . $city_location . "' AND name_location ='" . $name_location . "' AND postal_code_location ='" . $postal_code . "'limit 1) WHERE first_name='".$first_name_modif."' AND last_name='".$last_name_modif."' ";
+        $requser = $this->getBdd()->prepare($sqluser);
+        $requser->execute();
+        $requser->closeCursor();
+
+    }
+
+    public function ReqDeleteDelegate($last_name, $first_name)
+    {
+
+        $sqluser = " DELETE FROM user WHERE first_name='".$first_name_modif."' AND last_name='".$last_name_modif."'  ";
+        $requser = $this->getBdd()->prepare($sqluser);
+        $requser->execute();
+        $requser->closeCursor();
+
+
+        $sqlstudent = "DELETE FROM delegate WHERE id_user =(SELECT id_user from user WHERE first_name='".$first_name_modif."' AND last_name='".$last_name_modif."'  )";
+        $reqstudent = $this->getBdd()->prepare($sqlstudent);
+        $reqstudent->execute();
+        $reqstudent->closeCursor();
+
+        $sqlstudent = "DELETE FROM has WHERE id_delegate =(SELECT id_delegate from delegate WHERE id_user=(Select id_user from user where first_name='".$first_name_modif."' AND last_name='".$last_name_modif."' ) )";
+        $reqstudent = $this->getBdd()->prepare($sqlstudent);
+        $reqstudent->execute();
+        $reqstudent->closeCursor();
+
+    }
 
 
 }
