@@ -235,7 +235,7 @@ public function takeRole($mail, $password)
 
             ?>
             <?php foreach ($var3 as $varessee): ?>
-            <?php $id_permission = array($varessee->getId_permission()) ?>
+            <?php $id_permission[] = $varessee->getId_permission() ?>
             <?php endforeach; ?><?php
 
             return $id_permission;

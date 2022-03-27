@@ -1,4 +1,4 @@
-<?php echo $_SESSION['role']; ?>
+<?php print_r($_SESSION['role']);  ?>
 
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");

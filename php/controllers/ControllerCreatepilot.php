@@ -20,7 +20,7 @@ class ControllerCreatepilot
 
         if(isset($_SESSION['email'])){
 
-            if($_SESSION['role'] == 1 ){
+            if( $_SESSION['role'] == 1 ){
 
             if (isset($_POST['deconnexion']))
                 {

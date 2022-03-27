@@ -36,7 +36,7 @@ class ControllerIdentification
             $mail = $this->_userManager->verifUsers($_POST['email'],$_POST['mdp']);
             
             $role = $this->_userManager->takeRole($_POST['email'],$_POST['mdp']);
-            $_SESSION['role'][$num] = $role;
+            $_SESSION['role'] = $role;
             $_SESSION['email'] = $mail;
             
 
