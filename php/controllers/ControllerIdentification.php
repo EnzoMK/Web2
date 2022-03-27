@@ -23,11 +23,10 @@ class ControllerIdentification
     {
         $this->_userManager = new UserManager;
 
-        if(isset($_SESSION['email'])){
+        if(isset($_SESSION['email']) && isset($_SESSION['role']) ){
            
            header("Location: index.php?url=acceuil");
 
-           
         }
 
         else {

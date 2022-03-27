@@ -24,7 +24,9 @@ class ControllerAcceuil
 
             if (isset($_POST['deconnexion']))
                 {
+                    unset($_SESSION['role']);
                     unset($_SESSION['email']);
+                    
                     header("Location: index.php?url=identification");
                 }
             require_once('views/viewAccueil.php');

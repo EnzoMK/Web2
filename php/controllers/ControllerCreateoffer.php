@@ -24,6 +24,7 @@ class ControllerCreateoffer
             if($_SESSION['role'] !=3 ){
             if (isset($_POST['deconnexion']))
                 {
+                    unset($_SESSION['role']);
                     unset($_SESSION['email']);
                     header("Location: index.php?url=identification");
                 }
