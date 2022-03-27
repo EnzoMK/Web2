@@ -21,7 +21,7 @@ class ControllerAcceuil
     {
 
         if(isset($_SESSION['email'])){
-
+            
             if (isset($_POST['deconnexion']))
                 {
                     unset($_SESSION['role']);

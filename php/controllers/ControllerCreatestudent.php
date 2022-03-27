@@ -17,7 +17,7 @@ class ControllerCreatestudent
     {
 
         if(isset($_SESSION['email'])){
-            if($_SESSION['role'] !=3 ){
+            if(in_array("23", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
 
             $this->_createStudent = new CreateStudent();
             if (isset($_POST['submitCreate'])) {

@@ -20,20 +20,28 @@ private function updatestudent(){
 
 
 if (isset($_SESSION['email'])) {
-    if($_SESSION['role'] != 3 ){
+    if(in_array("24", $_SESSION['role']) || in_array("25", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
     if (isset($_POST['deconnexion'])) {
         unset($_SESSION['email']);
         header("Location: index.php?url=identification");
     }
     if (isset($_POST['submitUpdate'])) {
-
+        if(in_array("24", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
         $this->_updatestudent->ReqUpdateStudent($_POST['nomModifier'],$_POST['prenomModifier'],$_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['username'], $_POST['motdepasse'], $_POST['villeducentre'], $_POST['centre'], $_POST['codepostal'], $_POST['promotion']);
         }
+        else {
+            header("Location: index.php?url=erreur");
+        }
+    }
 
     if (isset($_POST['supprimer'])) {
-
+        if(in_array("25", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
         $this->_updatestudent->ReqDeleteStudent($_POST['nomModifier'],$_POST['prenomModifier']);
     }
+    else {
+        header("Location: index.php?url=erreur");
+    }
+}
     require_once('views/viewModifierEtudiant.php');
 }
 else 

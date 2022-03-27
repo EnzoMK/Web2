@@ -40,7 +40,7 @@ class ControllerRechercheavancee
         if(isset($_POST['envoyer'])){
             $selected = $_POST['Fruit'];
 
-        if($selected == 'Etudiant' && $_SESSION['role']!=3) { ?>
+        if($selected == 'Etudiant' && in_array("22", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role']) ) { ?>
         <div>
             <?php foreach($students as $student): ?>
                 <table><td >
@@ -55,7 +55,7 @@ class ControllerRechercheavancee
         header("Location: index.php?url=erreur");
     }
 
-        if($selected == 'Pilote' && $_SESSION['role']==1) { ?>
+        if($selected == 'Pilote' && in_array("13", $_SESSION['role']) || in_array("30", $_SESSION['role'])) { ?>
             <?php foreach($pilotes as $pilote): ?>
                 <?= $pilote->getFirst_name() ?>
                 <?= $pilote->getLast_name() ?>
@@ -68,7 +68,7 @@ class ControllerRechercheavancee
         header("Location: index.php?url=erreur");
     }
 
-        if($selected == 'Delegue' && $_SESSION['role']!=3) { ?>
+        if($selected == 'Delegue' && in_array("17", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])) { ?>
             <?php foreach($delegues as $delegue): ?>
                 <?= $delegue->getFirst_name() ?>
                 <?= $delegue->getLast_name() ?>
@@ -81,7 +81,7 @@ class ControllerRechercheavancee
         header("Location: index.php?url=erreur");
     }
 
-        if($selected == 'Entreprise') { ?>
+        if($selected == 'Entreprise' && in_array("2", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("50", $_SESSION['role']) || in_array("30", $_SESSION['role']) ) { ?>
             <?php foreach($companies as $company): ?>
                 <?= $company->getId_company() ?>
                 <?= $company->getName_company() ?>
@@ -91,7 +91,7 @@ class ControllerRechercheavancee
             <?php endforeach; ?><?php 
         } 
 
-        if($selected == 'Offre') { ?>
+        if($selected == 'Offre'  && in_array("8", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("50", $_SESSION['role']) || in_array("30", $_SESSION['role'])) { ?>
             <?php foreach($offers as $offer): ?>
                 <?= $offer->getId_offer() ?>
                 <?= $offer->getInternship_duration() ?>

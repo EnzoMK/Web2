@@ -176,13 +176,15 @@ public function takeRole($mail, $password)
             <?php $roleTest = $vare->getId_user() ?>
         <?php endforeach; ?><?php
 
+        $id_permission[] = '0';
+
         $sql2 = "SELECT * FROM admin WHERE id_user = '".$roleTest."'" ;
         $req2 = $this->getBdd()->prepare($sql2);
         $req2->execute();
 
         if($req2->rowCount() == 1){
-            $role = 1;
-            return $role;
+            $id_permission[] = 30;
+            return $id_permission;
         }
         $req2->closeCursor();
 
@@ -191,8 +193,8 @@ public function takeRole($mail, $password)
         $req3->execute();
 
         if($req3->rowCount() == 1){
-            $role = 2;
-            return $role;
+            $id_permission[] = 40;
+            return $id_permission;
         }
         $req3->closeCursor();
 
@@ -201,8 +203,8 @@ public function takeRole($mail, $password)
         $req4->execute();
 
         if($req4->rowCount() == 1){
-            $role = 3;
-            return $role;
+            $id_permission[] = 50;
+            return $id_permission;
         }
         $req4->closeCursor();
         
