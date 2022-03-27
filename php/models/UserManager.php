@@ -196,7 +196,7 @@ public function takeRole($mail, $password)
         }
         $req3->closeCursor();
 
-        $sql4 = "SELECT * FROM delegate WHERE id_user = '".$roleTest."'" ;
+        $sql4 = "SELECT * FROM student WHERE id_user = '".$roleTest."'" ;
         $req4 = $this->getBdd()->prepare($sql4);
         $req4->execute();
 
@@ -205,14 +205,40 @@ public function takeRole($mail, $password)
             return $role;
         }
         $req4->closeCursor();
-
-        $sql5 = "SELECT * FROM delegate WHERE id_user = '".$roleTest."'" ;
+        
+        $sql5 = "SELECT id_delegate FROM delegate WHERE id_user = '".$roleTest."'" ;
         $req5 = $this->getBdd()->prepare($sql5);
         $req5->execute();
+        
+        if($req5->rowCount() >= 1){
 
-        if($req5->rowCount() == 1){
-            $role = 4;
-            return $role;
+            $var2=[];
+            while($data2 = $req5->fetch(PDO::FETCH_ASSOC))
+            {
+                $var2[] = new Delegate($data2);
+
+            }
+            ?>
+            <?php foreach ($var2 as $varesse): ?>
+            <?php $id_delegue = $varesse->getId_delegate() ?>
+            <?php endforeach; ?><?php
+
+            $sql6 = "SELECT id_permission FROM has WHERE id_delegate = '".$id_delegue."'" ;
+            $req6 = $this->getBdd()->prepare($sql6);
+            $req6->execute();
+
+            $var3=[];
+            while($data2 = $req6->fetch(PDO::FETCH_ASSOC))
+            {
+                $var3[] = new Has($data2);
+            }
+
+            ?>
+            <?php foreach ($var3 as $varessee): ?>
+            <?php $id_permission = array($varessee->getId_permission()) ?>
+            <?php endforeach; ?><?php
+
+            return $id_permission;
         }
         $req5->closeCursor();
 

@@ -1,3 +1,5 @@
+<?php echo $_SESSION['role']; ?>
+
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");
 $objSmarty = new Smarty();
