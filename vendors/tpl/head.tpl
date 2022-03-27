@@ -19,8 +19,16 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/styles.css" rel="stylesheet"/>
-    <link rel="manifest" href="../manifest.json">
+   <!-- PWA -->
+<link rel="manifest" href="../manifest.json">
+    <link rel="apple-touch-icon" href="assets/icons/72.png">
     <meta name="apple-mobile-web-app-status-bar" content="white">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="white">
+   
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("../sw.js");
+        }
+    </script>
 </head>
