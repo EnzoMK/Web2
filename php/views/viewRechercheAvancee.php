@@ -26,7 +26,7 @@ $objSmarty = new Smarty();
 
                 <form action="" method="post">
                     <select name="Fruit">
-                        <option value="" disabled selected>Choose option</option>
+                        <option value="" disabled selected>Choisir un filtre</option>
 
                         <?php if(in_array("50", $_SESSION['role'])){  
 
