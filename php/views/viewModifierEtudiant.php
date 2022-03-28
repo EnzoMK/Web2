@@ -92,18 +92,23 @@ $objSmarty = new Smarty();
                                     </label>
                                 </div>
 
-                                <<div class="d-flex justify-content-center">
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("24", $_SESSION['role'])){  ?>    
+                                <div class="d-flex justify-content-center">
                                     <button type="submit" value="submitUpdate" name="submitUpdate"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                                         Modifier
                                     </button>
-                                
+
+</div>
+<?php } ?>
+<?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("25", $_SESSION['role'])){  ?>    
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" value="submitUpdate" name="supprimer"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                                         Supprimer
                                     </button>
 </div>
+<?php } ?>
 
                             </form>
 

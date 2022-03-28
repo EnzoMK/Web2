@@ -91,16 +91,28 @@ $objSmarty = new Smarty();
                                 <div class="form-check d-flex justify-content-center mb-5">
                                     <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg"/>
                                     <label class="form-check-label" for="form2Example3g">
-                                        Je confirme la création <a href="#!" class="text-body"><u></u></a>
+                                        Je confirme la modification <a href="#!" class="text-body"><u></u></a>
                                     </label>
                                 </div>
 
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("19", $_SESSION['role'])){  ?>
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" name="submitCreate"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
-                                        Création
+                                        Modifier
                                     </button>
                                 </div>
+                                <?php } ?>
+
+
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("20", $_SESSION['role'])){  ?>
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" value="submitUpdate" name="supprimer"
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                        Supprimer
+                                    </button>
+                                </div>
+                                <?php } ?>
 
                             </form>
 

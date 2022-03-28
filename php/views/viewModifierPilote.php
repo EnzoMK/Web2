@@ -91,19 +91,23 @@ $objSmarty = new Smarty();
                                         Je confirme la création <a href="#!" class="text-body"><u></u></a>
                                     </label>
                                 </div>
-
-                                <<div class="d-flex justify-content-center">
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("15", $_SESSION['role'])){  ?>   
+                                <div class="d-flex justify-content-center">
                                     <button type="submit" value="submitUpdate" name="submitUpdate"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                                         Modifier
                                     </button>
+                                </div>
+                                <?php } ?>
                                 
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("16", $_SESSION['role'])){  ?>   
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" value="submitUpdate" name="supprimer"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                                         Supprimer
                                     </button>
 </div>
+<?php } ?>
 
                             </form>
 

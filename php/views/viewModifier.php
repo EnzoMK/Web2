@@ -18,7 +18,7 @@ $objSmarty = new Smarty();
                             <h2 class="text-uppercase text-center mb-5">Modifier</h2>
 
                             <form>
-
+                            <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("4", $_SESSION['role'])){  ?>
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationEntreprise"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
@@ -26,6 +26,9 @@ $objSmarty = new Smarty();
                                             Entreprise</a></button>
                                 </div>
                                 <br>
+                                <?php } ?>
+
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("10", $_SESSION['role'])){  ?>
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationOffre"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
@@ -33,6 +36,9 @@ $objSmarty = new Smarty();
                                             Offre</a></button>
                                 </div>
                                 <br>
+                                <?php } ?>
+
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("24", $_SESSION['role'])){  ?>
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationEtudiant"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
@@ -40,6 +46,9 @@ $objSmarty = new Smarty();
                                             Etudiant</a></button>
                                 </div>
                                 <br>
+                                <?php } ?>
+
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("15", $_SESSION['role'])){  ?>
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationPilote"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
@@ -47,6 +56,9 @@ $objSmarty = new Smarty();
                                             Pilote</a></button>
                                 </div>
                                 <br>
+                                <?php } ?>
+
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("19", $_SESSION['role'])){  ?>
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationDelegue"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
@@ -54,6 +66,7 @@ $objSmarty = new Smarty();
                                             Délégué</a></button>
                                 </div>
                                 <br>
+                                <?php } ?>
 
                             </form>
 
