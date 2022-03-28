@@ -59,7 +59,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets\img\entreprise\airbus.jpg" alt="..." />
+                        
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage en Développement Logiciel</div>
@@ -74,7 +74,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets\img\entreprise\orange.jpg" alt="..." />
+                        
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage en développement Web</div>
@@ -89,7 +89,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets\img\entreprise\sopra.png" alt="..." />
+                        
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage Assistant Cyber-sécurité</div>
@@ -104,7 +104,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets\img\entreprise\ca.jpg" alt="..." />
+                        
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage en développement informatique</div>
@@ -119,7 +119,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets\img\entreprise\sncf.jpg" alt="..." />
+                        
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage Optimisation Base de Données</div>
@@ -134,7 +134,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets\img\entreprise\sfr.jpg" alt="..." />
+                       
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage en Analyse de données</div>

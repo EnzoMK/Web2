@@ -42,15 +42,12 @@ $objSmarty = new Smarty();
                     <!-- Aller vers la page de recherche avancée -->
                     <form method='POST'>
                         <div class="col-lg-3">
-                            <button type="button" name="buttonRechercheAvancee" class="btn btn-info wrn-btn"><a
-                                        href="?url=rechercheavancee" style="text-decoration: none; color: white;">Page
-                                    recherche avancée</a></button>
+                            <button style="text-decoration: none; color: white;"type="button" name="buttonRechercheAvancee" class="btn btn-info wrn-btn" onClick='window.location.href="?url=rechercheavancee"'>Page recherche avancée</button>
                         </div>
                     </form>
                 </div>
             </form>
         </div>
-
     </nav>
 </div>
 <!--Offres-->
@@ -68,7 +65,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets/img/entreprise/airbus.jpg" alt="..."/>
+                        
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage en développement Logiciel</div>
@@ -83,7 +80,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets/img/entreprise/orange.jpg" alt="..."/>
+                        
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage en développement Web</div>
@@ -98,7 +95,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets/img/entreprise/sopra.png" alt="..."/>
+                        
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage Assistant Cyber-sécurité</div>
@@ -113,7 +110,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets/img/entreprise/ca.jpg" alt="..."/>
+                        
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage en développement informatique</div>
@@ -128,7 +125,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets/img/entreprise/sncf.jpg" alt="..."/>
+                        
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage Optimisation Base de Données</div>
@@ -143,7 +140,7 @@ $objSmarty = new Smarty();
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../assets/img/entreprise/sfr.jpg" alt="..."/>
+                        
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Stage en Analyse de données</div>
@@ -170,7 +167,7 @@ $objSmarty = new Smarty();
                             <!-- Project details-->
                             <h2 class="text-uppercase">Stage en développement Logiciel</h2>
                             <p class="item-intro text-muted">Airbus</p>
-                            <img class="img-fluid d-block mx-auto" src="../assets/img/entreprise/airbus.jpg" alt="..."/>
+                            
                             <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                 repellat aperiam quasi sunt officia expedita beatae cupiditate,
@@ -214,7 +211,7 @@ $objSmarty = new Smarty();
                             <!-- Project details-->
                             <h2 class="text-uppercase">Stage en développement Web</h2>
                             <p class="item-intro text-muted">Orange</p>
-                            <img class="img-fluid d-block mx-auto" src="../assets/img/entreprise/orange.jpg" alt="..."/>
+                            
                             <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                 repellat aperiam quasi sunt officia expedita beatae cupiditate,
@@ -256,7 +253,7 @@ $objSmarty = new Smarty();
                             <!-- Project details-->
                             <h2 class="text-uppercase">Stage Assistant Cyber-sécurité</h2>
                             <p class="item-intro text-muted">Sopra Steria</p>
-                            <img class="img-fluid d-block mx-auto" src="../assets/img/entreprise/sopra.png" alt="..."/>
+                            
                             <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                 repellat aperiam quasi sunt officia expedita beatae cupiditate,
@@ -298,7 +295,7 @@ $objSmarty = new Smarty();
                             <!-- Project details-->
                             <h2 class="text-uppercase">Stage en développement informatique</h2>
                             <p class="item-intro text-muted">Crédit Agricole</p>
-                            <img class="img-fluid d-block mx-auto" src="../assets/img/entreprise/ca.jpg" alt="..."/>
+                            
                             <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                 repellat aperiam quasi sunt officia expedita beatae cupiditate,
@@ -340,7 +337,7 @@ $objSmarty = new Smarty();
                             <!-- Project details-->
                             <h2 class="text-uppercase">Stage Optimisation Base de Données</h2>
                             <p class="item-intro text-muted">SNCF</p>
-                            <img class="img-fluid d-block mx-auto" src="../assets/img/entreprise/sncf.jpg" alt="..."/>
+                            
                             <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                 repellat aperiam quasi sunt officia expedita beatae cupiditate,
@@ -382,7 +379,7 @@ $objSmarty = new Smarty();
                             <!-- Project details-->
                             <h2 class="text-uppercase">Stage en Analyse de données</h2>
                             <p class="item-intro text-muted">SFR</p>
-                            <img class="img-fluid d-block mx-auto" src="../assets/img/entreprise/sfr.jpg" alt="..."/>
+                           
                             <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                 repellat aperiam quasi sunt officia expedita beatae cupiditate,
