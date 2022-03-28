@@ -27,9 +27,18 @@ $objSmarty = new Smarty();
                 <form action="" method="post">
                     <select name="Fruit">
                         <option value="" disabled selected>Choose option</option>
+
+                        <?php if(in_array("50", $_SESSION['role'])){  
+
+                        }
+                        else 
+                        {?>
+
                         <option value="Etudiant">Etudiant</option>
                         <option value="Pilote">Pilote</option>
                         <option value="Delegue">Delegue</option>
+                        <?php }?>
+                        
                         <option value="Entreprise">Entreprise</option>
                         <option value="Offre">Offre</option>
                     </select>
