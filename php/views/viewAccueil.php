@@ -420,7 +420,7 @@ $objSmarty = new Smarty();
         <div class="row">
             <div class="col-lg-4">
                 <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="../assets/img/team/1.jpg" alt="..."/>
+                    <img class="mx-auto rounded-circle" src="../assets/img/team/1.webp" alt="..."/>
                     <h4>Guillaume Duboys</h4>
                     <p class="text-muted">L'investisseur</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -430,7 +430,7 @@ $objSmarty = new Smarty();
             </div>
             <div class="col-lg-4">
                 <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="../assets/img/team/2.jpg" alt="..."/>
+                    <img class="mx-auto rounded-circle" src="../assets/img/team/2.webp" alt="..."/>
                     <h4>Antoine Favereau</h4>
                     <p class="text-muted">Assistant café</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -440,7 +440,7 @@ $objSmarty = new Smarty();
             </div>
             <div class="col-lg-4">
                 <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="../assets\img\team\3.jpg" alt="..."/>
+                    <img class="mx-auto rounded-circle" src="../assets/img/team/3.webp" alt="..."/>
                     <h4>Timeo Villette</h4>
                     <p class="text-muted">Le cuistot</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
