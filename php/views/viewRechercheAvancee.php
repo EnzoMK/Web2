@@ -28,19 +28,34 @@ $objSmarty = new Smarty();
                     <select name="Fruit">
                         <option value="" disabled selected>Choose option</option>
 
-                        <?php if(in_array("50", $_SESSION['role'])){  
+                        <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("50", $_SESSION['role']) || in_array("2", $_SESSION['role']) ){  ?>
+                            
+                            <option value="Entreprise">Entreprise</option>
 
-                        }
-                        else 
-                        {?>
-
-                        <option value="Etudiant">Etudiant</option>
-                        <option value="Pilote">Pilote</option>
-                        <option value="Delegue">Delegue</option>
-                        <?php }?>
+                        <?php } ?>
                         
-                        <option value="Entreprise">Entreprise</option>
-                        <option value="Offre">Offre</option>
+                        <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("50", $_SESSION['role']) || in_array("8", $_SESSION['role']) ){  ?>
+                        
+                            <option value="Offre">Offre</option>
+                            <?php }?>
+                        
+                            <?php if(in_array("30", $_SESSION['role']) || in_array("13", $_SESSION['role']) ){  ?>
+                                <option value="Pilote">Pilote</option>
+
+                                <?php }?>
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("17", $_SESSION['role']) ){  ?>
+                                    <option value="Delegue">Delegue</option>
+                                <?php }?>
+
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("22", $_SESSION['role']) ){  ?>
+                                    <option value="Etudiant">Etudiant</option>
+                                <?php }?>
+                        
+                        
+                        
+                        
+                        
+                        
                     </select>
                     <input type="submit" name="envoyer" vlaue="Choose options">
                 </form>
