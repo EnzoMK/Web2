@@ -7,7 +7,7 @@ class ControllerCompte
     private $_user;
     private $_userLocation;
     private $_view;
-
+    private $_skill;
 
 
     public function __construct($url)

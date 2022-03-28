@@ -1,6 +1,7 @@
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");
 $objSmarty = new Smarty();
+
 ?>
 <?php $objSmarty->display("../vendors/tpl/head.tpl"); ?>
 
@@ -27,39 +28,40 @@ $objSmarty = new Smarty();
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Compétences</label>
-                                    <input type="text" id="form3Example2cg" class="form-control form-control-lg"
-                                           name="Competence"/>
+                                    <select name="Compétence">
+                                        <option value="" disabled selected>Choisir une compétence</option>
+                                        <?php foreach ($skills as $skill) {
+                                            echo('<option value="' . $skill->getNameSkill() . '">' . $skill->getNameSkill() . "</option>");
+                                        } ?>
+                                    </select>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Entreprise</label>
                                     <select name="Entreprise">
-                        <option value="" disabled selected>Choisir une promotion</option>
-                            <option value="A1">A1</option>               
-                            <option value="A2">A2</option>
-                            <option value="A3">A3</option>
-                            <option value="A4">A4</option>  
-                            <option value="A5">A5</option>
-                    </select>
+                                        <option value="" disabled selected>Choisir une entreprise</option>
+                                        <?php foreach ($companys as $company) {
+                                            echo('<option value="' . $company->getName_company() . '">' . $company->getName_company() . "</option>");
+                                        } ?>
+
+
+                                    </select>
                                 </div>
 
-
-                  
-                
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Type de promotion
                                         concernées</label>
-                                    
-                                
-                    <select name="Promotion">
-                        <option value="" disabled selected>Choisir une promotion</option>
-                            <option value="A1">A1</option>               
-                            <option value="A2">A2</option>
-                            <option value="A3">A3</option>
-                            <option value="A4">A4</option>  
-                            <option value="A5">A5</option>
-                    </select>
+
+
+                                    <select name="Promotion">
+                                        <option value="" disabled selected>Choisir une promotion</option>
+                                        <option value="A1">A1</option>
+                                        <option value="A2">A2</option>
+                                        <option value="A3">A3</option>
+                                        <option value="A4">A4</option>
+                                        <option value="A5">A5</option>
+                                    </select>
                                 </div>
 
                                 <div class="form-outline mb-4">
@@ -98,9 +100,9 @@ $objSmarty = new Smarty();
                                 </div>
 
                                 <div class="msg">
-                        <div class="text">Description</div>
-                        <textarea style=" width:100%;" rows="2" cols="25" required></textarea>
-                    </div>
+                                    <div class="text">Description</div>
+                                    <textarea style=" width:100%;" rows="2" cols="25" required></textarea>
+                                </div>
 
                                 <div class="form-check d-flex justify-content-center mb-5">
                                     <input class="form-check-input me-2" type="checkbox" value=""
