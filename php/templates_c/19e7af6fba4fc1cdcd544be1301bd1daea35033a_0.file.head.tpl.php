@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-28 15:40:11
-  from 'C:\xampp\htdocs\ProjetWebBis\Web2\vendors\tpl\head.tpl' */
+/* Smarty version 4.1.0, created on 2022-03-28 19:38:38
+  from 'C:\xampp\htdocs\Web2\vendors\tpl\head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6241babb9ffa20_25361922',
+  'unifunc' => 'content_6241f29e34b509_00215614',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '43ca307e2dd006ab8ddacb7e3ddffb030235a716' => 
+    '19e7af6fba4fc1cdcd544be1301bd1daea35033a' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\ProjetWebBis\\Web2\\vendors\\tpl\\head.tpl',
-      1 => 1648454489,
+      0 => 'C:\\xampp\\htdocs\\Web2\\vendors\\tpl\\head.tpl',
+      1 => 1648489114,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6241babb9ffa20_25361922 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6241f29e34b509_00215614 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,9 +35,9 @@ function content_6241babb9ffa20_25361922 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="icon" type="image/x-icon" href="../assets/img/logo/logo.png"/>
     <!-- Font Awesome icons (free version)-->
     <link rel="stylesheet" href="../vendors/fontawesome/css/all.min.css">
-    <!-- Google fonts-->
+    <!-- Google fonts
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>-->
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/styles.css" rel="stylesheet"/>
     <!-- PWA -->
