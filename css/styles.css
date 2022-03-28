@@ -11561,11 +11561,12 @@ footer {
     font-size: 1.0625rem;
     font-weight: 500;
     cursor: pointer;
-    transition: .3s;
+    transition: 1s;
 }
 
 .right form .btn button:hover {
-    background: #000;
+    background: #111;
+    color: white;
 }
 
 .bottom center {
