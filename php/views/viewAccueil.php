@@ -454,21 +454,25 @@ $objSmarty = new Smarty();
                 <div class="col-lg-8 mx-auto text-center">
                     <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
                         laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                </div>
-
-                <button onclick='window.location.href="?url=home"' class="btn btn-primary btn-xl text-uppercase"
-                        data-bs-dismiss="modal" type="button" id="buttonEdit">
-                    <a style="color: white; text-decoration: none;">Menu création</a>
-                </button>
-
-                <button onclick='window.location.href="?url=modifier"'
-                        class="btn btn-primary btn-xl text-uppercase mt-2" data-bs-dismiss="modal" type="button"
-                        id="buttonEdit">
-                    <a style="color: white; text-decoration: none;">Menu modifier</a>
-                </button>
-
-
-            </div>
+                        
+                        <?php if(in_array("50", $_SESSION['role'])){  ?>
+                    
+                    <?php }
+                    else {   ?>
+                        </div>
+        
+                        <button onclick='window.location.href="?url=home"' class="btn btn-primary btn-xl text-uppercase"
+                                data-bs-dismiss="modal" type="button" id="buttonEdit">
+                            <a style="color: white; text-decoration: none;">Menu création</a>
+                        </button>
+        
+                        <button onclick='window.location.href="?url=modifier"'
+                                class="btn btn-primary btn-xl text-uppercase mt-2" data-bs-dismiss="modal" type="button"
+                                id="buttonEdit">
+                            <a style="color: white; text-decoration: none;">Menu modifier</a>
+                        </button>
+                    </div>
+                <?php } ?>
 
 
         </form>
