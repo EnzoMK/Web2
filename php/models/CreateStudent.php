@@ -54,7 +54,11 @@ class CreateStudent extends Model
 
     public function ReqDeleteStudent($last_name_update,$first_name_update)
 
-        {
+        {   $sqllocation = "DELETE FROM headed WHERE id_user = (Select id_user FROM user WHERE first_name ='".$first_name_update."' AND last_name='".$last_name_update."')";
+            $reqlocation = $this->getBdd()->prepare($sqllocation);
+            $reqlocation->execute();
+            $reqlocation->closeCursor();
+            
             $sqlcompany = "DELETE FROM location WHERE id_location = (Select id_location FROM user WHERE first_name ='".$first_name_update."' AND last_name='".$last_name_update."')";
             $reqcompany = $this->getBdd()->prepare($sqlcompany);
             $reqcompany->execute();
@@ -65,10 +69,7 @@ class CreateStudent extends Model
             $reqcompany->execute();
             $reqcompany->closeCursor();
 
-            $sqllocation = "DELETE FROM headed WHERE id_user = (Select id_user FROM user WHERE first_name ='".$first_name_update."' AND last_name='".$last_name_update."')";
-            $reqlocation = $this->getBdd()->prepare($sqllocation);
-            $reqlocation->execute();
-            $reqlocation->closeCursor();
+         
 
 
             $sqllocation = "DELETE FROM user WHERE first_name ='".$first_name_update."' AND last_name='".$last_name_update."'";
