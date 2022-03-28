@@ -33,15 +33,33 @@ $objSmarty = new Smarty();
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Entreprise</label>
-                                    <input type="text" id="form3Example3cg" class="form-control form-control-lg"
-                                           name="Entreprise"/>
+                                    <select name="Entreprise">
+                        <option value="" disabled selected>Choisir une promotion</option>
+                            <option value="A1">A1</option>               
+                            <option value="A2">A2</option>
+                            <option value="A3">A3</option>
+                            <option value="A4">A4</option>  
+                            <option value="A5">A5</option>
+                    </select>
                                 </div>
+
+
+                  
+                
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Type de promotion
                                         concernées</label>
-                                    <input type="text" id="form3Example4cdg" class="form-control form-control-lg"
-                                           name="Promotion"/>
+                                    
+                                
+                    <select name="Promotion">
+                        <option value="" disabled selected>Choisir une promotion</option>
+                            <option value="A1">A1</option>               
+                            <option value="A2">A2</option>
+                            <option value="A3">A3</option>
+                            <option value="A4">A4</option>  
+                            <option value="A5">A5</option>
+                    </select>
                                 </div>
 
                                 <div class="form-outline mb-4">
@@ -78,6 +96,11 @@ $objSmarty = new Smarty();
                                     <input type="text" id="form3Example10cdg" class="form-control form-control-lg"
                                            name="places"/>
                                 </div>
+
+                                <div class="msg">
+                        <div class="text">Description</div>
+                        <textarea style=" width:100%;" rows="2" cols="25" required></textarea>
+                    </div>
 
                                 <div class="form-check d-flex justify-content-center mb-5">
                                     <input class="form-check-input me-2" type="checkbox" value=""
