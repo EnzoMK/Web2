@@ -79,6 +79,11 @@ $objSmarty = new Smarty();
                                            name="places"/>
                                 </div>
 
+                                <div class="msg">
+                        <div class="text">Description</div>
+                        <textarea style=" width:100%;" rows="2" cols="25" required></textarea>
+                    </div>
+
                                 <div class="form-check d-flex justify-content-center mb-5">
                                     <input class="form-check-input me-2" type="checkbox" value=""
                                            id="form2Example11cg"/>
