@@ -10,7 +10,7 @@ $objSmarty = new Smarty();
 <?php $objSmarty->display("../vendors/tpl/bandeau_haut.tpl"); ?>
 <!-- recherches et filtres -->
 
-<section id="barrerecherche-filtres" class="row align-content-center ">
+<section class="row align-content-center ">
     <div class="p-3 bg-dark text-white row">
 
         <div class="row mt-1">
@@ -49,22 +49,12 @@ $objSmarty = new Smarty();
 
                                 <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("22", $_SESSION['role']) ){  ?>
                                     <option value="Etudiant">Etudiant</option>
-                                <?php }?>
-                        
-                        
-                        
-                        
-                        
-                        
+                                <?php }?>            
                     </select>
                     <input type="submit" name="envoyer" vlaue="Choose options">
                 </form>
-
-
             </div>
             <!--Filtre 2-->
-
-
         </div>
 </section>
 

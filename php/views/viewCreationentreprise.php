@@ -12,7 +12,7 @@ $objSmarty = new Smarty();
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="col-12 col-md-9 col-lg-7 ">
                     <div class="card" style="border-radius: 15px;">
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Création d'une Entreprise</h2>
@@ -68,7 +68,7 @@ $objSmarty = new Smarty();
                                     <input class="form-check-input me-2" type="checkbox" value=""
                                            id="form2Example20cg"/>
                                     <label class="form-check-label" for="form2Example3g">
-                                        Je confirme la création <a href="rechercheAvancé.html" class="text-body"><u></u></a>
+                                        Je confirme la création 
                                     </label>
                                 </div>
 
