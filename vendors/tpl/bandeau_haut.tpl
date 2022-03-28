@@ -13,7 +13,7 @@
                     <li class="nav-item"><a class="nav-link" href="?url=compte">Compte</a></li>
                     <li class="nav-item"><a class="nav-link" href="?url=contact">Contact</a></li>
                     <li class="nav-item">
-                        <button name="deconnexion" type="submit" style="background:transparent; border-radius: 7px;"><a
+                        <button name="deconnexion" type="submit" style="background:transparent; border: 0px;"><a
                                     class="nav-link">DECONNEXION</a></button>
                     </li>
                 </ul>
