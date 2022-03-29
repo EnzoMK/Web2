@@ -65,7 +65,8 @@ $objSmarty = new Smarty();
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example5cdg">Durée du stage</label>
+                                    <label class="form-label" for="form3Example5cdg">Durée du stage (en
+                                        semaines)</label>
                                     <input type="text" id="form3Example5cdg" class="form-control form-control-lg"
                                            name="dureeoffre"/>
                                 </div>
