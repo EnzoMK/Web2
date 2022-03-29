@@ -14,7 +14,7 @@ $objSmarty = new Smarty();
 <header class="masthead">
     <div class="container">
         <div class="masthead-subheading">Trouvez un stage maintenant !</div>
-        <div class="masthead-heading text-uppercase">Bienvenue dans l'arèneuh !</div>
+        <div class="masthead-heading text-uppercase">Bienvenue dans l'arène !</div>
         <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">Let's go</a>
     </div>
 </header>
@@ -187,7 +187,7 @@ $objSmarty = new Smarty();
                             </button>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
                                     id="buttonEdit">
-                                <a href="html\editionHome.html" style="color: white; text-decoration: none;">Editer</a>
+                                Wish List
                             </button>
 
                         </div>
