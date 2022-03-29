@@ -1,4 +1,27 @@
-<!-- Footer -->
+<?php
+/* Smarty version 4.1.0, created on 2022-03-29 11:48:20
+  from 'C:\xampp\htdocs\Web2\vendors\tpl\footer.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.1.0',
+  'unifunc' => 'content_6242d5e4894ea5_08622122',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '4bb07ae19b3302d2681d96cef7eeffe0f09649ca' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Web2\\vendors\\tpl\\footer.tpl',
+      1 => 1648547296,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6242d5e4894ea5_08622122 (Smarty_Internal_Template $_smarty_tpl) {
+?><!-- Footer -->
 <footer>
     <div class="main-content">
         <div class="left box">
@@ -56,4 +79,5 @@
         <span class="far fa-copyright"></span><span><a href="../mentions-légales.txt"> Mentions Légales</a></span>
 
     </div>
-</footer>
+</footer><?php }
+}
