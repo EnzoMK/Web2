@@ -63,21 +63,25 @@ $objSmarty = new Smarty();
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Promotion</label>
-                                    <input type="text" id="form3Example6cdg" name="promotion"
-                                           class="form-control form-control-lg"/>
+
+                                           <select name="promotion" id="form3Example6cdg" 
+                                           class="form-control form-control-lg">
+                                        <option value="" disabled selected>Choisir une promotion</option>
+                                        <option value="A1">A1</option>
+                                        <option value="A2">A2</option>
+                                        <option value="A3">A3</option>
+                                        <option value="A4">A4</option>
+                                        <option value="A5">A5</option>
+                                    </select>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Mail</label>
-                                    <input type="email" id="form3Example7cdg" name="mail"
+                                    <input placeholder="exemple.test@viacesi.fr" type="email" id="form3Example7cdg" name="mail"
                                            class="form-control form-control-lg"/>
                                 </div>
 
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example3cg">Username</label>
-                                    <input type="text" id="form3Example8cg" name="username"
-                                           class="form-control form-control-lg"/>
-                                </div>
+                  
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Mot de passe</label>
