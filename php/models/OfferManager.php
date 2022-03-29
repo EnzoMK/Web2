@@ -35,6 +35,50 @@ class OfferManager extends Model {
         $reqofferpromotion->execute();
         $reqofferpromotion->closeCursor();
     }
+
+
+public function ReqUpdateOffer($nomdeloffre, $duree, $basedermuneration, $datedebut, $datefin, $nombredeplace, $nomcompany, $skill, $descriptionoffer, $promotion)
+{
+
+    
+    $sqloffer = "UPDATE offer SET internship_duration='" . $duree . "',remuneration='" . $basedermuneration . "',number_place='" . $nombredeplace . "',start_intership_date='". $datedebut .",end_intership_date='". $datefin .",'$nombredeplace='". $nombredeplace ."',name_offer='" . $nomdeloffre ."',description_offer='". $descriptionoffer . "'where nomdeloffre";
+    $reqoffer = $this->getBdd()->prepare($sqloffer);
+    $reqoffer->execute();
+    $reqoffer->closeCursor();
+
+    $sqlofferskill = "insert into offer_skills (name_skill,id_offer) values ('" . $skill . "',(select id_offer from offer where name_offer = '" . $nomdeloffre . "' and description_offer = '" . $descriptionoffer . "'limit 1))";
+    $reqofferprskill = $this->getBdd()->prepare($sqlofferskill);
+    $reqofferprskill->execute();
+    $reqofferprskill->closeCursor();
+
+    $sqlofferpromotion = "insert into offer_promotion (id_offer,name_promotion) values ((select id_offer from offer where name_offer = '" . $nomdeloffre . "' and description_offer = '" . $descriptionoffer . "'limit 1),'" . $promotion . "')";
+    $reqofferpromotion = $this->getBdd()->prepare($sqlofferpromotion);
+    $reqofferpromotion->execute();
+    $reqofferpromotion->closeCursor();
+
+
 }
 
+public function ReqDeleteOffer($last_name_update,$first_name_update)
+
+    {       
+        $sqloffer = "UPDATE offer SET internship_duration='" . $duree . "',remuneration='" . $basedermuneration . "',number_place='" . $nombredeplace . "',start_intership_date='". $datedebut .",end_intership_date='". $datefin .",'$nombredeplace='". $nombredeplace ."',name_offer='" . $nomdeloffre ."',description_offer='". $descriptionoffer . "'where nomdeloffre";
+        $reqoffer = $this->getBdd()->prepare($sqloffer);
+        $reqoffer->execute();
+        $reqoffer->closeCursor();
+    
+        $sqlofferskill = "insert into offer_skills (name_skill,id_offer) values ('" . $skill . "',(select id_offer from offer where name_offer = '" . $nomdeloffre . "' and description_offer = '" . $descriptionoffer . "'limit 1))";
+        $reqofferprskill = $this->getBdd()->prepare($sqlofferskill);
+        $reqofferprskill->execute();
+        $reqofferprskill->closeCursor();
+    
+        $sqlofferpromotion = "insert into offer_promotion (id_offer,name_promotion) values ((select id_offer from offer where name_offer = '" . $nomdeloffre . "' and description_offer = '" . $descriptionoffer . "'limit 1),'" . $promotion . "')";
+        $reqofferpromotion = $this->getBdd()->prepare($sqlofferpromotion);
+        $reqofferpromotion->execute();
+        $reqofferpromotion->closeCursor();
+    
+
+        
+    }
+}
 ?>
