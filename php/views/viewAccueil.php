@@ -25,7 +25,7 @@ $objSmarty = new Smarty();
             <form action="viewRechercheAvance.php" method="get" novalidate="novalidate">
                 <div class="row">
                     <!-- Liste de filtre -->
-                    <div class="col-lg-5 ">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <select class="search-slt" id="filtreacceuil">
                             <option>Rechercher</option>
                             <option>Un étudiant</option>
@@ -36,12 +36,12 @@ $objSmarty = new Smarty();
                         </select>
                     </div>
                     <!-- Bouton lancer la recherche -->
-                    <div class="col-lg-3 col-md-3  p-0">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <button type="button" class="btn btn-info wrn-btn"> GO !</button>
                     </div>
                     <!-- Aller vers la page de recherche avancée -->
                     <form method='POST'>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4 col-sm-6 mb-4x">
                             <button style="text-decoration: none; color: white;"type="button" name="buttonRechercheAvancee" class="btn btn-info wrn-btn" onClick='window.location.href="?url=rechercheavancee"'>Page recherche avancée</button>
                         </div>
                     </form>
