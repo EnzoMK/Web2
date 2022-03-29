@@ -83,7 +83,7 @@ $objSmarty = new Smarty();
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Confiance du pilote de
                                         promotion</label>
-                                    <input type="text" id="form3Example6cdg" class="form-control form-control-lg"
+                                    <input placeholder="Exemple : 5/10" type="text" id="form3Example6cdg" class="form-control form-control-lg"
                                            name="Confiance"/>
                                 </div>
 
@@ -96,7 +96,7 @@ $objSmarty = new Smarty();
                                 </div>
 
                                 <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("4", $_SESSION['role'])){  ?>
-                                <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center  mb-4">
                                     <button type="submit" value="submitUpdate" name="submitUpdate"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                                         Modifier
@@ -105,13 +105,14 @@ $objSmarty = new Smarty();
                                     <?php } ?>
                                 
                                     <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("6", $_SESSION['role'])){  ?>    
-                                <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center  mb-4">
                                     <button type="submit" value="submitUpdate" name="supprimer"
-                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                            class="btn btn-danger btn-block btn-lg gradient-custom-4 text-body">
                                         Supprimer
                                     </button>
+                                    </div>
                                     
-</div>
+
 <?php } ?>
                                 
 

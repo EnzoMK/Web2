@@ -10,7 +10,7 @@ class OfferManager extends Model {
 
         $var = [];
         while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
-            $var[] = new Company($data);
+            $var[] = new Offer($data);
 
         }
         return $var;
@@ -36,6 +36,7 @@ class OfferManager extends Model {
         $reqofferpromotion->closeCursor();
     }
 
+<<<<<<< HEAD
 
 public function ReqUpdateOffer($nomdeloffre, $duree, $basedermuneration, $datedebut, $datefin, $nombredeplace, $nomcompany, $skill, $descriptionoffer, $promotion)
 {
@@ -57,6 +58,128 @@ public function ReqUpdateOffer($nomdeloffre, $duree, $basedermuneration, $datede
     $reqofferpromotion->closeCursor();
 
 
+=======
+    public function getAllOfferCompany($name)
+    {
+        $sqllocation = "SELECT * FROM offer WHERE id_company =(Select id_company from company WHERE name_company ='".$name."' ) ";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $var=[];
+        while($data = $reqlocation->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Offer($data);
+
+        }
+        return $var;
+        $reqlocation->closeCursor();
+    }
+
+    public function getAllCompanyOffer()
+    {
+        $sqllocation = "SELECT * FROM offer INNER JOIN company ON offer.id_company = company.id_company";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $var=[];
+        while($data = $reqlocation->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Company($data);
+
+        }
+        return $var;
+        $reqlocation->closeCursor();
+    }
+
+    public function getAllPromotionOffer()
+    {
+        $sqllocation = "SELECT * FROM offer INNER JOIN Offer_promotion ON offer.id_offer = Offer_promotion.id_offer INNER JOIN promotion ON Offer_promotion.name_promotion = promotion.name_promotion";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $var=[];
+        while($data = $reqlocation->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Promotion($data);
+
+        }
+        return $var;
+        $reqlocation->closeCursor();
+    }
+
+    public function getAllSkillOffer()
+    {
+        $sqllocation = "SELECT * FROM offer INNER JOIN offer_skills ON offer.id_offer = offer_skills.id_offer INNER JOIN Skill ON Skill.name_skill = offer_skills.name_skill";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $var=[];
+        while($data = $reqlocation->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Skill($data);
+
+        }
+        return $var;
+        $reqlocation->closeCursor();
+    }
+
+    public function getAllOfferCompetence($name){
+
+        $sqllocation = "SELECT * FROM offer WHERE id_offer =(Select id_offer from offer_skills WHERE name_skill ='".$name."' ) ";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $var=[];
+        while($data = $reqlocation->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Offer($data);
+
+        }
+        return $var;
+        $reqlocation->closeCursor();
+    }
+
+    public function getAllOfferPromotion($name){
+
+        $sqllocation = "SELECT * FROM offer WHERE id_offer =(Select id_offer from offer_promotion WHERE name_promotion ='".$name."' ) ";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $var=[];
+        while($data = $reqlocation->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Offer($data);
+
+        }
+        return $var;
+        $reqlocation->closeCursor();
+    }
+
+    public function getAllOfferDateDebut($name){
+
+        $sqllocation = "SELECT * FROM offer WHERE start_intership_date = '".$name."' ";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $var=[];
+        while($data = $reqlocation->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Offer($data);
+
+        }
+        return $var;
+        $reqlocation->closeCursor();
+    }
+
+    public function getAllOfferDateFin($name){
+
+        $sqllocation = "SELECT * FROM offer WHERE send_intership_date = '".$name."' ";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $var=[];
+        while($data = $reqlocation->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Offer($data);
+
+        }
+        return $var;
+        $reqlocation->closeCursor();
+    }
+    
+>>>>>>> 519d46280772fce16bdf9460b0ec27788565b9f1
 }
 
 public function ReqDeleteOffer($last_name_update,$first_name_update)

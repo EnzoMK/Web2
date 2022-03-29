@@ -42,8 +42,12 @@ class ControllerRechercheavancee
             $this->_company = new CompanyManager;
             $companies = $this->_company->getAllCompany();
             $companiesLocation = $this->_company->getCompanyLocation();
+
             $this->_offer = new OfferManager;
             $offers = $this->_offer->getAllOffer();
+            $offersCompany = $this->_offer->getAllCompanyOffer();
+            $offersSkill = $this->_offer->getAllSkillOffer();
+            $offersPromotion = $this->_offer->getAllPromotionOffer();
 
         
 
@@ -54,11 +58,8 @@ class ControllerRechercheavancee
                 
                 $selected = $_POST['Fruit'];
                 
-                $_POST['envoyer'] = true;
             
-                if($selected == 'Entreprise' && in_array("2", $_SESSION['role']) || $selected == 'Entreprise' &&  in_array("40", $_SESSION['role']) || $selected == 'Entreprise' &&  in_array("50", $_SESSION['role']) ||  $selected == 'Entreprise' &&  in_array("30", $_SESSION['role']) ) { 
-                    $_POST['value'] = '1';
-                } 
+
         
             if($selected == 'Etudiant' && in_array("22", $_SESSION['role']) || $selected == 'Etudiant' && in_array("40", $_SESSION['role']) || $selected == 'Etudiant' && in_array("30", $_SESSION['role']) ) { ?>
             <div>
@@ -93,7 +94,9 @@ class ControllerRechercheavancee
             
     
             if($selected == 'Entreprise' && in_array("2", $_SESSION['role']) || $selected == 'Entreprise' &&  in_array("40", $_SESSION['role']) || $selected == 'Entreprise' &&  in_array("50", $_SESSION['role']) ||  $selected == 'Entreprise' &&  in_array("30", $_SESSION['role']) ) { ?>
-                <?php foreach($companies as $company): ?>
+               
+               <?php $_POST['value'] = '1'; ?>
+               <?php foreach($companies as $company): ?>
                     <?= $company->getId_company() ?>
                     <?= $company->getName_company() ?>
                     <?= $company->getActivity_area() ?>
@@ -103,6 +106,8 @@ class ControllerRechercheavancee
             } 
            
             if($selected == 'Offre'  && in_array("8", $_SESSION['role']) || $selected == 'Offre'  && in_array("40", $_SESSION['role']) || $selected == 'Offre'  && in_array("50", $_SESSION['role']) || $selected == 'Offre'  && in_array("30", $_SESSION['role'])) { ?>
+                
+                <?php $_POST['offer'] = true ;?>
                 <?php foreach($offers as $offer): ?>
                     <?= $offer->getId_offer() ?>
                     <?= $offer->getInternship_duration() ?>
@@ -117,10 +122,93 @@ class ControllerRechercheavancee
             } 
             }
 
+            if (isset($_POST['NameEntrepriseOffer'])){
+                $_POST['offer'] = true;
+                $offersName = $this->_offer->getAllOfferCompany($_POST['NameEntrepriseOffer']); ?>
+
+                <?php foreach($offersName as $offer): ?>
+                    <?= $offer->getId_offer() ?>
+                    <?= $offer->getInternship_duration() ?>
+                    <?= $offer->getRemuneration() ?>
+                    <?= $offer->getNumber_place() ?>
+                    <?= $offer->getStart_intership_date() ?>
+                    <?= $offer->getEnd_intership_date() ?>
+                    <?= $offer->getPublication_date() ?>
+                    <?= $offer->getId_company() ?>
+                    <?= $offer->getName_offer() ?>
+                <?php endforeach; ?><?php 
+            }
+
+            if (isset($_POST['CompetenceOffer'])){
+                $_POST['offer'] = true;
+                $offersName = $this->_offer->getAllOfferCompetence($_POST['CompetenceOffer']); ?>
+
+                <?php foreach($offersName as $offer): ?>
+                    <?= $offer->getId_offer() ?>
+                    <?= $offer->getInternship_duration() ?>
+                    <?= $offer->getRemuneration() ?>
+                    <?= $offer->getNumber_place() ?>
+                    <?= $offer->getStart_intership_date() ?>
+                    <?= $offer->getEnd_intership_date() ?>
+                    <?= $offer->getPublication_date() ?>
+                    <?= $offer->getId_company() ?>
+                    <?= $offer->getName_offer() ?>
+                <?php endforeach; ?><?php 
+            }
+
+            if (isset($_POST['Promotion'])){
+                $_POST['offer'] = true;
+                $offersName = $this->_offer->getAllOfferPromotion($_POST['Promotion']); ?>
+
+                <?php foreach($offersName as $offer): ?>
+                    <?= $offer->getId_offer() ?>
+                    <?= $offer->getInternship_duration() ?>
+                    <?= $offer->getRemuneration() ?>
+                    <?= $offer->getNumber_place() ?>
+                    <?= $offer->getStart_intership_date() ?>
+                    <?= $offer->getEnd_intership_date() ?>
+                    <?= $offer->getPublication_date() ?>
+                    <?= $offer->getId_company() ?>
+                    <?= $offer->getName_offer() ?>
+                <?php endforeach; ?><?php 
+            }
+
+            if (isset($_POST['DateDebut'])){
+                $_POST['offer'] = true;
+                $offersName = $this->_offer->getAllOfferDateDebut($_POST['DateDebut']); ?>
+
+                <?php foreach($offersName as $offer): ?>
+                    <?= $offer->getId_offer() ?>
+                    <?= $offer->getInternship_duration() ?>
+                    <?= $offer->getRemuneration() ?>
+                    <?= $offer->getNumber_place() ?>
+                    <?= $offer->getStart_intership_date() ?>
+                    <?= $offer->getEnd_intership_date() ?>
+                    <?= $offer->getPublication_date() ?>
+                    <?= $offer->getId_company() ?>
+                    <?= $offer->getName_offer() ?>
+                <?php endforeach; ?><?php 
+            }
+
+            if (isset($_POST['DateFin'])){
+                $_POST['offer'] = true;
+                $offersName = $this->_offer->getAllOfferDateFin($_POST['DateFin']); ?>
+
+                <?php foreach($offersName as $offer): ?>
+                    <?= $offer->getId_offer() ?>
+                    <?= $offer->getInternship_duration() ?>
+                    <?= $offer->getRemuneration() ?>
+                    <?= $offer->getNumber_place() ?>
+                    <?= $offer->getStart_intership_date() ?>
+                    <?= $offer->getEnd_intership_date() ?>
+                    <?= $offer->getPublication_date() ?>
+                    <?= $offer->getId_company() ?>
+                    <?= $offer->getName_offer() ?>
+                <?php endforeach; ?><?php 
+            }
 
 
             if (isset($_POST['NameEntreprise'])){
-
                 $_POST['value'] = true;
                 $companiesName = $this->_company->getAllCompanyName($_POST['NameEntreprise']); ?>
 
