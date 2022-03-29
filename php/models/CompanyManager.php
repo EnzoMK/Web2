@@ -21,8 +21,8 @@ class CompanyManager extends Model{
     
     public function getCompanyLocation()
     {
-        $sql = "SELECT * FROM location INNER JOIN company ON location.id_location = company.id_location";
-        $req = $this->getBdd()->prepare($sql);
+        $sql = "SELECT * FROM location INNER JOIN place ON location.id_location = place.id_location INNER JOIN company ON place.id_company = company.id_company";
+        $req = $this->getBdd()->prepare($sql);  
         $req->execute();
 
         $var=[];
@@ -66,6 +66,53 @@ class CompanyManager extends Model{
         $reqcompany->execute();
         $reqcompany->closeCursor();
     }
+
+
+    public function getAllCompanyName($name)
+    {
+        $sqllocation = "SELECT * FROM company WHERE name_company = '".$name."'";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $var=[];
+        while($data = $reqlocation->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Company($data);
+
+        }
+        return $var;
+        $reqlocation->closeCursor();
+    }
+
+    public function getAllCompanySecteur($name)
+    {
+        $sqllocation = "SELECT * FROM company WHERE activity_area = '".$name."'";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $var=[];
+        while($data = $reqlocation->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Company($data);
+
+        }
+        return $var;
+        $reqlocation->closeCursor();
+    }
+
+    public function getAllCompanyCity($name)
+    {
+        $sqllocation = "SELECT * FROM company WHERE id_company =(Select id_company from place WHERE id_location =(Select id_location FROM location WHERE city_location = '".$name."')) ";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $var=[];
+        while($data = $reqlocation->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Company($data);
+
+        }
+        return $var;
+        $reqlocation->closeCursor();
+    }
+
 
     }
 ?>

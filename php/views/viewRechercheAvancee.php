@@ -25,7 +25,47 @@ $objSmarty = new Smarty();
 
 
                 <form action="" method="post">
-                    <select name="Fruit">
+                
+                    <?php 
+                        if(isset($_POST['envoyer'])){ ?>
+
+                        <select name="NameEntreprise">
+                        <option value="" disabled selected>Nom Entreprise</option>
+
+                        <?php 
+                            if(isset($_POST['value'])){ ?>
+                            <?php foreach ($companies as $company) {
+                                            echo('<option value="' . $company->getName_company() . '">' . $company->getName_company() . "</option>");
+                                }
+                            } ?>
+                        </select>
+
+                        <select name="SecteurEntreprise">
+                        <option value="" disabled selected>Secteur d'activité</option>
+
+                        <?php 
+                            if(isset($_POST['value'])){ ?>
+                            <?php foreach ($companies as $company) {
+                                            echo('<option value="' . $company->getActivity_area() . '">' . $company->getActivity_area() . "</option>");
+                                }
+                            } ?>
+                        </select>
+
+                        <select name="VilleEntreprise">
+                        <option value="" disabled selected>Ville</option>
+
+                        <?php 
+                            if(isset($_POST['value'])){ ?>
+                            <?php foreach ($companiesLocation as $company) {
+                                            echo('<option value="' . $company->getCity_location() . '">' . $company->getCity_location() . "</option>");
+                                }
+                            } ?>
+                        </select>
+
+
+                       <?php }
+                        else { ?>
+                                <select name="Fruit">
                         <option value="" disabled selected>Choisir un filtre</option>
 
                         <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("50", $_SESSION['role']) || in_array("2", $_SESSION['role']) ){  ?>
@@ -51,6 +91,11 @@ $objSmarty = new Smarty();
                                     <option value="Etudiant">Etudiant</option>
                                 <?php }?>            
                     </select>
+
+                       <?php } ?>
+
+                                
+                 
                     <input type="submit" name="envoyer" vlaue="Choose options">
                 </form>
             </div>
