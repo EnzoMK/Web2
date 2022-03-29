@@ -97,7 +97,7 @@ $objSmarty = new Smarty();
                                 </div>
 
                                 <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("24", $_SESSION['role'])){  ?>    
-                                <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center mb-4">
                                     <button type="submit" value="submitUpdate" name="submitUpdate"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                                         Modifier
@@ -106,9 +106,9 @@ $objSmarty = new Smarty();
 </div>
 <?php } ?>
 <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("25", $_SESSION['role'])){  ?>    
-                                <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center mb-4">
                                     <button type="submit" value="submitUpdate" name="supprimer"
-                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                            class="btn btn-danger btn-block btn-lg gradient-custom-4 text-body">
                                         Supprimer
                                     </button>
 </div>
