@@ -19,15 +19,15 @@
             <div class="content">
                 <div class="place">
                     <span class="fas fa-map-marker-alt"></span>
-                    <span class="text">1 allée du titane - Orléans</span>
+                    <span class="text"><a class="lienfooter" href="https://www.google.fr/maps/place/1+All.+du+Titane,+45100+Orl%C3%A9ans/@47.845176,1.9384295,17z/data=!3m1!4b1!4m5!3m4!1s0x47e4e3f521708f4d:0xd69f73c032a993c5!8m2!3d47.8451724!4d1.9406182">1 allée du titane - Orléans</a></span>
                 </div>
                 <div class="phone">
                     <span class="fas fa-phone-alt"></span>
-                    <span class="text">01 33 55 38 93</span>
+                    <span class="text"><a class="lienfooter" href="tel:+33 1 33 55 38 93"> 01 33 55 38 93 </a></span>
                 </div>
                 <div class="email">
                     <span class="fas fa-envelope"></span>
-                    <span class="text">contact@superstage.com</span>
+                    <span class="text"> <a class="lienfooter" href="mailto:contact@superstage.com">contact@superstage.com</a></span>
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
                         <textarea rows="2" cols="25" required></textarea>
                     </div>
                     <div class="btn">
-                        <button type="submit">Envoyer <i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit">Envoyer</button>
                     </div>
                 </form>
             </div>

@@ -9,7 +9,7 @@ $objSmarty = new Smarty();
 <!-- Navigation-->
 <?php $objSmarty->display("../vendors/tpl/bandeau_haut.tpl"); ?>
 
-
+<br><br>
 <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading fw-bold">Merci de votre participation.</h1>

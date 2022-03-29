@@ -6513,3 +6513,12 @@ footer {
     text-decoration: none;
     color: #fff;
 }
+
+.lienfooter {
+    color: white
+}
+
+.lienfooter:hover {
+    color: #208cf1;
+    transition: .3s;
+}

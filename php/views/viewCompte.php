@@ -31,10 +31,8 @@ $objSmarty = new Smarty();
                             <?= $user->getLast_name() ?>
                         <?php endforeach; ?>
                     </h5>
-                    <h6>
-                        Web Developer and Designer
-                    </h6>
-                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                   
+                    
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="home-tab" data-toggle="tab" href="" role="tab"
@@ -43,23 +41,16 @@ $objSmarty = new Smarty();
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2">
-                <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-            </div>
         </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-work">
-                    <p>WORK LINK</p>
-                    <a href="">Website Link</a><br/>
-                    <a href="">Bootsnipp Profile</a><br/>
-                    <a href="">Bootply Profile</a>
-                    <p>SKILLS</p>
-                    <a href="">Web Designer</a><br/>
-                    <a href="">Web Developer</a><br/>
-                    <a href="">WordPress</a><br/>
-                    <a href="">WooCommerce</a><br/>
-                    <a href="">PHP, .Net</a><br/>
+                    <p style="text-decoration: underline;">SKILLS</p>
+                    <a href="">CCNA 1</a><br/>
+                    <a href="">C++</a><br/>
+                    <a href="">PHP</a><br/>
+                    <a href="">HTML/CSS</a><br/>
+                    <a href="">SOFTSKILLS</a><br/>
                 </div>
             </div>
             <div class="col-md-8">
@@ -67,7 +58,7 @@ $objSmarty = new Smarty();
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="row">
                             <div class="col-md-6">
-                                <label>User Id</label>
+                                <label>Username</label>
                             </div>
                             <div class="col-md-6">
                                 <p>
@@ -79,7 +70,7 @@ $objSmarty = new Smarty();
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Name</label>
+                                <label>Prénom et nom</label>
                             </div>
                             <div class="col-md-6">
                                 <p>
@@ -104,7 +95,7 @@ $objSmarty = new Smarty();
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Nom de société</label>
+                                <label>Etablissement / Société</label>
                             </div>
                             <div class="col-md-6">
                                 <p>
