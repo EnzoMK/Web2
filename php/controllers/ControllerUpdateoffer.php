@@ -25,7 +25,7 @@ if (isset($_SESSION['email'])) {
     if (isset($_POST['submitUpdate'])) {
 
         if(in_array("4", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
-        $this->_updateoffer->ReqUpdateOffer($_POST['Nlocalite'], $_POST['Vlocalite'], $_POST['CP'], $_POST['Nom'],$_POST['NomModif'], $_POST['Secteur'], $_POST['AncienStagiaire'], $_POST['Confiance']);
+        $this->_updateoffer->ReqUpdateOffer($_POST['nom'], $_POST['skill'], $_POST['nomcompany'], $_POST['promotion'],$_POST['dureeoffre'], $_POST['basederemuneration'], $_POST['datedebut'], $_POST['datefin'], $_POST['nombreplace'], $_POST['descriptionoffre']);
         header("Location: index.php?url=pagefincm");
     }
         else {
@@ -36,7 +36,7 @@ if (isset($_SESSION['email'])) {
     if (isset($_POST['supprimer'])) {
         if(in_array("6", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
 
-        $this->_updateoffer->ReqDeleteOffer($_POST['NomModif']);
+        $this->_updateoffer->ReqDeleteOffer($_POST['nom']);
         header("Location: index.php?url=pagefincm");
     }
     else {
