@@ -2,7 +2,7 @@
 
 class Skill
 {
-    private $name_skill;
+    private $_name_skill;
 
     public function __construct(array $data)
     {
@@ -23,17 +23,17 @@ class Skill
 
     //CONSTRUCTEUR
 
-    public function getNameSkill()
+    public function getName_skill()
     {
-        return $this->name_skill;
+        return $this->_name_skill;
     }
 
     //HYDRATATION
     //securite maximum
     //renvoyer au differents setters pour mettre a jour les données
 
-    public function setNameSkill($name_skill): void
+    public function setName_skill($name_skill): void
     {
-        $this->name_skill = $name_skill;
+        $this->_name_skill = $name_skill;
     }
 }

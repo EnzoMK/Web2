@@ -23,22 +23,22 @@ $objSmarty = new Smarty();
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Nom de l'offre</label>
                                     <input type="text" id="form3Example1cg" class="form-control form-control-lg"
-                                           name="Offre"/>
+                                           name="nom"/>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Compétences</label>
-                                    <select name="Compétence">
+                                    <select name="skill">
                                         <option value="" disabled selected>Choisir une compétence</option>
                                         <?php foreach ($skills as $skill) {
-                                            echo('<option value="' . $skill->getNameSkill() . '">' . $skill->getNameSkill() . "</option>");
+                                            echo('<option value="' . $skill->getName_skill() . '">' . $skill->getName_skill() . "</option>");
                                         } ?>
                                     </select>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Entreprise</label>
-                                    <select name="Entreprise">
+                                    <select name="nomcompany">
                                         <option value="" disabled selected>Choisir une entreprise</option>
                                         <?php foreach ($companys as $company) {
                                             echo('<option value="' . $company->getName_company() . '">' . $company->getName_company() . "</option>");
@@ -54,7 +54,7 @@ $objSmarty = new Smarty();
                                         concernées</label>
 
 
-                                    <select name="Promotion">
+                                    <select name="promotion">
                                         <option value="" disabled selected>Choisir une promotion</option>
                                         <option value="A1">A1</option>
                                         <option value="A2">A2</option>
@@ -67,41 +67,37 @@ $objSmarty = new Smarty();
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example5cdg">Durée du stage</label>
                                     <input type="text" id="form3Example5cdg" class="form-control form-control-lg"
-                                           name="DureeStage"/>
+                                           name="dureeoffre"/>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example6cdg">Base de rémunération</label>
                                     <input type="text" id="form3Example6cdg" class="form-control form-control-lg"
-                                           name="Remuneration"/>
+                                           name="basederemuneration"/>
                                 </div>
 
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example7cdg">Date publication de l'offre</label>
-                                    <input type="text" id="form3Example7cdg" class="form-control form-control-lg"
-                                           name="publication"/>
-                                </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example5cdg">Date de début d'offre</label>
                                     <input type="text" id="form3Example8cdg" class="form-control form-control-lg"
-                                           name="debutoffre"/>
+                                           name="datedebut"/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example5cdg">Date de fin d'offre</label>
                                     <input type="text" id="form3Example9cdg" class="form-control form-control-lg"
-                                           name="finoffre"/>
+                                           name="datefin"/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example8cdg">Nombre de places offertes aux
                                         étudiants</label>
                                     <input type="text" id="form3Example10cdg" class="form-control form-control-lg"
-                                           name="places"/>
+                                           name="nombreplace"/>
                                 </div>
 
                                 <div class="msg">
                                     <div class="text">Description</div>
-                                    <textarea style=" width:100%;" rows="2" cols="25" required></textarea>
+                                    <textarea style=" width:100%;" name="descriptionoffre" rows="2" cols="25"
+                                              required></textarea>
                                 </div>
 
                                 <div class="form-check d-flex justify-content-center mb-5">
