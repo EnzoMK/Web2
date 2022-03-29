@@ -1,3 +1,15 @@
+<?php
+include("../vendors/smarty/libs/Smarty.class.php");
+$objSmarty = new Smarty();
+?>
+
+<?php $objSmarty->display("../vendors/tpl/head.tpl"); ?>
+
+<body id="page-top">
+<!-- Navigation-->
+<?php $objSmarty->display("../vendors/tpl/bandeau_haut.tpl"); ?>
+
+
 Mentions légales
 
 
@@ -106,3 +118,14 @@ Flux RSS
 
 Les flux RSS sont exclusivement destinés aux visiteurs du site pour une utilisation personnelle et ne sauraient en aucun cas servir à alimenter d’autres sites, sauf autorisation écrite préalable de www.superstage.com.
 
+
+<?php $objSmarty->display("../vendors/tpl/footer.tpl"); ?>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="../js/scripts.js"></script>
+
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>

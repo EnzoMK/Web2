@@ -53,7 +53,7 @@
     <div class="bottom text-center">
 
         <span class="credit">Créé par <a href="#">SuperStage</a> | </span>
-        <span class="far fa-copyright"></span><span><a href="../mentions-légales.txt"> Mentions Légales</a></span>
+        <span class="far fa-copyright"></span><span><a href="?url=mentionslegales"> Mentions Légales</a></span>
 
     </div>
 </footer>
