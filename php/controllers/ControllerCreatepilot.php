@@ -32,7 +32,7 @@ class ControllerCreatepilot
             $this->_createPilot = new CreatePilot();
             if (isset($_POST['submitCreate'])) {
                     $this->_createPilot->ReqCreatePilot($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['motdepasse'], $_POST['villeducentre'], $_POST['centre'], $_POST['codepostal']);
-        
+                    header("Location: index.php?url=pagefincm");
             }
         
 

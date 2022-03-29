@@ -31,7 +31,8 @@ if (isset($_SESSION['email'])) {
 
         if(in_array("4", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
         $this->_updatecompany->ReqUpdateCompany($_POST['Nlocalite'], $_POST['Vlocalite'], $_POST['CP'], $_POST['Nom'],$_POST['NomModif'], $_POST['Secteur'], $_POST['AncienStagiaire'], $_POST['Confiance']);
-        }
+        header("Location: index.php?url=pagefincm");
+    }
         else {
             header("Location: index.php?url=erreur");
         }
@@ -41,6 +42,7 @@ if (isset($_SESSION['email'])) {
         if(in_array("6", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
 
         $this->_updatecompany->ReqSupprimerCompany($_POST['NomModif']);
+        header("Location: index.php?url=pagefincm");
     }
     else {
         header("Location: index.php?url=erreur");

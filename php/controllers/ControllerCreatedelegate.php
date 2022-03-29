@@ -33,8 +33,8 @@ class ControllerCreatedelegate
                 $this->_createdelegate = new DelegateManager();
 
                 if (isset($_POST['submitCreate'])) {
-        
                     $this->_createdelegate->ReqCreateDelegate($_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['pseudo'], $_POST['password'], $_POST['ville'], $_POST['namecenter'], $_POST['codepostal']);
+                    header("Location: index.php?url=pagefincm");
                 }
             
             require_once('views/viewCreationDelegue.php');

@@ -28,7 +28,7 @@ class ControllerCreateoffer
 
         if (isset($_POST['submitCreate'])) {
             $this->_objmodeloffre->ReqCreateOffer($_POST['nom'], $_POST['dureeoffre'], $_POST['basederemuneration'], $_POST['datedebut'], $_POST['datefin'], $_POST['nombreplace'], $_POST['nomcompany'], $_POST['skill'], $_POST['descriptionoffre'], $_POST['promotion']);
-
+            header("Location: index.php?url=pagefincm");
         }
         if (isset($_SESSION['email'])) {
             if (in_array("9", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])) {

@@ -24,6 +24,7 @@ class ControllerCreatecompany
         if (isset($_POST['submitCreate'])) {
 
             $this->_createcompany->ReqCreateCompany($_POST['Nlocalite'], $_POST['Vlocalite'], $_POST['CP'], $_POST['Nom'], $_POST['Secteur'], $_POST['AncienStagiaire'], $_POST['Confiance']);
+            header("Location: index.php?url=pagefincm");
         }
 
       

@@ -27,7 +27,7 @@ class CreateStudent extends Model
         $reqstudent->closeCursor();
 
 
-        ?> <strong class="EtudiantCree"> <?php echo "étudiant créé"; ?> </strong><?php
+        ?> <strong class="EtudiantCree"></strong><?php
 
     }
 
