@@ -469,7 +469,7 @@ $objSmarty = new Smarty();
                         <button onclick='window.location.href="?url=modifier"'
                                 class="btn btn-primary btn-xl text-uppercase mt-2" data-bs-dismiss="modal" type="button"
                                 id="buttonEdit">
-                            <a style="color: white; text-decoration: none;">Menu modifier</a>
+                            <a style="color: white; text-decoration: none;">Menu modification</a>
                         </button>
                     </div>
                 <?php } ?>
