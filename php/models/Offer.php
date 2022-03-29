@@ -2,7 +2,7 @@
 
 //class pour récupérer toute les données de la classe user
 
-class User 
+class Offer 
 {
     private $_id_offer;
     private $_internship_duration;

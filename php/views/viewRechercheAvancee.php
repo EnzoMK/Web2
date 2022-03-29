@@ -29,40 +29,69 @@ $objSmarty = new Smarty();
                     <?php 
                         if(isset($_POST['envoyer'])){ ?>
 
-                        <select name="NameEntreprise">
-                        <option value="" disabled selected>Nom Entreprise</option>
+                        
 
                         <?php 
                             if(isset($_POST['value'])){ ?>
+                            <select name="NameEntreprise">
+                            <option value="" disabled selected>Nom Entreprise</option>
                             <?php foreach ($companies as $company) {
                                             echo('<option value="' . $company->getName_company() . '">' . $company->getName_company() . "</option>");
                                 }
-                            } ?>
-                        </select>
-
-                        <select name="SecteurEntreprise">
-                        <option value="" disabled selected>Secteur d'activité</option>
-
-                        <?php 
-                            if(isset($_POST['value'])){ ?>
+                                ?> </select> 
+                                 <select name="SecteurEntreprise">
+                            <option value="" disabled selected>Secteur d'activité</option>
                             <?php foreach ($companies as $company) {
                                             echo('<option value="' . $company->getActivity_area() . '">' . $company->getActivity_area() . "</option>");
                                 }
-                            } ?>
-                        </select>
-
-                        <select name="VilleEntreprise">
+                                ?> </select>
+                                <select name="VilleEntreprise">
                         <option value="" disabled selected>Ville</option>
-
-                        <?php 
-                            if(isset($_POST['value'])){ ?>
                             <?php foreach ($companiesLocation as $company) {
                                             echo('<option value="' . $company->getCity_location() . '">' . $company->getCity_location() . "</option>");
                                 }
+                                ?> </select>
+                                <?php
+                                
                             } ?>
-                        </select>
 
+                        <?php 
+                            if(isset($_POST['offer'])){ ?>
+                            <select name="NameEntrepriseOffer">
+                            <option value="" disabled selected>Nom Entreprise</option>
+                            <?php foreach ($offersCompany as $offers) {
+                                            echo('<option value="' . $offers->getName_company() . '">' . $offers->getName_company() . "</option>");
+                                }
+                                ?> </select>
+                        <select name="CompetenceOffer">
+                        <option value="" disabled selected>Compétences</option>
+                            <?php foreach ($offersSkill as $offerSkill) {
+                                            echo('<option value="' . $offerSkill->getName_skill() . '">' . $offerSkill->getName_skill() . "</option>");
+                                }
+                                ?> </select>
 
+                        <select name="Promotion">
+                        <option value="" disabled selected>Promotion</option>
+                            <?php foreach ($offersPromotion as $offerPromotion) {
+                                            echo('<option value="' . $offerPromotion->getName_promotion() . '">' . $offerPromotion->getName_promotion() . "</option>");
+                                }
+                                ?> </select>
+                                <select name="DateDebut">
+                        <option value="" disabled selected>Date de début</option>
+                            <?php foreach ($offers as $offer) {
+                                            echo('<option value="' . $offer->getStart_intership_date() . '">' . $offer->getStart_intership_date() . "</option>");
+                                }
+                                ?> </select>
+                                <select name="DateFin">
+                        <option value="" disabled selected>Date de fin</option>
+                            <?php foreach ($offers as $offer) {
+                                            echo('<option value="' . $offer->getEnd_intership_date() . '">' . $offer->getEnd_intership_date() . "</option>");
+                                }
+                                ?> </select>
+                                <?php 
+                            } ?>
+                        
+                        
                        <?php }
                         else { ?>
                                 <select name="Fruit">
@@ -96,7 +125,8 @@ $objSmarty = new Smarty();
 
                                 
                  
-                    <input type="submit" name="envoyer" vlaue="Choose options">
+                    <input type="submit" name="envoyer" value="Actualiser">
+                    <input type="submit" name="reinitialiser" value="Reintialiser">
                 </form>
             </div>
             <!--Filtre 2-->
