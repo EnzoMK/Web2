@@ -18,7 +18,7 @@ class CompanyManager extends Model{
             $req->closeCursor();
         }
 
-    
+
     public function getCompanyLocation()
     {
         $sql = "SELECT * FROM location INNER JOIN place ON location.id_location = place.id_location INNER JOIN company ON place.id_company = company.id_company";
