@@ -59,7 +59,9 @@ $objSmarty = new Smarty();
             <h3 class="section-subheading text-muted">Vous pouvez retrouver nos offres les plus interressantes</h3>
         </div>
         <div class="row">
-            <?php foreach ($offers as $offer) {
+            <?php
+            $i = 0;
+            foreach ($offers as $offer) {
                 $objSmarty->assign('titreoffre', $offer->getName_offer());
                 $objSmarty->assign('description', $offer->getDescription_offer());
                 $objSmarty->assign('remuneration', $offer->getRemuneration());
@@ -67,7 +69,10 @@ $objSmarty = new Smarty();
                 $objSmarty->assign('datefin', $offer->getEnd_intership_date());
                 $objSmarty->assign('datepublication', $offer->getPublication_date());
                 $objSmarty->assign('duree', $offer->getInternship_duration());
-
+                if ($i == 5) {
+                    break;
+                }
+                $i++;
                 /*foreach ($offer_promotions as $offer_promotion){
                     if($offer->getId_offer() == $offer_promotion->getId_offer()){
                         $objSmarty->assign('promotion', $offer_promotion->getName_promotion());

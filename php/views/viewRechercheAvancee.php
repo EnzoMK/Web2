@@ -141,98 +141,62 @@ $objSmarty = new Smarty();
             <h3 class="section-subheading text-muted">Merci d'avoir utilisé nos filtres</h3>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <!-- Portfolio item 1-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage en Développement Logiciel</div>
-                        <div class="portfolio-caption-subheading text-muted">Airbus</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <!-- Portfolio item 2-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage en développement Web</div>
-                        <div class="portfolio-caption-subheading text-muted">Orange</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <!-- Portfolio item 3-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage Assistant Cyber-sécurité</div>
-                        <div class="portfolio-caption-subheading text-muted">Sopra Steria</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                <!-- Portfolio item 4-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage en développement informatique</div>
-                        <div class="portfolio-caption-subheading text-muted">Crédit Agricole</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                <!-- Portfolio item 5-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage Optimisation Base de Données</div>
-                        <div class="portfolio-caption-subheading text-muted">SNCF</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <!-- Portfolio item 6-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                       
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage en Analyse de données</div>
-                        <div class="portfolio-caption-subheading text-muted">SFR</div>
-                    </div>
-                </div>
-            </div>
+            <?php foreach ($offers as $offer) {
+                $objSmarty->assign('titreoffre', $offer->getName_offer());
+                $objSmarty->assign('description', $offer->getDescription_offer());
+                $objSmarty->assign('remuneration', $offer->getRemuneration());
+                $objSmarty->assign('datedebut', $offer->getStart_intership_date());
+                $objSmarty->assign('datefin', $offer->getEnd_intership_date());
+                $objSmarty->assign('datepublication', $offer->getPublication_date());
+                $objSmarty->assign('duree', $offer->getInternship_duration());
+
+                /*foreach ($offer_promotions as $offer_promotion){
+                    if($offer->getId_offer() == $offer_promotion->getId_offer()){
+                        $objSmarty->assign('promotion', $offer_promotion->getName_promotion());
+
+                    }
+
+
+                }
+                foreach ($skills as $skill){
+                   if($offer->getId_offer() == $skill->getId_offer()){
+                       $objSmarty->assign('skill', $skill->getName_skill());
+
+                   }
+
+
+               }*/
+
+
+                foreach ($companys as $company) {
+                    if ($company->getId_company() == $offer->getId_company()) {
+                        $objSmarty->assign('nomentreprise', $company->getName_company());
+                        foreach ($places as $place) {
+                            if ($company->getId_company() == $place->getId_company()) {
+                                foreach ($locations as $location) {
+                                    if ($place->getId_location() == $location->getId_location()) {
+                                        $objSmarty->assign('lieu', $location->getCity_location());
+                                    }
+
+
+                                }
+
+                            }
+                        }
+                    }
+                    $numerotile++;
+                    $objSmarty->assign('numerotile', $numerotile);
+
+                }
+
+
+                $objSmarty->display("../vendors/tpl/tileoffer.tpl");
+
+
+            } ?>
+
+
         </div>
-    </div>
 </section>
 
 <?php $objSmarty->display("../vendors/tpl/footer.tpl"); ?>
