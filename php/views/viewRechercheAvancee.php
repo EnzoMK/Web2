@@ -15,7 +15,7 @@ $objSmarty = new Smarty();
 
         <div class="row mt-1">
             <form class=" mb-3 mb-lg-0">
-                <input type="search" class="form-control form-control-dark " placeholder="Recherches... "></input>
+                <input type="search" class="form-control form-control-dark form-control form-control-lg" placeholder="Recherches... "></input>
             </form>
         </div>
 
@@ -124,9 +124,10 @@ $objSmarty = new Smarty();
                        <?php } ?>
 
                                 
-                 
-                    <input type="submit" name="envoyer" value="Actualiser" class="button">
-                    <input type="submit" name="reinitialiser" value="Réintialiser" class="button">
+                 <div class="text-center">
+                    <input type="submit" name="envoyer" value="Actualiser" class="buttonfiltre">
+                    <input type="submit" name="reinitialiser" value="Réintialiser" class="buttonfiltre">
+                    </div>
                 </form>
             </div>
             <!--Filtre 2-->
