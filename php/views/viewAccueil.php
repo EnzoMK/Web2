@@ -1,5 +1,3 @@
-
-
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");
 $objSmarty = new Smarty();
@@ -41,11 +39,11 @@ $objSmarty = new Smarty();
                         <button type="button" class="btn btn-info wrn-btn"> GO !</button>
                     </div>
                     <!-- Aller vers la page de recherche avancée -->
-                    <form method='POST'>
+                    
                         <div class="col-lg-4 col-sm-6 mb-4x">
-                            <button style="text-decoration: none; color: white;"type="button" name="buttonRechercheAvancee" class="btn btn-info wrn-btn" onClick='window.location.href="?url=rechercheavancee"'>Page recherche avancée</button>
+                            <button style="text-decoration: none; color: white;" type="button" name="buttonRechercheAvancee" class="btn btn-info wrn-btn" onClick='window.location.href="?url=rechercheavancee"'>Page recherche avancée</button>
                         </div>
-                    </form>
+                    
                 </div>
             </form>
         </div>
@@ -177,19 +175,16 @@ $objSmarty = new Smarty();
                         </div>
         
                         <button onclick='window.location.href="?url=home"' class="btn btn-primary btn-xl text-uppercase"
-                                data-bs-dismiss="modal" type="button" id="buttonEdit">
-                            <a style="color: white; text-decoration: none;">Menu création</a>
+                                data-bs-dismiss="modal" type="button" id="buttonCreate" >
+                            Menu création
                         </button>
         
                         <button onclick='window.location.href="?url=modifier"'
                                 class="btn btn-primary btn-xl text-uppercase mt-2" data-bs-dismiss="modal" type="button"
-                                id="buttonEdit">
-                            <a style="color: white; text-decoration: none;">Menu modification</a>
+                                id="buttonEdit" >
+                            Menu modification
                         </button>
-                    </div>
                 <?php } ?>
-
-
         </form>
     </div>
 

@@ -23,7 +23,7 @@
                 </div>
                 <div class="phone">
                     <span class="fas fa-phone-alt"></span>
-                    <span class="text"><a class="lienfooter" href="tel:+33 1 33 55 38 93"> 01 33 55 38 93 </a></span>
+                    <span class="text"><a class="lienfooter" href="tel:+33133553893"> 01 33 55 38 93 </a></span>
                 </div>
                 <div class="email">
                     <span class="fas fa-envelope"></span>
