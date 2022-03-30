@@ -61,11 +61,50 @@ $objSmarty = new Smarty();
         <div class="row">
             <?php foreach ($offers as $offer) {
                 $objSmarty->assign('titreoffre', $offer->getName_offer());
+                $objSmarty->assign('description', $offer->getDescription_offer());
+                $objSmarty->assign('remuneration', $offer->getRemuneration());
+                $objSmarty->assign('datedebut', $offer->getStart_intership_date());
+                $objSmarty->assign('datefin', $offer->getEnd_intership_date());
+                $objSmarty->assign('datepublication', $offer->getPublication_date());
+                $objSmarty->assign('duree', $offer->getInternship_duration());
+
+                /*foreach ($offer_promotions as $offer_promotion){
+                    if($offer->getId_offer() == $offer_promotion->getId_offer()){
+                        $objSmarty->assign('promotion', $offer_promotion->getName_promotion());
+
+                    }
+
+
+                }
+                foreach ($skills as $skill){
+                   if($offer->getId_offer() == $skill->getId_offer()){
+                       $objSmarty->assign('skill', $skill->getName_skill());
+
+                   }
+
+
+               }*/
+
+
                 foreach ($companys as $company) {
                     if ($company->getId_company() == $offer->getId_company()) {
                         $objSmarty->assign('nomentreprise', $company->getName_company());
+                        foreach ($places as $place) {
+                            if ($company->getId_company() == $place->getId_company()) {
+                                foreach ($locations as $location) {
+                                    if ($place->getId_location() == $location->getId_location()) {
+                                        $objSmarty->assign('lieu', $location->getCity_location());
+                                    }
+
+
+                                }
+
+                            }
+                        }
                     }
-                    $objSmarty->assign('numerotile', $numerotile + 1);
+                    $numerotile++;
+                    $objSmarty->assign('numerotile', $numerotile);
+
                 }
 
 
