@@ -83,8 +83,20 @@ $objSmarty = new Smarty();
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Confiance du pilote de
                                         promotion</label>
-                                    <input placeholder="Exemple : 5/10" type="text" id="form3Example6cdg" class="form-control form-control-lg"
-                                           name="Confiance"/>
+                                        <select id="form3Example6cdg"  name="Confiance"
+                                           class="form-control form-control-lg">
+                                        <option value="" disabled selected>Choisir une note</option>
+                                        <option value="1/10">1/10</option>
+                                        <option value="2/10">2/10</option>
+                                        <option value="3/10">3/10</option>
+                                        <option value="4/10">4/10</option>
+                                        <option value="5/10">5/10</option>
+                                        <option value="6/10">6/10</option>
+                                        <option value="7/10">7/10</option>
+                                        <option value="8/10">8/10</option>
+                                        <option value="9/10">9/10</option>
+                                        <option value="10/10">10/10</option>
+                                    </select>
                                 </div>
 
                                 <div class="form-check d-flex justify-content-center mb-5">
@@ -135,7 +147,7 @@ $objSmarty = new Smarty();
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
 <script src="../js/scripts.js"></script>
-
+<script src="../js/champs.js"></script>
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 

@@ -45,7 +45,7 @@ $objSmarty = new Smarty();
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cg">Code postal du Centre</label>
-                                    <input type="text" id="form3Example5cg" name="codepostal"
+                                    <input type="number" id="form3Example5cg" name="codepostal" max="99999"
                                            class="form-control form-control-lg"/>
                                 </div>
 
@@ -64,7 +64,7 @@ $objSmarty = new Smarty();
 
                                 <div class="form-outline mb-4">
                                     <label  class="form-label" for="form3Example4cdg">Mail</label>
-                                    <input placeholder="exemple.test@viacesi.fr" type="email" id="form3Example7cdg" name="mail"
+                                    <input placeholder="exemple.test@viacesi.fr" type="email" id="email" name="mail"
                                            class="form-control form-control-lg"/>
                                 </div>
 
@@ -106,6 +106,8 @@ $objSmarty = new Smarty();
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
 <script src="../js/scripts.js"></script>
+<script src="../js/champs.js"></script>
+
 
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
