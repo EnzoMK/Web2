@@ -49,9 +49,7 @@
                                 <li>
                                     <strong>Durée du stage:</strong> {$duree}
                                 </li>
-                                <li>
-                                    <strong>Competence:</strong> {$skill}
-                                </li>
+
 
                             </ul>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
