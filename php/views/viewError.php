@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERROR</title>
+    <title>ERREUR</title>
     <link rel="stylesheet" href="../../css/error.css">
 </head>
 <body>
@@ -36,11 +36,12 @@
   <!-- Content -->
   <div class="error__content">
     <div class="error__message message">
-      <h1 class="message__title">Page Not Found</h1>
-      <p class="message__text">We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our.</p>
+      <h1 class="message__title">ERREUR</h1>
+      <p class="message__text">Votre action a provoqué une erreur, veillez réessayer. Vous n'avez peut être pas les droits pour faire cette action, le formulaire a pu être mal rempli
+        ou votre action n'est pas gérée par les exceptions.</p>
     </div>
     <div class="error__nav e-nav">
-      <a href="#" target="_blanck" class="e-nav__link"></a>
+      <a href="?url=acceuil" target="_blanck" class="e-nav__link"></a>
     </div>
   </div>
   <!-- END Content -->
