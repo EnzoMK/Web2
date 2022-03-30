@@ -59,7 +59,9 @@ $objSmarty = new Smarty();
             <h3 class="section-subheading text-muted">Vous pouvez retrouver nos offres les plus interressantes</h3>
         </div>
         <div class="row">
-            <?php foreach ($offers as $offer) {
+            <?php
+            $i = 0;
+            foreach ($offers as $offer) {
                 $objSmarty->assign('titreoffre', $offer->getName_offer());
                 $objSmarty->assign('description', $offer->getDescription_offer());
                 $objSmarty->assign('remuneration', $offer->getRemuneration());
@@ -67,7 +69,10 @@ $objSmarty = new Smarty();
                 $objSmarty->assign('datefin', $offer->getEnd_intership_date());
                 $objSmarty->assign('datepublication', $offer->getPublication_date());
                 $objSmarty->assign('duree', $offer->getInternship_duration());
-
+                if ($i == 5) {
+                    break;
+                }
+                $i++;
                 /*foreach ($offer_promotions as $offer_promotion){
                     if($offer->getId_offer() == $offer_promotion->getId_offer()){
                         $objSmarty->assign('promotion', $offer_promotion->getName_promotion());
@@ -121,263 +126,6 @@ $objSmarty = new Smarty();
 </section>
 
 
-<!-- Détails Offres -->
-<!-- item1 -->
-<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="../assets/img/close-icon.svg" alt="Close modal"/>
-            </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">Stage en développement Logiciel</h2>
-                            <p class="item-intro text-muted">Airbus</p>
-                            
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate,
-                                maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>
-                                    <strong>Lieu:</strong> Orléans
-                                </li>
-                                <li>
-                                    <strong>Contact:</strong> erkljgnerq@airbus.fr
-                                </li>
-                            </ul>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttonEdit">
-                                <i class="fas fa-times me-1"></i>
-                                Fermer
-                            </button>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttonEdit">
-                                Wish List
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--item 2-->
-<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="../assets/img/close-icon.svg" alt="Close modal"/>
-            </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">Stage en développement Web</h2>
-                            <p class="item-intro text-muted">Orange</p>
-                            
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate,
-                                maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>
-                                    <strong>Lieu:</strong> Tours
-                                </li>
-                                <li>
-                                    <strong>Contact:</strong> bapt.ouee@orange.fr
-                                </li>
-                            </ul>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttonEdit">
-                                <i class="fas fa-times me-1"></i>
-                                Fermer
-                            </button>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttonEdit">
-                                <a href="html\editionHome.html" style="color: white; text-decoration: none;">Editer</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--item 3-->
-<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="../assets/img/close-icon.svg" alt="Close modal"/>
-            </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">Stage Assistant Cyber-sécurité</h2>
-                            <p class="item-intro text-muted">Sopra Steria</p>
-                            
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate,
-                                maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>
-                                    <strong>Lieu:</strong> Orléans-la-source
-                                </li>
-                                <li>
-                                    <strong>Contact:</strong> fk.hich@sopra.fr
-                                </li>
-                            </ul>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttonEdit">
-                                <i class="fas fa-times me-1"></i>
-                                Fermer
-                            </button>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttonEdit">
-                                <a href="html\editionHome.html" style="color: white; text-decoration: none;">Editer</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--item 4-->
-<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="../assets/img/close-icon.svg" alt="Close modal"/>
-            </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">Stage en développement informatique</h2>
-                            <p class="item-intro text-muted">Crédit Agricole</p>
-                            
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate,
-                                maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>
-                                    <strong>Lieu:</strong> Olivet
-                                </li>
-                                <li>
-                                    <strong>Contact:</strong> armde@ca.fr
-                                </li>
-                            </ul>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttonEdit">
-                                <i class="fas fa-times me-1"></i>
-                                Fermer
-                            </button>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttonEdit">
-                                <a href="html\editionHome.html" style="color: white; text-decoration: none;">Editer</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--item 5-->
-<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="../assets/img/close-icon.svg" alt="Close modal"/>
-            </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">Stage Optimisation Base de Données</h2>
-                            <p class="item-intro text-muted">SNCF</p>
-                            
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate,
-                                maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>
-                                    <strong>Lieu:</strong> Fleury-les-Aubrais
-                                </li>
-                                <li>
-                                    <strong>Contact:</strong> jacki.lflflfl@sncf.fr
-                                </li>
-                            </ul>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttonEdit">
-                                <i class="fas fa-times me-1"></i>
-                                Fermer
-                            </button>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttonEdit">
-                                <a href="html\editionHome.html" style="color: white; text-decoration: none;">Editer</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--item 6-->
-<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="../assets/img/close-icon.svg" alt="Close modal"/>
-            </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">Stage en Analyse de données</h2>
-                            <p class="item-intro text-muted">SFR</p>
-                           
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate,
-                                maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>
-                                    <strong>Lieu:</strong> Orléans
-                                </li>
-                                <li>
-                                    <strong>Contact:</strong> jack.echel@sfr.fr
-                                </li>
-                            </ul>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttonEdit">
-                                <i class="fas fa-times me-1"></i>
-                                Fermer
-                            </button>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    id="buttoncreer">
-                                <a href="html\editionHome.html" style="color: white; text-decoration: none;">Editer</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 <!-- Team-->
 <section class="page-section bg-light" id="team">
     <div class="container">
@@ -410,7 +158,7 @@ $objSmarty = new Smarty();
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="../assets/img/team/3.webp" alt="..."/>
                     <h4>Enzo miragliotta</h4>
-                    <p class="text-muted">A un gros front</p>
+                    <p class="text-muted">Développeur Frontend</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>

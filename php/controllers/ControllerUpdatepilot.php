@@ -23,9 +23,15 @@ if (isset($_SESSION['email'])) {
     }
     if (isset($_POST['submitUpdate'])) {
         if(in_array("15", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
-        $this->_updatepilote->ReqUpdatePilote($_POST['nomModifier'],$_POST['prenomModifier'],$_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['username'], $_POST['motdepasse'], $_POST['villeducentre'], $_POST['centre'], $_POST['codepostal'], $_POST['promotion']);
+        if(!empty($_POST['nomModifier']) && !empty($_POST['prenomModifier']) && !empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['mail']) && !empty($_POST['motdepasse']) && !empty($_POST['villeducentre']) && !empty($_POST['centre']) && !empty($_POST['codepostal']) && !empty($_POST['promotion'])){
+        $this->_updatepilote->ReqUpdatePilote($_POST['nomModifier'],$_POST['prenomModifier'],$_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['motdepasse'], $_POST['villeducentre'], $_POST['centre'], $_POST['codepostal'], $_POST['promotion']);
         header("Location: index.php?url=pagefincm");
     }
+    else 
+            {
+                $_POST['error']=true;
+            }
+}
         else {
             header("Location: index.php?url=erreur");
         }
@@ -33,10 +39,17 @@ if (isset($_SESSION['email'])) {
 
     if (isset($_POST['supprimer'])) {
         if(in_array("16", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
+            if(!empty($_POST['nomModifier']) && !empty($_POST['prenomModifier'])){
 
             $this->_updatepilote->ReqDeletePilote($_POST['nomModifier'],$_POST['prenomModifier']);
             header("Location: index.php?url=pagefincm");
         }
+        else 
+            {
+                $_POST['error']=true;
+            }
+    }
+        
     else {
         header("Location: index.php?url=erreur");
     }
