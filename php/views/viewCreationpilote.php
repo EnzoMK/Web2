@@ -74,6 +74,10 @@ $objSmarty = new Smarty();
                                     </label>
                                 </div>
 
+                                <?php if(isset($_POST['error'])){ ?>
+                                    <strong style='postion: absolute; margin-left:33%; color:red;'> Veuillez remplir le formulaire </strong> <br> <br>
+                                    <?php } ?>
+                                   
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" value="submitCreate" name="submitCreate"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
