@@ -1,4 +1,4 @@
-const email = document.getElementById('mailetudiant');
+const email = document.getElementById('email');
 const cp = document.getElementById('CP');
 
 form.addEventListener('submit', e => {

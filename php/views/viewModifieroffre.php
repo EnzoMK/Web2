@@ -80,12 +80,12 @@ $objSmarty = new Smarty();
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example5cdg">Date de début d'offre</label>
-                                    <input type="text" id="form3Example8cdg" class="form-control form-control-lg"
+                                    <input type="date" id="form3Example8cdg" class="form-control form-control-lg"
                                            name="datedebut"/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example5cdg">Date de fin d'offre</label>
-                                    <input type="text" id="form3Example9cdg" class="form-control form-control-lg"
+                                    <input type="date" id="form3Example9cdg" class="form-control form-control-lg"
                                            name="datefin"/>
                                 </div>
                                 <div class="form-outline mb-4">
@@ -131,7 +131,7 @@ $objSmarty = new Smarty();
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
 <script src="../js/scripts.js"></script>
-
+<script src="../js/champs.js"></script>
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 
