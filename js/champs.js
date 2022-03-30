@@ -1,4 +1,5 @@
 const email = document.getElementById('mailetudiant');
+const cp = document.getElementById('CP');
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
@@ -17,7 +18,6 @@ function checkInputs() {
 	} else {
 		setSuccessFor(email);
 	}
-	
 }
 
 function setErrorFor(input, message) {
@@ -36,23 +36,13 @@ function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
-function valider()     
-{
+// function cp_Valide(cp) {
+//     var regex = new RegExp(([A-Z]+[A-Z]?\-)?[0-9]{1,2} ?[0-9]{3});
 
-		  if (document.code_postal.cp.value.length < 5 && document.code_postal.cp.value.length > 0 )
-		  {
-		  alert("Indiquez un code postal à 5 chiffres");
-		  return false;
-		  }
-		  if (document.code_postal.cp.value.length == 0)
-		  {
-		  alert("Indiquez un code postal");
-		  return false;
-		  }
-		  if (isNaN(document.code_postal.cp.value)  == true)
-		  {
-		  alert("Un code postal ne peut pas contenir de lettres");
-		  return false;
-		  }
-return true;     
-} 
+//     if (regex.test(cp)) {
+//         return (true);
+//     } else {
+//         alert("Vous avez entré un mauvais code postal!")
+//         return (false);
+//     }
+// }
