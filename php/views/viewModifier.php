@@ -32,7 +32,7 @@ $objSmarty = new Smarty();
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationOffre"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
-                                                href="?url=createoffer" style="text-decoration: none; color: black;">Modifier
+                                                href="?url=updateoffer" style="text-decoration: none; color: black;">Modifier
                                             Offre</a></button>
                                 </div>
                                 <br>
