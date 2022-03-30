@@ -82,18 +82,18 @@ $objSmarty = new Smarty();
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example5cdg">Date de début d'offre</label>
-                                    <input placeholder="AAAA/MM/JJ" type="text" id="form3Example8cdg" class="form-control form-control-lg"
+                                    <input placeholder="AAAA/MM/JJ" type="date" id="form3Example8cdg" class="form-control form-control-lg"
                                            name="datedebut"/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example5cdg">Date de fin d'offre</label>
-                                    <input placeholder="AAAA/MM/JJ" type="text" id="form3Example9cdg" class="form-control form-control-lg"
+                                    <input placeholder="AAAA/MM/JJ" type="date" id="form3Example9cdg" class="form-control form-control-lg"
                                            name="datefin"/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example8cdg">Nombre de places offertes aux
                                         étudiants</label>
-                                    <input placeholder="AAAA/MM/JJ" type="text" id="form3Example10cdg" class="form-control form-control-lg"
+                                    <input placeholder="Nombre" type="text" id="form3Example10cdg" class="form-control form-control-lg"
                                            name="nombreplace"/>
                                 </div>
 
