@@ -26,6 +26,7 @@ class ControllerModifier
                     header("Location: index.php?url=identification");
                 }
             require_once('views/viewModifier.php');
+            require_once('views/viewModifier.php');
             
 
         }
