@@ -410,7 +410,7 @@ $objSmarty = new Smarty();
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="../assets/img/team/3.webp" alt="..."/>
                     <h4>Enzo miragliotta</h4>
-                    <p class="text-muted">A un gros front</p>
+                    <p class="text-muted">Développeur Frontend</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
