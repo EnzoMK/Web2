@@ -104,9 +104,9 @@ $objSmarty = new Smarty();
                         <?php } ?>
                         
                         <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("50", $_SESSION['role']) || in_array("8", $_SESSION['role']) ){  ?>
-                        
-                            <option value="Offre">Offre</option>
-                            <?php }?>
+
+                            <option value="Offer">Offre</option>
+                        <?php }?>
                         
                             <?php if(in_array("30", $_SESSION['role']) || in_array("13", $_SESSION['role']) ){  ?>
                                 <option value="Pilote">Pilote</option>
@@ -141,31 +141,45 @@ $objSmarty = new Smarty();
             <h3 class="section-subheading text-muted">Merci d'avoir utilisé nos filtres</h3>
         </div>
         <div class="row">
-            <?php foreach ($offers as $offer) {
-                $objSmarty->assign('titreoffre', $offer->getName_offer());
-                $objSmarty->assign('description', $offer->getDescription_offer());
-                $objSmarty->assign('remuneration', $offer->getRemuneration());
-                $objSmarty->assign('datedebut', $offer->getStart_intership_date());
-                $objSmarty->assign('datefin', $offer->getEnd_intership_date());
-                $objSmarty->assign('datepublication', $offer->getPublication_date());
-                $objSmarty->assign('duree', $offer->getInternship_duration());
+            <?php
+            if (isset($_POST['Fruit'])) {
 
-                /*foreach ($offer_promotions as $offer_promotion){
-                    if($offer->getId_offer() == $offer_promotion->getId_offer()){
-                        $objSmarty->assign('promotion', $offer_promotion->getName_promotion());
+                if ($_POST['Fruit'] == "Pilote") {
+                    foreach ($companys as $company) {
+                        $objSmarty->assign('titre', $company->getName_company());
+                        $objSmarty->assign('secteuractivite', $company->getActivity_area());
+
+
+                        $numerotile++;
+                        $objSmarty->assign('numerotile', $numerotile);
 
                     }
+                } elseif ($_POST['Fruit'] == "Offer") {
+                    foreach ($offers as $offer) {
+                        $objSmarty->assign('titreoffre', $offer->getName_offer());
+                        $objSmarty->assign('description', $offer->getDescription_offer());
+                        $objSmarty->assign('remuneration', $offer->getRemuneration());
+                        $objSmarty->assign('datedebut', $offer->getStart_intership_date());
+                        $objSmarty->assign('datefin', $offer->getEnd_intership_date());
+                        $objSmarty->assign('datepublication', $offer->getPublication_date());
+                        $objSmarty->assign('duree', $offer->getInternship_duration());
+
+                        /*foreach ($offer_promotions as $offer_promotion){
+                            if($offer->getId_offer() == $offer_promotion->getId_offer()){
+                                $objSmarty->assign('promotion', $offer_promotion->getName_promotion());
+
+                            }
 
 
-                }
-                foreach ($skills as $skill){
-                   if($offer->getId_offer() == $skill->getId_offer()){
-                       $objSmarty->assign('skill', $skill->getName_skill());
+                        }
+                        foreach ($skills as $skill){
+                           if($offer->getId_offer() == $skill->getId_offer()){
+                               $objSmarty->assign('skill', $skill->getName_skill());
 
-                   }
+                           }
 
 
-               }*/
+                       }*/
 
 
                 foreach ($companys as $company) {
@@ -190,9 +204,11 @@ $objSmarty = new Smarty();
                 }
 
 
-                $objSmarty->display("../vendors/tpl/tileoffer.tpl");
+                        $objSmarty->display("../vendors/tpl/tileoffer.tpl");
 
 
+                    }
+                }
             } ?>
 
 
