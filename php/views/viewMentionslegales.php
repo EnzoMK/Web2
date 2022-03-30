@@ -5,12 +5,10 @@ $objSmarty = new Smarty();
 
 <?php $objSmarty->display("../vendors/tpl/head.tpl"); ?>
 
-<body id="page-top">
-<!-- Navigation-->
-<?php $objSmarty->display("../vendors/tpl/bandeau_haut.tpl"); ?>
 
+<img src="../assets/img/logo/logo.webp" style="height: 150px" alt="..."/>
 <main style="text-align: center; font-weight:bold;">
-<br><br><br><br><br><br><br>
+<br><br>
 <h1>Mentions légales</h1> 
 <br>
 
@@ -98,10 +96,13 @@ En aucun cas, votre adresse e-mail ne sera cédée à des tiers.</p>
 <br>
 <h2>Flux RSS</h2>
 
-<p>Les flux RSS sont exclusivement destinés aux visiteurs du site pour une utilisation personnelle et ne sauraient en aucun cas servir à alimenter d’autres sites, sauf autorisation écrite préalable de www.superstage.com.
+<p>Les flux RSS sont exclusivement destinés aux visiteurs du site pour une utilisation personnelle et ne sauraient en aucun cas servir à alimenter d’autres sites, sauf autorisation écrite préalable de www.superstage.com.</p>
+<br>
+
+<button  id="retourlegale" name="submit" onClick='window.location.href="?url=identification"' >Retour</button>
 
 <br><br><br></main>
-<?php $objSmarty->display("../vendors/tpl/footer.tpl"); ?>
+
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->

@@ -32,7 +32,10 @@ $objSmarty = new Smarty();
             <button class="button" name="submit">Connexion</button>
             <br>
             <br>
-            <a class="forget-pass" href="#">Mentions légales | Aide</a>
+            <div>
+            <a class="forget-pass" href="?url=mentionslegales">Mentions légales </a>
+        
+            </div>
         </form>
     </div>
 
