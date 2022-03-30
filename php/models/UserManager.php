@@ -163,6 +163,7 @@ public function takeRole($mail, $password)
         $req1 = $this->getBdd()->prepare($sql1);
         $req1->execute();
 
+        if($req1->rowCount() == 1){
         $var1=[];
         while($data = $req1->fetch(PDO::FETCH_ASSOC))
         {
@@ -243,6 +244,7 @@ public function takeRole($mail, $password)
             return $id_permission;
         }
         $req5->closeCursor();
+    }
 
 
 }

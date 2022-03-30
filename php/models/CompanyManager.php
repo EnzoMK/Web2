@@ -22,12 +22,12 @@ class CompanyManager extends Model{
     public function getCompanyLocation()
     {
         $sql = "SELECT * FROM location INNER JOIN place ON location.id_location = place.id_location INNER JOIN company ON place.id_company = company.id_company";
-        $req = $this->getBdd()->prepare($sql);  
+        $req = $this->getBdd()->prepare($sql);
         $req->execute();
 
-        $var=[];
-        while($data = $req->fetch(PDO::FETCH_ASSOC))
-        {
+        $var = [];
+        $var1 = [];
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
             $var[] = new Location($data);
 
         }
@@ -35,6 +35,20 @@ class CompanyManager extends Model{
         $req->closeCursor();
     }
 
+    public function getCompanyLocationname($name)
+    {
+        $sql = "SELECT city_location FROM location INNER JOIN place ON location.id_location = place.id_location INNER JOIN company ON place.id_company = company.id_company where name_company='" . $name . "'limit 1";
+        $req = $this->getBdd()->prepare($sql);
+        $req->execute();
+
+        $var = [];
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $var[] = new Location($data);
+
+        }
+        return $var;
+        $req->closeCursor();
+    }
     public function ReqUpdateCompany($name_location, $city_location, $postal_code, $name_company,$name_modif, $activity_area, $number_of_student, $confidence_promotion_Pilot)
     {
 
