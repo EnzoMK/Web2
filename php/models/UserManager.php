@@ -134,7 +134,11 @@ class UserManager extends Model
 
     public function verifUsers($mail, $password)
     {
-        $sql = "SELECT * FROM user WHERE mail='".$mail."' AND password='".$password."'" ;
+    
+        $passwordHache = hash("sha256",$password);
+      
+
+        $sql = "SELECT * FROM user WHERE mail='".$mail."' AND password = '".$passwordHache."'" ;
         $req = $this->getBdd()->prepare($sql);
         $req->execute();
 
@@ -143,23 +147,16 @@ class UserManager extends Model
                 header("Location: index.php?url=acceuil");
                 return $mail;
             }
-            else 
-            {
-            ?>
-            <p class="ConnectionEchoue">Connexion echouée</p>
-            <style>
-                .ConnectionEchoue {position:relative; color:rgb(255, 0, 0);height:50px;}
-            </style>
-            <?php
-            }
-
+        
 
         $req->closeCursor();
 }
 
 public function takeRole($mail, $password)
     {
-        $sql1 = "SELECT id_user FROM user WHERE mail='".$mail."' AND password='".$password."'" ;
+        $passwordHache = hash("sha256",$password);
+
+        $sql1 = "SELECT id_user FROM user WHERE mail='".$mail."' AND password='".$passwordHache."'" ;
         $req1 = $this->getBdd()->prepare($sql1);
         $req1->execute();
 

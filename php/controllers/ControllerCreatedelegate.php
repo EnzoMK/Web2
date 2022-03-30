@@ -35,7 +35,8 @@ class ControllerCreatedelegate
                 
 if (isset($_POST['submitCreate'])) {
     if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['ville']) && !empty($_POST['namecenter']) && !empty($_POST['codepostal'])){
-    $this->_createdelegate->ReqCreateDelegate($_POST['nom'], $_POST['prenom'], $_POST['email'],  $_POST['password'], $_POST['ville'], $_POST['namecenter'], $_POST['codepostal']);
+        $password = hash("sha256",$_POST['password']);
+        $this->_createdelegate->ReqCreateDelegate($_POST['nom'], $_POST['prenom'], $_POST['email'],  $password, $_POST['ville'], $_POST['namecenter'], $_POST['codepostal']);
     header("Location: index.php?url=pagefincm");
 }
 else 
