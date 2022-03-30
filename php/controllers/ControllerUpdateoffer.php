@@ -13,6 +13,12 @@ class ControllerUpdateoffer{
 
 private function updateoffer(){
     $this->_updateoffer = new OfferManager();
+    $this->_objmodeloffre = new OfferManager();
+    $this->_company = new CompanyManager();
+    $companys = $this->_company->getAllCompany();
+
+    $this->_skill = new SkillManager();
+    $skills = $this->_skill->getAllSkill();
 
 if (isset($_SESSION['email'])) {
     if(in_array("4", $_SESSION['role']) || in_array("6", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
@@ -31,7 +37,7 @@ if (isset($_SESSION['email'])) {
         else {
             header("Location: index.php?url=erreur");
         }
-        }
+        } 
 
     if (isset($_POST['supprimer'])) {
         if(in_array("6", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
