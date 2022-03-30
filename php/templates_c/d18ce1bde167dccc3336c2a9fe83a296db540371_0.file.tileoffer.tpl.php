@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-30 10:24:52
+/* Smarty version 4.1.0, created on 2022-03-30 10:39:06
   from 'C:\xampp\htdocs\ProjetWebBis\Web2\vendors\tpl\tileoffer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_624413d43c9539_18620364',
+  'unifunc' => 'content_6244172a2e3831_22197980',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd18ce1bde167dccc3336c2a9fe83a296db540371' => 
     array (
       0 => 'C:\\xampp\\htdocs\\ProjetWebBis\\Web2\\vendors\\tpl\\tileoffer.tpl',
-      1 => 1648628643,
+      1 => 1648629523,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_624413d43c9539_18620364 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6244172a2e3831_22197980 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="col-lg-4 col-sm-6 mb-4">
     <!--item1-->
     <div class="portfolio-item">
@@ -64,6 +64,32 @@ function content_624413d43c9539_18620364 (Smarty_Internal_Template $_smarty_tpl)
                                     <strong>Lieu:</strong> <?php echo $_smarty_tpl->tpl_vars['lieu']->value;?>
 
                                 </li>
+                                <li>
+                                    <strong>Base de remuneration:</strong> <?php echo $_smarty_tpl->tpl_vars['remuneration']->value;?>
+
+                                </li>
+                                <li>
+                                    <strong>Date de debut:</strong> <?php echo $_smarty_tpl->tpl_vars['datedebut']->value;?>
+
+                                </li>
+                                <li>
+                                    <strong>Date de fin:</strong> <?php echo $_smarty_tpl->tpl_vars['datefin']->value;?>
+
+                                </li>
+
+                                <li>
+                                    <strong>Date de publication de l'offre:</strong> <?php echo $_smarty_tpl->tpl_vars['datepublication']->value;?>
+
+                                </li>
+                                <li>
+                                    <strong>Durée du stage:</strong> <?php echo $_smarty_tpl->tpl_vars['duree']->value;?>
+
+                                </li>
+                                <li>
+                                    <strong>Competence:</strong> <?php echo $_smarty_tpl->tpl_vars['skill']->value;?>
+
+                                </li>
+
                             </ul>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
                                     id="buttonEdit" value="close">
