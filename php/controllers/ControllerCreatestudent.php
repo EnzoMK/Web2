@@ -25,14 +25,9 @@ class ControllerCreatestudent
              $this->_createStudent->ReqCreateStudent($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['username'], $_POST['motdepasse'], $_POST['villeducentre'], $_POST['centre'], $_POST['codepostal'], $_POST['promotion']);
              header("Location: index.php?url=pagefincm");
             }
-            else {
-                ?>
-                <p class="ConnectionEchoue">FAUT REMPLIR LES CHAMPS</p>
-                <style>
-                    .ConnectionEchoue {position:absolute; color:rgb(255, 0, 0);height:50px;}
-                </style>
-            <?php
-        
+            else 
+            {
+                $_POST['error']=true;
             }
             }
             if (isset($_POST['deconnexion']))

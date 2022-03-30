@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-30 09:35:09
+/* Smarty version 4.1.0, created on 2022-03-30 10:24:52
   from 'C:\xampp\htdocs\ProjetWebBis\Web2\vendors\tpl\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6244082d93fd26_91527015',
+  'unifunc' => 'content_624413d4496be4_07025024',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d534e3141c2d828d636f7a456d1b7316c9e8733' => 
     array (
       0 => 'C:\\xampp\\htdocs\\ProjetWebBis\\Web2\\vendors\\tpl\\footer.tpl',
-      1 => 1648562768,
+      1 => 1648628643,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6244082d93fd26_91527015 (Smarty_Internal_Template $_smarty_tpl) {
+function content_624413d4496be4_07025024 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Footer -->
 <footer>
     <div class="main-content">
@@ -31,7 +31,7 @@ function content_6244082d93fd26_91527015 (Smarty_Internal_Template $_smarty_tpl)
                     données des entreprises ayant déjà pris un stagiaire, ou qui en recherchent un.</p>
                 <div class="social">
                     <a href="https://fr-fr.facebook.com/"><span class="fab fa-facebook-f"></span></a>
-                    <a href="https://twitter.com/"><span class="fab fa-twitter"></span></a>
+                    <a href="https://twitter.com/qu3ntinlc"><span class="fab fa-twitter"></span></a>
                     <a href="https://www.instagram.com/"><span class="fab fa-instagram"></span></a>
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><span class="fab fa-youtube"></span></a>
                 </div>
