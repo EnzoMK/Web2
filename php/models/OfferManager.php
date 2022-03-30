@@ -4,7 +4,7 @@ class OfferManager extends Model {
 
     public function getAllOffer()
     {
-        $sql = "SELECT * FROM `offer`" ;
+        $sql = "SELECT * FROM offer " ;
         $req = $this->getBdd()->prepare($sql);
         $req->execute();
 
@@ -155,7 +155,52 @@ class OfferManager extends Model {
         return $var;
         $reqlocation->closeCursor();
     }
+
+    public function ReqUpdateOffer($nomdeloffre, $duree, $basedermuneration, $datedebut, $datefin, $nombredeplace, $nomcompany, $skill, $descriptionoffer, $promotion)
+
+    {       
+        $sqloffer = "UPDATE offer SET internship_duration='" . $duree . "',remuneration='" . $basedermuneration . "',number_place='" . $nombredeplace . "',start_intership_date='" . $datedebut . "',end_intership_date='" . $datefin . "',number_place='" . $nombredeplace . "',name_offer='" . $nomdeloffre . "',description_offer='" . $descriptionoffer . "'where nomdeloffre";
+        $reqoffer = $this->getBdd()->prepare($sqloffer);
+        $reqoffer->execute();
+        $reqoffer->closeCursor();
     
+        $sqlofferskill = "UPDATE offer_skills SET nameskill='" . $skill . "',name_offer='" . $nomdeloffre ."',description_offer='". $descriptionoffer . "'where nomdeloffre";
+        $reqofferprskill = $this->getBdd()->prepare($sqlofferskill);
+        $reqofferprskill->execute();
+        $reqofferprskill->closeCursor();
+
+        $sqlofferpromotion = "UPDATE offer_promotion SET namepromotion='" . $promotion . "'";
+        $reqofferpromotion = $this->getBdd()->prepare($sqlofferpromotion);
+        $reqofferpromotion->execute();
+        $reqofferpromotion->closeCursor();
+    
+
+        
+    }
+
+public function ReqDeleteOffer($nomdeloffre)
+
+    {       
+        $sqloffer = "DELETE FROM offer WHERE id_offer";
+        $reqoffer = $this->getBdd()->prepare($sqloffer);
+        $reqoffer->execute();
+        $reqoffer->closeCursor();
+    
+        $sqlofferskill = "DELETE FROM offer_skills WHERE id_offer";
+        $reqofferprskill = $this->getBdd()->prepare($sqlofferskill);
+        $reqofferprskill->execute();
+        $reqofferprskill->closeCursor();
+    
+        $sqlofferpromotion = "DELETE FROM offer_promotion WHERE id_offer";
+        $reqofferpromotion = $this->getBdd()->prepare($sqlofferpromotion);
+        $reqofferpromotion->execute();
+        $reqofferpromotion->closeCursor();
+    
+
+        
+    }
 }
+
+
 
 ?>

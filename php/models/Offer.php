@@ -2,7 +2,7 @@
 
 //class pour récupérer toute les données de la classe user
 
-class Offer 
+class Offer
 {
     private $_id_offer;
     private $_internship_duration;
@@ -13,7 +13,7 @@ class Offer
     private $_publication_date;
     private $_id_company;
     private $_name_offer;
-
+    private $_description_offer;
     //CONSTRUCTEUR
     public function __construct(array $data)
     {
@@ -64,21 +64,28 @@ class Offer
     {
         $this->_publication_date = $publication_date;
     }
+
     public function setId_company($id_company)
     {
         $this->_id_company = $id_company;
     }
+
     public function setName_offer($name_offer)
     {
         $this->_name_offer = $name_offer;
     }
 
+    public function setDescription_offer($_descritpion)
+    {
+        $this->_description_offer = $_descritpion;
+    }
 
     //GETTERS
     public function getId_offer()
     {
         return $this->_id_offer;
     }
+
     public function getInternship_duration()
     {
         return $this->_internship_duration;
@@ -103,13 +110,20 @@ class Offer
     {
         return $this->_publication_date;
     }
+
     public function getId_company()
     {
         return $this->_id_company;
     }
+
     public function getName_offer()
     {
         return $this->_name_offer;
+    }
+
+    public function getDescription_offer()
+    {
+        return $this->_description_offer;
     }
 }
 

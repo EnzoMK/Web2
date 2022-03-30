@@ -52,15 +52,11 @@ $objSmarty = new Smarty();
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example4cdg">Email</label>
-                                    <input type="email" id="form3Example4cdg" class="form-control form-control-lg"
+                                    <label class="form-label" for="form3Example4cdg">Mail</label>
+                                    <input  placeholder="exemple.test@viacesi.fr" type="email" id="form3Example4cdg" class="form-control form-control-lg"
                                            name="email"/>
                                 </div>
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example4cdg">Pseudo</label>
-                                    <input type="text" id="form3Example4cdg" class="form-control form-control-lg"
-                                           name="pseudo"/>
-                                </div>
+                          
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Mot de passe</label>

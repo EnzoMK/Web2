@@ -60,7 +60,7 @@ $objSmarty = new Smarty();
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cdg">Confiance du pilote de
                                         promotion</label>
-                                    <input type="text" id="form3Example6cdg" class="form-control form-control-lg"
+                                    <input placeholder="Exemple : 5/10" type="text" id="form3Example6cdg" class="form-control form-control-lg"
                                            name="Confiance"/>
                                 </div>
 

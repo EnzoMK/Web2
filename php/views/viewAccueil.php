@@ -3,6 +3,7 @@
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");
 $objSmarty = new Smarty();
+
 ?>
 
 <?php $objSmarty->display("../vendors/tpl/head.tpl"); ?>
@@ -58,97 +59,25 @@ $objSmarty = new Smarty();
             <h3 class="section-subheading text-muted">Vous pouvez retrouver nos offres les plus interressantes</h3>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <!--item1-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage en développement Logiciel</div>
-                        <div class="portfolio-caption-subheading text-muted">Airbus</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <!--item2-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage en développement Web</div>
-                        <div class="portfolio-caption-subheading text-muted">Orange</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <!--item3-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage Assistant Cyber-sécurité</div>
-                        <div class="portfolio-caption-subheading text-muted">Sopra Steria</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                <!-- item4-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage en développement informatique</div>
-                        <div class="portfolio-caption-subheading text-muted">Crédit Agricole</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                <!--item5-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage Optimisation Base de Données</div>
-                        <div class="portfolio-caption-subheading text-muted">SNCF</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <!-- item6-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Stage en Analyse de données</div>
-                        <div class="portfolio-caption-subheading text-muted">SFR</div>
-                    </div>
-                </div>
-            </div>
+            <?php foreach ($offers as $offer) {
+                $objSmarty->assign('titreoffre', $offer->getName_offer());
+                foreach ($companys as $company) {
+                    if ($company->getId_company() == $offer->getId_company()) {
+                        $objSmarty->assign('nomentreprise', $company->getName_company());
+                    }
+                    $objSmarty->assign('numerotile', $numerotile + 1);
+                }
+
+
+                $objSmarty->display("../vendors/tpl/tileoffer.tpl");
+
+
+            } ?>
+
+
         </div>
+
+
     </div>
 </section>
 
@@ -414,14 +343,14 @@ $objSmarty = new Smarty();
 <section class="page-section bg-light" id="team">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Notre équipe</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Voici notre équipe</h2>
+            <h3 class="section-subheading text-muted">Ils sont à votre disposition pour tout renseignement</h3>
         </div>
         <div class="row">
             <div class="col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="../assets/img/team/1.webp" alt="..."/>
-                    <h4>Guillaume Duboys</h4>
+                    <h4>Guillaume Duboys de Lavigerie</h4>
                     <p class="text-muted">L'investisseur</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
@@ -431,8 +360,8 @@ $objSmarty = new Smarty();
             <div class="col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="../assets/img/team/2.webp" alt="..."/>
-                    <h4>Antoine Favereau</h4>
-                    <p class="text-muted">Assistant café</p>
+                    <h4>Baptiste Raulin</h4>
+                    <p class="text-muted">Chef de projet</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
@@ -441,8 +370,8 @@ $objSmarty = new Smarty();
             <div class="col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="../assets/img/team/3.webp" alt="..."/>
-                    <h4>Timeo Villette</h4>
-                    <p class="text-muted">Le cuistot</p>
+                    <h4>Enzo miragliotta</h4>
+                    <p class="text-muted">A un gros front</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
@@ -452,8 +381,7 @@ $objSmarty = new Smarty();
         <form method='GET'>
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
-                        laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p class="large text-muted">On oublie pas Alex Duguy mais on avait plus trop de place, veuillez nous excuser pour la gène occasionnée. </p>
                         
                         <?php if(in_array("50", $_SESSION['role'])){  ?>
                     
