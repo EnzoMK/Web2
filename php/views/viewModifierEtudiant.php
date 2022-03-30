@@ -96,6 +96,10 @@ $objSmarty = new Smarty();
                                     </label>
                                 </div>
 
+                                <?php if(isset($_POST['error'])){ ?>
+                                    <strong style='postion: absolute; margin-left:33%; color:red;'> Veuillez remplir le formulaire </strong> <br> <br>
+                                    <?php } ?>
+
                                 <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("24", $_SESSION['role'])){  ?>    
                                 <div class="d-flex justify-content-center mb-4">
                                     <button type="submit" value="submitUpdate" name="submitUpdate"
