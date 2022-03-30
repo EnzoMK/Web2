@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-29 17:53:17
-  from 'C:\xampp\htdocs\Web2\vendors\tpl\bandeau_haut.tpl' */
+/* Smarty version 4.1.0, created on 2022-03-30 09:35:09
+  from 'C:\xampp\htdocs\ProjetWebBis\Web2\vendors\tpl\bandeau_haut.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62432b6d3df090_71775023',
+  'unifunc' => 'content_6244082d8cc4b1_47341374',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '793a0d4970486c152f0fd00018bd479ca73e8f5c' => 
+    '7a0c566ceaf1a16fa6212d72328484ba09238c6a' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Web2\\vendors\\tpl\\bandeau_haut.tpl',
-      1 => 1648488904,
+      0 => 'C:\\xampp\\htdocs\\ProjetWebBis\\Web2\\vendors\\tpl\\bandeau_haut.tpl',
+      1 => 1648492935,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62432b6d3df090_71775023 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6244082d8cc4b1_47341374 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="#page-top"><img src="../assets/img/logo/logo.webp" style="height: 100px" alt="..."/></a>

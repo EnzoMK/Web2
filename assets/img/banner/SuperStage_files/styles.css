@@ -6526,21 +6526,3 @@ footer {
 #plusaccueil {
     color: black;
 }
-
-#retourlegale {
-    border-radius: 6px;
-    background-color: #0d6efd;
-    color: black;
-    font-weight: bold;
-    text-decoration: underline;
-    cursor: pointer;
-    border-color: white;
-}
-
-#retourlegale:hover {
-    color: #0d6efd;
-    background-color: black;
-    border: none;
-    transition: .5s;
-    border-color: white;
-}

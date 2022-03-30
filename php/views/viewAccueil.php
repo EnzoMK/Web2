@@ -61,11 +61,50 @@ $objSmarty = new Smarty();
         <div class="row">
             <?php foreach ($offers as $offer) {
                 $objSmarty->assign('titreoffre', $offer->getName_offer());
+                $objSmarty->assign('description', $offer->getDescription_offer());
+                $objSmarty->assign('remuneration', $offer->getRemuneration());
+                $objSmarty->assign('datedebut', $offer->getStart_intership_date());
+                $objSmarty->assign('datefin', $offer->getEnd_intership_date());
+                $objSmarty->assign('datepublication', $offer->getPublication_date());
+                $objSmarty->assign('duree', $offer->getInternship_duration());
+
+                /*foreach ($offer_promotions as $offer_promotion){
+                    if($offer->getId_offer() == $offer_promotion->getId_offer()){
+                        $objSmarty->assign('promotion', $offer_promotion->getName_promotion());
+
+                    }
+
+
+                }
+                foreach ($skills as $skill){
+                   if($offer->getId_offer() == $skill->getId_offer()){
+                       $objSmarty->assign('skill', $skill->getName_skill());
+
+                   }
+
+
+               }*/
+
+
                 foreach ($companys as $company) {
                     if ($company->getId_company() == $offer->getId_company()) {
                         $objSmarty->assign('nomentreprise', $company->getName_company());
+                        foreach ($places as $place) {
+                            if ($company->getId_company() == $place->getId_company()) {
+                                foreach ($locations as $location) {
+                                    if ($place->getId_location() == $location->getId_location()) {
+                                        $objSmarty->assign('lieu', $location->getCity_location());
+                                    }
+
+
+                                }
+
+                            }
+                        }
                     }
-                    $objSmarty->assign('numerotile', $numerotile + 1);
+                    $numerotile++;
+                    $objSmarty->assign('numerotile', $numerotile);
+
                 }
 
 
@@ -343,14 +382,14 @@ $objSmarty = new Smarty();
 <section class="page-section bg-light" id="team">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Notre équipe</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Voici notre équipe</h2>
+            <h3 class="section-subheading text-muted">Ils sont à votre disposition pour tout renseignement</h3>
         </div>
         <div class="row">
             <div class="col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="../assets/img/team/1.webp" alt="..."/>
-                    <h4>Guillaume Duboys</h4>
+                    <h4>Guillaume Duboys de Lavigerie</h4>
                     <p class="text-muted">L'investisseur</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
@@ -360,8 +399,8 @@ $objSmarty = new Smarty();
             <div class="col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="../assets/img/team/2.webp" alt="..."/>
-                    <h4>Antoine Favereau</h4>
-                    <p class="text-muted">Assistant café</p>
+                    <h4>Baptiste Raulin</h4>
+                    <p class="text-muted">Chef de projet</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
@@ -370,8 +409,8 @@ $objSmarty = new Smarty();
             <div class="col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="../assets/img/team/3.webp" alt="..."/>
-                    <h4>Timeo Villette</h4>
-                    <p class="text-muted">Le cuistot</p>
+                    <h4>Enzo miragliotta</h4>
+                    <p class="text-muted">A un gros front</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
@@ -381,8 +420,7 @@ $objSmarty = new Smarty();
         <form method='GET'>
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
-                        laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p class="large text-muted">On oublie pas Alex Duguy mais on avait plus trop de place, veuillez nous excuser pour la gène occasionnée. </p>
                         
                         <?php if(in_array("50", $_SESSION['role'])){  ?>
                     

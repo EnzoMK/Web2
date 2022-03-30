@@ -33,6 +33,24 @@
                                 <li>
                                     <strong>Lieu:</strong> {$lieu}
                                 </li>
+                                <li>
+                                    <strong>Base de remuneration:</strong> {$remuneration}
+                                </li>
+                                <li>
+                                    <strong>Date de debut:</strong> {$datedebut}
+                                </li>
+                                <li>
+                                    <strong>Date de fin:</strong> {$datefin}
+                                </li>
+
+                                <li>
+                                    <strong>Date de publication de l'offre:</strong> {$datepublication}
+                                </li>
+                                <li>
+                                    <strong>Durée du stage:</strong> {$duree}
+                                </li>
+
+
                             </ul>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
                                     id="buttonEdit" value="close">

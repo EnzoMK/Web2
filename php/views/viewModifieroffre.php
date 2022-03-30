@@ -28,7 +28,7 @@ $objSmarty = new Smarty();
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Compétences</label>
-                                    <select name="skill">
+                                    <select name="skill" class="form-control form-control-lg">
                                         <option value="" disabled selected>Choisir une compétence</option>
                                         <?php foreach ($skills as $skill) {
                                             echo('<option value="' . $skill->getName_skill() . '">' . $skill->getName_skill() . "</option>");
@@ -38,7 +38,7 @@ $objSmarty = new Smarty();
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Entreprise</label>
-                                    <select name="nomcompany">
+                                    <select name="nomcompany" class="form-control form-control-lg">
                                         <option value="" disabled selected>Choisir une entreprise</option>
                                         <?php foreach ($companys as $company) {
                                             echo('<option value="' . $company->getName_company() . '">' . $company->getName_company() . "</option>");
@@ -54,7 +54,7 @@ $objSmarty = new Smarty();
                                         concernées</label>
 
 
-                                    <select name="promotion">
+                                    <select name="promotion" class="form-control form-control-lg">
                                         <option value="" disabled selected>Choisir une promotion</option>
                                         <option value="A1">A1</option>
                                         <option value="A2">A2</option>

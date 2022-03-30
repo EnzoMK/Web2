@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="descriptionn">
+    <meta name="author" content="kimbo">
+    <title>SuperStage</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="http://localhost/ProjetWebBis/Web2/assets/img/logo/logo.png">
+    <!-- Font Awesome icons (free version)-->
+    <link rel="stylesheet" href="./SuperStage_files/all.min.css">
+    <!-- Google fonts
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>-->
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="./SuperStage_files/styles.css" rel="stylesheet">
+    <!-- PWA -->
+    <link rel="manifest" href="http://localhost/ProjetWebBis/Web2/manifest.json">
+    <link rel="apple-touch-icon" href="http://localhost/ProjetWebBis/Web2/php/assets/icons/72.png">
+    <meta name="apple-mobile-web-app-status-bar" content="white">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="white">
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("../sw.js");
+        }
+    </script>
+<style>.d-none {
+    display: none;
+}
+.invalid-feedback {
+    display: none;
+}
+.btn.disabled {
+    pointer-events: none;
+    opacity: 0.65;
+}</style></head>
+
+
+<body id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="http://localhost/ProjetWebBis/Web2/php/index.php?url=createpilot#page-top"><img src="./SuperStage_files/logo.webp" style="height: 100px" alt="..."></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+        <form method="post">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="http://localhost/ProjetWebBis/Web2/php/index.php?url=acceuil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://localhost/ProjetWebBis/Web2/php/index.php?url=compte">Compte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://localhost/ProjetWebBis/Web2/php/index.php?url=contact">Contact</a></li>
+                    <li class="nav-item">
+                        <button name="deconnexion" type="submit" style="background:transparent; border: 0px;"><a class="nav-link">DECONNEXION</a></button>
+                    </li>
+                </ul>
+            </div>
+        </form>
+
+
+    </div>
+</nav><br><br><br>
+<section class=" bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 ">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+                            <h2 class="text-uppercase text-center mb-5">Création d'un compte pilote</h2>
+
+                            <form method="post">
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1cg">Nom</label>
+                                    <input type="text" id="form3Example1cg" name="nom" class="form-control form-control-lg">
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Prénom</label>
+                                    <input type="text" id="form3Example2cg" name="prenom" class="form-control form-control-lg">
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cg">Centre</label>
+                                    <input type="text" id="form3Example3cg" name="centre" class="form-control form-control-lg">
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cg">Ville du Centre</label>
+                                    <input type="text" id="form3Example4cg" name="villeducentre" class="form-control form-control-lg">
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cg">Code postal du Centre</label>
+                                    <input type="text" id="form3Example5cg" name="codepostal" class="form-control form-control-lg">
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cdg">Promotion assignée(s)</label>
+                                    <input type="text" id="form3Example6cdg" name="promotionassigné" class="form-control form-control-lg">
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cdg">Mail</label>
+                                    <input type="email" id="form3Example7cdg" name="mail" class="form-control form-control-lg">
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cdg">Mot de passe</label>
+                                    <input type="password" id="form3Example8cdg" name="motdepasse" class="form-control form-control-lg">
+                                </div>
+
+                                <div class="form-check d-flex justify-content-center mb-5">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg">
+                                    <label class="form-check-label" for="form2Example3g">
+                                        Je confirme la création <a href="http://localhost/ProjetWebBis/Web2/php/index.php?url=createpilot#!" class="text-body"><u></u></a>
+                                    </label>
+                                </div>
+
+                                                                    Veuillez remplir le formulaire
+                                    
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" value="submitCreate" name="submitCreate" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                        Création
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="main-content">
+        <div class="left box">
+            <h2>A propos de nous</h2>
+            <div class="content">
+                <p>Notre site web vous permet de regrouper différentes offres de stage, et qui permet de stocker les
+                    données des entreprises ayant déjà pris un stagiaire, ou qui en recherchent un.</p>
+                <div class="social">
+                    <a href="https://fr-fr.facebook.com/"><span class="fab fa-facebook-f"></span></a>
+                    <a href="https://twitter.com/"><span class="fab fa-twitter"></span></a>
+                    <a href="https://www.instagram.com/"><span class="fab fa-instagram"></span></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><span class="fab fa-youtube"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="center box">
+            <h2>Adresse</h2>
+            <div class="content">
+                <div class="place">
+                    <span class="fas fa-map-marker-alt"></span>
+                    <span class="text"><a class="lienfooter" href="https://www.google.fr/maps/place/1+All.+du+Titane,+45100+Orl%C3%A9ans/@47.845176,1.9384295,17z/data=!3m1!4b1!4m5!3m4!1s0x47e4e3f521708f4d:0xd69f73c032a993c5!8m2!3d47.8451724!4d1.9406182">1 allée du titane - Orléans</a></span>
+                </div>
+                <div class="phone">
+                    <span class="fas fa-phone-alt"></span>
+                    <span class="text"><a class="lienfooter" href="tel:+33 1 33 55 38 93"> 01 33 55 38 93 </a></span>
+                </div>
+                <div class="email">
+                    <span class="fas fa-envelope"></span>
+                    <span class="text"> <a class="lienfooter" href="mailto:contact@superstage.com">contact@superstage.com</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="right box">
+            <h2>Contactez nous</h2>
+            <div class="content">
+                <form action="http://localhost/ProjetWebBis/Web2/php/index.php?url=createpilot#">
+                    <div class="email">
+                        <div class="text">Email *</div>
+                        <input type="email" required="">
+                    </div>
+                    <div class="msg">
+                        <div class="text">Message *</div>
+                        <textarea rows="2" cols="25" required=""></textarea>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="bottom text-center">
+
+        <span class="credit">Créé par <a href="http://localhost/ProjetWebBis/Web2/php/index.php?url=createpilot#">SuperStage</a> | </span>
+        <span class="far fa-copyright"></span><span><a href="http://localhost/ProjetWebBis/Web2/php/index.php?url=mentionslegales"> Mentions Légales</a></span>
+
+    </div>
+</footer><!-- Bootstrap core JS-->
+<script src="./SuperStage_files/bootstrap.bundle.min.js.téléchargement"></script>
+<!-- Core theme JS-->
+<script src="./SuperStage_files/scripts.js.téléchargement"></script>
+
+<script src="./SuperStage_files/sb-forms-latest.js.téléchargement"></script>
+
+
+
+</body></html>

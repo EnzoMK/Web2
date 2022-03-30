@@ -3,7 +3,7 @@
 class Skill
 {
     private $_name_skill;
-
+    private $_id_offer;
     public function __construct(array $data)
     {
         $this->hydrate($data);
@@ -28,6 +28,11 @@ class Skill
         return $this->_name_skill;
     }
 
+    public function getId_offer()
+    {
+        return $this->_id_offer;
+    }
+
     //HYDRATATION
     //securite maximum
     //renvoyer au differents setters pour mettre a jour les données
@@ -35,5 +40,10 @@ class Skill
     public function setName_skill($name_skill): void
     {
         $this->_name_skill = $name_skill;
+    }
+
+    public function setId_offer($id_offer): void
+    {
+        $this->_id_offer = $id_offer;
     }
 }
