@@ -23,9 +23,9 @@ $objSmarty = new Smarty();
                             <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("3", $_SESSION['role'])){  ?>
 
                                 <div class="d-flex justify-content-center">
-                                    <button type="reset" name="viewCreationEntreprise"
-                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
-                                                href="?url=createcompany" style="text-decoration: none; color: black;">Création
+                                    <button type="reset" name="viewCreationEntreprise" onClick='window.location.href="?url=createcompany"' style="text-decoration: none; color: black;"
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                                Création
                                             Entreprise</a></button>
                                 </div>
                                 <br>
@@ -36,9 +36,9 @@ $objSmarty = new Smarty();
 
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationOffre"
-                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
-                                                href="?url=createoffer" style="text-decoration: none; color: black;">Création
-                                            Offre</a></button>
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onClick='window.location.href="?url=createoffer"' style="text-decoration: none; color: black;">
+                                                Création
+                                            Offre</button>
                                 </div>
                                 <br>
 
@@ -47,9 +47,9 @@ $objSmarty = new Smarty();
                                 <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("23", $_SESSION['role'])){  ?>
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationEtudiant"
-                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
-                                                href="?url=createstudent" style="text-decoration: none; color: black;">Création
-                                            Etudiant</a></button>
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onClick='window.location.href="?url=createstudent"' style="text-decoration: none; color: black;">
+                                                Création
+                                            Etudiant</button>
                                 </div>
                                 <br>
 
@@ -58,9 +58,9 @@ $objSmarty = new Smarty();
                                 <?php if(in_array("30", $_SESSION['role']) || in_array("14", $_SESSION['role'])){  ?>
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationPilote"
-                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
-                                                href="?url=createpilot" style="text-decoration: none; color: black;">Création
-                                            Pilote</a></button>
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onClick='window.location.href="?url=createpilot"' style="text-decoration: none; color: black;">
+                                                Création
+                                            Pilote</button>
                                 </div>
                                 <br>
                                 <?php } ?>
@@ -68,9 +68,9 @@ $objSmarty = new Smarty();
                                 <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("18", $_SESSION['role'])){  ?>
                                 <div class="d-flex justify-content-center">
                                     <button type="reset" name="viewCreationDelegue"
-                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a
-                                                href="?url=createdelegate" style="text-decoration: none; color: black;">Création
-                                            Délégué</a></button>
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onClick='window.location.href="?url=createdelegate"' style="text-decoration: none; color: black;">
+                                                Création
+                                            Délégué</button>
                                 </div>
                                 <br>
                                 <?php } ?>
