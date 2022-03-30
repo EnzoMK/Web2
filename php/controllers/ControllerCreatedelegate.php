@@ -19,7 +19,7 @@ class ControllerCreatedelegate
 
     private function createdelegate()
     {
-
+        $this->_createdelegate = new DelegateManager();
         if(isset($_SESSION['email'])){
             if(in_array("18", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
 
@@ -30,14 +30,16 @@ class ControllerCreatedelegate
                     header("Location: index.php?url=identification");
                 }
 
-                $this->_createdelegate = new DelegateManager();
+                
 
                 
 if (isset($_POST['submitCreate'])) {
     if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['ville']) && !empty($_POST['namecenter']) && !empty($_POST['codepostal'])){
+        
         $password = hash("sha256",$_POST['password']);
-        $this->_createdelegate->ReqCreateDelegate($_POST['nom'], $_POST['prenom'], $_POST['email'],  $password, $_POST['ville'], $_POST['namecenter'], $_POST['codepostal']);
-    header("Location: index.php?url=pagefincm");
+        
+        $this->_createdelegate->ReqCreateDelegate($_POST['nom'], $_POST['prenom'], $_POST['email'], $password, $_POST['ville'], $_POST['namecenter'], $_POST['codepostal']);
+        header("Location: index.php?url=pagefincm");
 }
 else 
 {
