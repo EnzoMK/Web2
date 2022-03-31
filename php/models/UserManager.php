@@ -3,15 +3,33 @@
 class UserManager extends Model
 {
 
-    public function getUsersLocation()
+
+    public function getAllUser()
     {
-        $sql = "SELECT * FROM location WHERE id_location = (Select id_location FROM user WHERE mail='".$_SESSION['email']."')";
+
+        $sql = "SELECT * FROM user ";
         $req = $this->getBdd()->prepare($sql);
         $req->execute();
 
-        $var=[];
-        while($data = $req->fetch(PDO::FETCH_ASSOC))
-        {
+        $var = [];
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $var[] = new User($data);
+
+        }
+        return $var;
+        $req->closeCursor();
+
+    }
+
+
+    public function getUsersLocation()
+    {
+        $sql = "SELECT * FROM location WHERE id_location = (Select id_location FROM user WHERE mail='" . $_SESSION['email'] . "')";
+        $req = $this->getBdd()->prepare($sql);
+        $req->execute();
+
+        $var = [];
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
             $var[] = new Location($data);
 
         }

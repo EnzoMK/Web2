@@ -13,6 +13,7 @@ class ControllerRechercheavancee
     private $_skill;
     private $_pilot;
     private $_promotion;
+    private $_student;
 
     public function __construct($url)
     {
@@ -24,9 +25,13 @@ class ControllerRechercheavancee
 
     private function RechercheAvancee()
     {
+        $numerotile = 1;
+
         $this->_offer = new OfferManager();
         $offers = $this->_offer->getAllOffer();
-        $numerotile = 1;
+
+        $this->_student = new StudentManager();
+        $students = $this->_student->getAllStudent();
 
         $this->_company = new CompanyManager();
         $companys = $this->_company->getAllCompany();
@@ -39,7 +44,7 @@ class ControllerRechercheavancee
         $delegates = $this->_delegate->getAllDelegate();
 
         $this->_user = new UserManager();
-        $users = $this->_user->getAllPilote();
+        $users = $this->_user->getAllUser();
 
         $this->_promotion = new PromotionManager();
         $promotions = $this->_promotion->getAllPromotion();
