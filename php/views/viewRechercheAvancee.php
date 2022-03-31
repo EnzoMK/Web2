@@ -145,16 +145,29 @@ $objSmarty = new Smarty();
             <?php
             if (isset($_POST['Fruit'])) {
 
-                if ($_POST['Fruit'] == "Pilote") {
+                if ($_POST['Fruit'] == "Entreprise") {
+
                     foreach ($companys as $company) {
                         $objSmarty->assign('titre', $company->getName_company());
                         $objSmarty->assign('secteuractivite', $company->getActivity_area());
-
+                        $objSmarty->assign('etudiantdejastage', $company->getNumber_of_cesi_interns());
+                        $objSmarty->assign('confiancepilot', $company->getConfidence_promotion_pilot());
+                        foreach ($places as $place) {
+                            if ($company->getId_company() == $place->getId_company()) {
+                                foreach ($locations as $location) {
+                                    if ($place->getId_location() == $location->getId_location()) {
+                                        $objSmarty->assign('lieu', $location->getCity_location());
+                                    }
+                                }
+                            }
+                        }
 
                         $numerotile++;
                         $objSmarty->assign('numerotile', $numerotile);
-
+                        $objSmarty->display("../vendors/tpl/tilecompany.tpl");
                     }
+
+
                 } elseif ($_POST['Fruit'] == "Offer") {
                     foreach ($offers as $offer) {
                         $objSmarty->assign('titreoffre', $offer->getName_offer());
@@ -209,8 +222,27 @@ $objSmarty = new Smarty();
 
 
                     }
+                } elseif ($_POST['Fruit'] == "Pilote") {
+                    foreach ($users as $user) {
+                        foreach ($pilots as $pilot) {
+                            if ($user->getId_user() == $pilot->getId_user()) {
+                                $objSmarty->assign('titre', $user->getFirst_name());
+
+                            }
+
+                            $numerotile++;
+                            $objSmarty->assign('numerotile', $numerotile);
+                        }
+                        $objSmarty->display("../vendors/tpl/tilepilot.tpl");
+
+                    }
+
+
                 }
-            } ?>
+
+            }
+
+            ?>
 
 
         </div>
@@ -226,4 +258,3 @@ $objSmarty = new Smarty();
 </body>
 
 </html>
-

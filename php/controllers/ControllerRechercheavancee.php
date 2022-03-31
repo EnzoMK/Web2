@@ -5,14 +5,14 @@
 class ControllerRechercheavancee
 {
 
-    private $_view;
-
+    private $_user;
     private $_offer;
     private $_company;
     private $_place;
     private $_offer_promotion;
     private $_skill;
-
+    private $_pilot;
+    private $_promotion;
 
     public function __construct($url)
     {
@@ -32,6 +32,14 @@ class ControllerRechercheavancee
         $companys = $this->_company->getAllCompany();
         $locations = $this->_company->getCompanyLocation();
 
+        $this->_pilot = new PilotManager();
+        $pilots = $this->_pilot->getAllPilot();
+
+        $this->_user = new UserManager();
+        $users = $this->_user->getAllPilote();
+
+        $this->_promotion = new PromotionManager();
+        $promotions = $this->_promotion->getAllPromotion();
 
         $this->_offer_promotion = new Offer_promotionManager();
         $offer_promotions = $this->_offer_promotion->getAllOfferPromotion();
