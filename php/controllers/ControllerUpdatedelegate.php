@@ -26,20 +26,33 @@ if (isset($_SESSION['email'])) {
     if (isset($_POST['submitUpdate'])) {
 
         if(in_array("19", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
-        $this->_updatecompany->ReqUpdateDelegate($_POST['nomModifier'],$_POST['prenomModifier'],$_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['username'], $_POST['motdepasse'], $_POST['villeducentre'], $_POST['centre'], $_POST['codepostal']);
+        if(!empty($_POST['nomModifier']) && !empty($_POST['prenomModifier']) && !empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['ville']) && !empty( $_POST['namecenter']) && !empty($_POST['codepostal']) ){
+         $password = hash("sha256",$_POST['password']);
+        $this->_updatedelegate->ReqUpdateDelegate($_POST['nomModifier'],$_POST['prenomModifier'],$_POST['nom'], $_POST['prenom'], $_POST['email'], $password, $_POST['ville'], $_POST['namecenter'], $_POST['codepostal']);
         header("Location: index.php?url=pagefincm");
     }
+    else 
+            {
+                $_POST['error']=true;
+            }
+}
         else {
             header("Location: index.php?url=erreur");
         }
         }
 
+
     if (isset($_POST['supprimer'])) {
         if(in_array("20", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
-
-        $this->_updatecompany->ReqSupprimerCompany($_POST['NomModif']);
+            if(!empty($_POST['nomModifier']) && !empty($_POST['prenomModifier'])){
+        $this->_updatedelegate->ReqDeleteDelegate($_POST['nomModifier'],$_POST['prenomModifier']);
         header("Location: index.php?url=pagefincm");
     }
+    else 
+            {
+                $_POST['error']=true;
+            }
+}
     else {
         header("Location: index.php?url=erreur");
     }

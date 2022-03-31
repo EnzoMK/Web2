@@ -79,7 +79,178 @@ $objSmarty = new Smarty();
 
                                 </div>
                                 
+<<<<<<< HEAD
                                 <!-- bouton à cocher pour les différents roles -->
+=======
+                                <!-- Default switch -->
+
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role'])){  ?>
+                                
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="rechentreprise" class="custom-control-input"
+                                           id="customSwitches1">
+                                    <label class="custom-control-label" for="customSwitches">Rechercher une
+                                        entreprise</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="crentreprise" class="custom-control-input"
+                                           id="customSwitches2">
+                                    <label class="custom-control-label" for="customSwitches">Créer une
+                                        entreprise</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="modentreprise" class="custom-control-input"
+                                           id="customSwitches3">
+                                    <label class="custom-control-label" for="customSwitches">Modifier une
+                                        entreprise</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="eventreprise" class="custom-control-input"
+                                           id="customSwitches4">
+                                    <label class="custom-control-label" for="customSwitches">Evaluer une
+                                        entreprise</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="suppentreprise" class="custom-control-input"
+                                           id="customSwitches5">
+                                    <label class="custom-control-label" for="customSwitches">Supprimer une
+                                        entreprise</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="statsentreprise" class="custom-control-input"
+                                           id="customSwitches5">
+                                    <label class="custom-control-label" for="customSwitches">Consulter les stats de l'entreprise</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="rechoffre" class="custom-control-input"
+                                           id="customSwitches7">
+                                    <label class="custom-control-label" for="customSwitches">Rechercher une
+                                        offre</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="croffre" class="custom-control-input"
+                                           id="customSwitches8">
+                                    <label class="custom-control-label" for="customSwitches">Créer une offre</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="modoffre" class="custom-control-input"
+                                           id="customSwitches9">
+                                    <label class="custom-control-label" for="customSwitches">Modifier une offre</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="suppoffre" class="custom-control-input"
+                                           id="customSwitches10">
+                                    <label class="custom-control-label" for="customSwitches">Supprimer une offre</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="statsoffre" class="custom-control-input"
+                                           id="customSwitches5">
+                                    <label class="custom-control-label" for="customSwitches">Consulter les stats des offres</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="rechpilote" class="custom-control-input"
+                                           id="customSwitches12">
+                                    <label class="custom-control-label" for="customSwitches">Rechercher un compte
+                                        pilote</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="crpilote" class="custom-control-input"
+                                           id="customSwitches13">
+                                    <label class="custom-control-label" for="customSwitches">Créer un compte
+                                        pilote</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="modpilote" class="custom-control-input"
+                                           id="customSwitches14">
+                                    <label class="custom-control-label" for="customSwitches">Modifier un compte
+                                        pilote</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="supppilote" class="custom-control-input"
+                                           id="customSwitches15">
+                                    <label class="custom-control-label" for="customSwitches">Supprimer un compte
+                                        pilote</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="rechdelegue" class="custom-control-input"
+                                           id="customSwitches16">
+                                    <label class="custom-control-label" for="customSwitches">Rechercher un compte
+                                        délégué</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="crdelegue" class="custom-control-input"
+                                           id="customSwitches17">
+                                    <label class="custom-control-label" for="customSwitches">Créer un compte
+                                        délégué</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="moddelegue" class="custom-control-input"
+                                           id="customSwitches18">
+                                    <label class="custom-control-label" for="customSwitches">Modifier un compte
+                                        délégué</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="suppdelegue" class="custom-control-input"
+                                           id="customSwitches19">
+                                    <label class="custom-control-label" for="customSwitches">Supprimer un compte
+                                        délégué</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="droitdelegue" class="custom-control-input"
+                                           id="customSwitches19">
+                                    <label class="custom-control-label" for="customSwitches">Assigner des droits à un délègue</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="rechetudiant" class="custom-control-input"
+                                           id="customSwitches20">
+                                    <label class="custom-control-label" for="customSwitches">Rechercher un compte
+                                        étudiant</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="cretudiant" class="custom-control-input"
+                                           id="customSwitches21">
+                                    <label class="custom-control-label" for="customSwitches">Créer un compte
+                                        étudiant</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="modetudiant" class="custom-control-input"
+                                           id="customSwitches22">
+                                    <label class="custom-control-label" for="customSwitches">Modifier un compte
+                                        étudiant</label>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" name="suppetudiant" class="custom-control-input"
+                                           id="customSwitches23">
+                                    <label class="custom-control-label" for="customSwitches">Supprimer un compte
+                                        étudiant</label>
+                                </div>
+                                <?php } ?>
+                                
+
+>>>>>>> 235d61745e16ca0d75f9a6e6afb3c66be78d90f6
                                 <br><br>
                                 <div class="form-check d-flex justify-content-center mb-5">
                                     <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg"/>
@@ -88,9 +259,13 @@ $objSmarty = new Smarty();
                                     </label>
                                 </div>
 
+                                <?php if(isset($_POST['error'])){ ?>
+                                    <strong style='postion: absolute; margin-left:33%; color:red;'> Veuillez remplir le formulaire </strong> <br> <br>
+                                    <?php } ?>
+
                                 <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("19", $_SESSION['role'])){  ?>
                                 <div class="d-flex justify-content-center mb-4">
-                                    <button type="submit" name="submitCreate"
+                                    <button type="submit" name="submitUpdate"
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                                         Modifier
                                     </button>
@@ -99,7 +274,7 @@ $objSmarty = new Smarty();
 
                                 <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("20", $_SESSION['role'])){  ?>
                                 <div class="d-flex justify-content-center mb-4">
-                                    <button type="submit" value="submitUpdate" name="supprimer"
+                                    <button type="submit" value="submitDelete" name="supprimer"
                                             class="btn btn-danger btn-block btn-lg gradient-custom-4 text-body">
                                         Supprimer
                                     </button>

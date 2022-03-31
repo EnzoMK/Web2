@@ -4,7 +4,7 @@
 
 class ControllerRechercheavancee
 {
-
+    private $_delegate;
     private $_user;
     private $_offer;
     private $_company;
@@ -34,6 +34,9 @@ class ControllerRechercheavancee
 
         $this->_pilot = new PilotManager();
         $pilots = $this->_pilot->getAllPilot();
+
+        $this->_delegate = new DelegateManager();
+        $delegates = $this->_delegate->getAllDelegate();
 
         $this->_user = new UserManager();
         $users = $this->_user->getAllPilote();
