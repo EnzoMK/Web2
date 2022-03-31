@@ -57,10 +57,12 @@
                                 <i class="fas fa-times me-1"></i>
                                 Fermer
                             </button>
-                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    value="wishlist">
+                            <form  method="post" class="mt-3">
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="submit"
+                                    {* value="wishlist" name="wishlist"> *}
                                 <a style="color: white; text-decoration: none;">wishlist</a>
                             </button>
+                            </form>
                         </div>
                     </div>
                 </div>

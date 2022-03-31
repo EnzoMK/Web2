@@ -157,6 +157,7 @@ $objSmarty = new Smarty();
                     }
                 } elseif ($_POST['Fruit'] == "Offer") {
                     foreach ($offers as $offer) {
+                        $objSmarty->assign('idoffre', $offer->getId_offer());
                         $objSmarty->assign('titreoffre', $offer->getName_offer());
                         $objSmarty->assign('description', $offer->getDescription_offer());
                         $objSmarty->assign('remuneration', $offer->getRemuneration());

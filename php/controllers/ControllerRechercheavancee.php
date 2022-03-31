@@ -9,7 +9,7 @@ class ControllerRechercheavancee
 
     private $_offer;
     private $_company;
-    private $_place;
+    private $_place; 
     private $_offer_promotion;
     private $_skill;
 
@@ -46,6 +46,7 @@ class ControllerRechercheavancee
         $this->_skill = new SkillManager();
         $skills = $this->_skill->getAllSkill();
 
+        $this->_addwishlist = new WishlistManager();
 
         if (isset($_SESSION['email'])) {
 
@@ -54,6 +55,10 @@ class ControllerRechercheavancee
                 unset($_SESSION['email']);
                 header("Location: index.php?url=identification");
             }
+
+            if (isset($_POST['wishlist'])) {
+                $this->_addwishlist->AddWishList($_POST['id_offer'], $_POST['email']);
+                echo("ajouté à la wl"); }
 
             $this->_user = new UserManager;
 
@@ -287,6 +292,12 @@ class ControllerRechercheavancee
             header("Location: index.php?url=identification");
         }
     
-}}
+    }
+}
+            
+          
+    
+
+
 
 ?>
