@@ -219,41 +219,42 @@ class DelegateManager extends Model
 
     }
 
-    public function ReqUpdateDelegate($last_name_modif,$first_name_modif,$last_name, $first_name, $mail,  $password, $city_location, $name_location, $postal_code)
+    public function ReqUpdateDelegate($last_name_update,$first_name_update,$last_name, $first_name, $mail, $password, $city_location, $name_location, $postal_code)
     {
 
-        $sqllocation = "UPDATE location SET name_location='" . $name_location . "',city_location='" . $city_location . "',postal_code_location='" . $postal_code . "' WHERE id_location = (SELECT id_location FROM user WHERE first_name='".$first_name_modif."' AND last_name='".$last_name_modif."')";
+        $sqllocation = "UPDATE location SET name_location='" . $name_location . "',city_location='" . $city_location . "',postal_code_location='" . $postal_code . "' WHERE id_location=(SELECT id_location FROM user WHERE first_name = '".$first_name_update."' AND last_name = '".$last_name_update."') ";
         $reqlocation = $this->getBdd()->prepare($sqllocation);
         $reqlocation->execute();
         $reqlocation->closeCursor();
 
-        $sqluser = " UPDATE user first_name='" . $first_name . "',last_name='" . $last_name . "',mail='" . $mail . "',password='" . $password . "',id_location= (SELECT id_location FROM location WHERE city_location= '" . $city_location . "' AND name_location ='" . $name_location . "' AND postal_code_location ='" . $postal_code . "'limit 1) WHERE first_name='".$first_name_modif."' AND last_name='".$last_name_modif."' ";
-        $requser = $this->getBdd()->prepare($sqluser);
-        $requser->execute();
-        $requser->closeCursor();
+        $sqllocation = "UPDATE User SET first_name='" . $first_name . "',last_name='" . $last_name . "',mail='" . $mail . "',password='" . $password . "',id_location=(SELECT id_location FROM location WHERE city_location= '" . $city_location . "' AND name_location ='" . $name_location . "' AND postal_code_location ='" . $postal_code . "'limit 1) WHERE first_name = '".$first_name_update."' AND last_name = '".$last_name_update."'";
+        $reqlocation = $this->getBdd()->prepare($sqllocation);
+        $reqlocation->execute();
+        $reqlocation->closeCursor();
+
 
     }
 
-    public function ReqDeleteDelegate($last_name, $first_name)
-    {
 
-        $sqluser = " DELETE FROM user WHERE first_name='".$first_name_modif."' AND last_name='".$last_name_modif."'  ";
-        $requser = $this->getBdd()->prepare($sqluser);
-        $requser->execute();
-        $requser->closeCursor();
+    public function ReqDeleteDelegate($last_name_update,$first_name_update)
 
+        {
+            $sqlcompany = "DELETE FROM location WHERE id_location = (Select id_location FROM user WHERE first_name ='".$first_name_update."' AND last_name='".$last_name_update."')";
+            $reqcompany = $this->getBdd()->prepare($sqlcompany);
+            $reqcompany->execute();
+            $reqcompany->closeCursor();
 
-        $sqlstudent = "DELETE FROM delegate WHERE id_user =(SELECT id_user from user WHERE first_name='".$first_name_modif."' AND last_name='".$last_name_modif."'  )";
-        $reqstudent = $this->getBdd()->prepare($sqlstudent);
-        $reqstudent->execute();
-        $reqstudent->closeCursor();
+            $sqllocation = "DELETE FROM user WHERE first_name ='".$first_name_update."' AND last_name='".$last_name_update."'";
+            $reqlocation = $this->getBdd()->prepare($sqllocation);
+            $reqlocation->execute();
+            $reqlocation->closeCursor();
 
-        $sqlstudent = "DELETE FROM has WHERE id_delegate =(SELECT id_delegate from delegate WHERE id_user=(Select id_user from user where first_name='".$first_name_modif."' AND last_name='".$last_name_modif."' ) )";
-        $reqstudent = $this->getBdd()->prepare($sqlstudent);
-        $reqstudent->execute();
-        $reqstudent->closeCursor();
+            $sqlcompany = "DELETE FROM delegate WHERE id_user = (Select id_user FROM user WHERE first_name ='".$first_name_update."' AND last_name='".$last_name_update."')";
+            $reqcompany = $this->getBdd()->prepare($sqlcompany);
+            $reqcompany->execute();
+            $reqcompany->closeCursor();
+        }
 
-    }
 
 
 }
