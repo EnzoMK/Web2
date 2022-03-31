@@ -44,7 +44,7 @@ $objSmarty = new Smarty();
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cg">Code postal du Centre</label>
-                                    <input type="number" id="CP" name="codepostal"  max ="99999"
+                                    <input type="number" id="CP" name="codepostal"  min="10000" max ="99999"
                                            class="form-control form-control-lg"/>
                                 </div>
 
