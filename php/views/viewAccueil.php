@@ -1,15 +1,17 @@
+<!-- Appel de smarty pour utiliser les templates -->
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");
 $objSmarty = new Smarty();
-
 ?>
 
+<!-- Appel du template du head  -->
 <?php $objSmarty->display("../vendors/tpl/head.tpl"); ?>
 
 <body id="page-top">
 <!-- Navigation-->
 <?php $objSmarty->display("../vendors/tpl/bandeau_haut.tpl"); ?>
-<!-- Masthead-->
+
+<!-- bannière + Titres -->
 <header class="masthead">
     <div class="container">
         <div class="masthead-subheading">Trouvez un stage maintenant !</div>
@@ -17,13 +19,14 @@ $objSmarty = new Smarty();
         <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">Let's go</a>
     </div>
 </header>
-<!-- recherches -->
+
+<!-- Recherches -->
 <div class="p-3 bg-dark text-white row">
     <nav class="navbar">
         <div class="container bg-dark text-white row p-2 ">
             <form action="viewRechercheAvance.php" method="get" novalidate="novalidate">
                 <div class="row">
-                    <!-- Liste de filtre -->
+                    <!-- Liste des filtres -->
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <select class="search-slt" id="filtreacceuil">
                             <option>Rechercher</option>
@@ -34,21 +37,22 @@ $objSmarty = new Smarty();
                             <option>Une délégué</option>
                         </select>
                     </div>
+
                     <!-- Bouton lancer la recherche -->
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <button type="button" class="btn btn-info wrn-btn"> GO !</button>
                     </div>
-                    <!-- Aller vers la page de recherche avancée -->
-                    
+
+                    <!-- Aller vers la page de recherche avancée --> 
                         <div class="col-lg-4 col-sm-6 mb-4x">
                             <button style="text-decoration: none; color: white;" type="button" name="buttonRechercheAvancee" class="btn btn-info wrn-btn" onClick='window.location.href="?url=rechercheavancee"'>Page recherche avancée</button>
-                        </div>
-                    
+                        </div>        
                 </div>
             </form>
         </div>
     </nav>
 </div>
+
 <!--Offres-->
 <section class="page-section bg-light" id="portfolio">
     <div class="container">
@@ -190,10 +194,13 @@ $objSmarty = new Smarty();
 
 </section>
 
+<!-- implémentation du template footer -->
 <?php $objSmarty->display("../vendors/tpl/footer.tpl"); ?>
-<!-- Bootstrap core JS-->
+
+<!-- Implémentation Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
+
+<!-- Implémentation du script JS-->
 <script src="../js/scripts.js"></script>
 
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>

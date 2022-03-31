@@ -1,13 +1,17 @@
+<!-- Appel de smarty pour utiliser les templates -->
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");
 $objSmarty = new Smarty();
 ?>
+
+<!-- Appel du template du head  -->
 <?php $objSmarty->display("../vendors/tpl/head.tpl"); ?>
 
-
 <body id="page-top">
+
 <!-- Navigation-->
 <?php $objSmarty->display("../vendors/tpl/bandeau_haut.tpl"); ?>
+<br><br><br>
 <section class="bg-image mt-5">
     <div class="mask d-flex align-items-center gradient-custom-3">
         <div class="container h-100">
@@ -16,10 +20,11 @@ $objSmarty = new Smarty();
                     <div class="card" style="border-radius: 15px;">
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Modifier un compte Etudiant</h2>
-
+                     
+                     
+                            <!-- Formulaire de modification -->
                             <form method="POST">
-
-
+                                
                             <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Nom à modifier</label>
                                     <input type="text" id="form3Example1cg" name="nomModifier"
@@ -128,10 +133,13 @@ $objSmarty = new Smarty();
     </div>
 </section>
 
+<!-- implémentation du template footer -->
 <?php $objSmarty->display("../vendors/tpl/footer.tpl"); ?>
-<!-- Bootstrap core JS-->
+
+<!-- Implémentation Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
+
+<!-- Implémentation des script JS-->
 <script src="../js/scripts.js"></script>
 <script src="../js/champs.js"></script>
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>

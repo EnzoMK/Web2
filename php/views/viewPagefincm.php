@@ -1,14 +1,16 @@
+<!-- Appel de smarty pour utiliser les templates -->
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");
 $objSmarty = new Smarty();
 ?>
+
+<!-- Appel du template du head  -->
 <?php $objSmarty->display("../vendors/tpl/head.tpl"); ?>
 
-
 <body id="page-top">
+
 <!-- Navigation-->
 <?php $objSmarty->display("../vendors/tpl/bandeau_haut.tpl"); ?>
-
 <br><br><br><br><br><br><br><br>
 <section class="jumbotron text-center">
         <div class="container">
@@ -21,12 +23,15 @@ $objSmarty = new Smarty();
 
 
 
-      <?php $objSmarty->display("../vendors/tpl/footer.tpl"); ?>
-<!-- Bootstrap core JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
-<script src="../js/scripts.js"></script>
+<!-- implémentation du template footer -->
+<?php $objSmarty->display("../vendors/tpl/footer.tpl"); ?>
 
+<!-- Implémentation Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Implémentation des script JS-->
+<script src="../js/scripts.js"></script>
+<script src="../js/champs.js"></script>
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 
