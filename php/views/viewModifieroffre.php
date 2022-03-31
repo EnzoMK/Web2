@@ -100,12 +100,12 @@ $objSmarty = new Smarty();
                                     <textarea style=" width:100%;" name="descriptionoffre" rows="2" cols="25"
                                               required></textarea>
                                 </div>
-
+<br>
                                 <div class="form-check d-flex justify-content-center mb-5">
                                     <input class="form-check-input me-2" type="checkbox" value=""
                                            id="form2Example11cg"/>
                                     <label class="form-check-label" for="form2Example3g">
-                                        Je confirme la création <a href="#!" class="text-body"><u></u></a>
+                                        Je confirme la modification <a href="#!" class="text-body"><u></u></a>
                                     </label>
                                 </div>
 
@@ -115,7 +115,15 @@ $objSmarty = new Smarty();
                                         Modification
                                     </button>
                                 </div>
-
+<br>
+                                <?php if(in_array("30", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("6", $_SESSION['role'])){  ?>    
+                                <div class="d-flex justify-content-center  mb-4">
+                                    <button type="submit" value="submitUpdate" name="supprimer"
+                                            class="btn btn-danger btn-block btn-lg gradient-custom-4 text-body">
+                                        Supprimer
+                                    </button>
+                                    </div>
+                                    <?php } ?>
                             </form>
 
                         </div>
