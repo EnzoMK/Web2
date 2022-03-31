@@ -1,6 +1,25 @@
 <?php
 
-class DelegateManager extends Model {
+class DelegateManager extends Model
+{
+
+    public function getAllDelegate()
+    {
+
+        $sql = "SELECT * FROM delegate ";
+        $req = $this->getBdd()->prepare($sql);
+        $req->execute();
+
+        $var = [];
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $var[] = new Delegate($data);
+
+        }
+        return $var;
+        $req->closeCursor();
+
+    }
+
 
     public function ReqCreateDelegate($last_name, $first_name, $mail, $password, $city_location, $name_location, $postal_code)
     {

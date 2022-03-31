@@ -238,6 +238,24 @@ $objSmarty = new Smarty();
                     }
 
 
+                } elseif ($_POST['Fruit'] == "Delegue") {
+                    foreach ($users as $user) {
+                        foreach ($delegates as $delegate) {
+                            if ($user->getId_user() == $delegate->getId_user()) {
+
+
+                                $objSmarty->assign('titre', $user->getFirst_name());
+
+                            }
+
+                            $numerotile++;
+                            $objSmarty->assign('numerotile', $numerotile);
+                        }
+                        $objSmarty->display("../vendors/tpl/tiledelegue.tpl");
+
+                    }
+
+
                 }
 
             }
