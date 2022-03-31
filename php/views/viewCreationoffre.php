@@ -1,8 +1,10 @@
+<!-- Appel de smarty pour utiliser les templates -->
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");
 $objSmarty = new Smarty();
-
 ?>
+
+<!-- Appel du template du head  -->
 <?php $objSmarty->display("../vendors/tpl/head.tpl"); ?>
 
 
@@ -18,6 +20,7 @@ $objSmarty = new Smarty();
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Création d'une Offre</h2>
 
+                            <!-- Formulaire de creation -->
                             <form method="POST">
 
                                 <div class="form-outline mb-4">
@@ -131,10 +134,13 @@ $objSmarty = new Smarty();
     </div>
 </section>
 
+<!-- implémentation du template footer -->
 <?php $objSmarty->display("../vendors/tpl/footer.tpl"); ?>
-<!-- Bootstrap core JS-->
+
+<!-- Implémentation Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
+
+<!-- Implémentation des script JS-->
 <script src="../js/scripts.js"></script>
 <script src="../js/champs.js"></script>
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>

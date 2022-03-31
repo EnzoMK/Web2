@@ -1,15 +1,19 @@
+<!-- Appel de smarty pour utiliser les templates -->
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");
 $objSmarty = new Smarty();
 ?>
+
+<!-- Appel du template du head  -->
 <?php $objSmarty->display("../vendors/tpl/head.tpl"); ?>
 
-
 <body id="page-top">
+
 <!-- Navigation-->
 <?php $objSmarty->display("../vendors/tpl/bandeau_haut.tpl"); ?>
-<!-- recherches et filtres -->
+<br><br><br>
 
+<!-- recherches et filtres -->
 <section class="row align-content-center ">
     <div class="p-3 bg-dark text-white row">
 
@@ -23,13 +27,11 @@ $objSmarty = new Smarty();
             <!--Filtre 1-->
             <div class="col">
 
-
+<!-- Formulaire de filtres et de recherches  -->
                 <form action="" method="post">
                 
                     <?php 
                         if(isset($_POST['envoyer'])){ ?>
-
-                        
 
                         <?php 
                             if(isset($_POST['value'])){ ?>
@@ -145,16 +147,29 @@ $objSmarty = new Smarty();
             <?php
             if (isset($_POST['Fruit'])) {
 
-                if ($_POST['Fruit'] == "Pilote") {
+                if ($_POST['Fruit'] == "Entreprise") {
+
                     foreach ($companys as $company) {
                         $objSmarty->assign('titre', $company->getName_company());
                         $objSmarty->assign('secteuractivite', $company->getActivity_area());
-
+                        $objSmarty->assign('etudiantdejastage', $company->getNumber_of_cesi_interns());
+                        $objSmarty->assign('confiancepilot', $company->getConfidence_promotion_pilot());
+                        foreach ($places as $place) {
+                            if ($company->getId_company() == $place->getId_company()) {
+                                foreach ($locations as $location) {
+                                    if ($place->getId_location() == $location->getId_location()) {
+                                        $objSmarty->assign('lieu', $location->getCity_location());
+                                    }
+                                }
+                            }
+                        }
 
                         $numerotile++;
                         $objSmarty->assign('numerotile', $numerotile);
-
+                        $objSmarty->display("../vendors/tpl/tilecompany.tpl");
                     }
+
+
                 } elseif ($_POST['Fruit'] == "Offer") {
                     foreach ($offers as $offer) {
                         $objSmarty->assign('idoffre', $offer->getId_offer());
@@ -210,21 +225,60 @@ $objSmarty = new Smarty();
 
 
                     }
+                } elseif ($_POST['Fruit'] == "Pilote") {
+                    foreach ($users as $user) {
+                        foreach ($pilots as $pilot) {
+                            if ($user->getId_user() == $pilot->getId_user()) {
+                                $objSmarty->assign('titre', $user->getFirst_name());
+
+                            }
+
+                            $numerotile++;
+                            $objSmarty->assign('numerotile', $numerotile);
+                        }
+                        $objSmarty->display("../vendors/tpl/tilepilot.tpl");
+
+                    }
+
+
+                } elseif ($_POST['Fruit'] == "Delegue") {
+                    foreach ($users as $user) {
+                        foreach ($delegates as $delegate) {
+                            if ($user->getId_user() == $delegate->getId_user()) {
+
+
+                                $objSmarty->assign('titre', $user->getFirst_name());
+
+                            }
+
+                            $numerotile++;
+                            $objSmarty->assign('numerotile', $numerotile);
+                        }
+                        $objSmarty->display("../vendors/tpl/tiledelegue.tpl");
+
+                    }
+
+
                 }
-            } ?>
+
+            }
+
+            ?>
 
 
         </div>
 </section>
 
+<!-- implémentation du template footer -->
 <?php $objSmarty->display("../vendors/tpl/footer.tpl"); ?>
-<!-- Bootstrap core JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
-<script src="../js/scripts.js"></script>
 
+<!-- Implémentation Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Implémentation des script JS-->
+<script src="../js/scripts.js"></script>
+<script src="../js/champs.js"></script>
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 
 </html>
-

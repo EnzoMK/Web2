@@ -1,16 +1,19 @@
+<!-- Appel de smarty pour utiliser les templates -->
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");
 $objSmarty = new Smarty();
 ?>
 
+<!-- Appel du template du head  -->
 <?php $objSmarty->display("../vendors/tpl/head.tpl"); ?>
 
-
 <body id="page-top">
+
 <!-- Navigation-->
 <?php $objSmarty->display("../vendors/tpl/bandeau_haut.tpl"); ?>
 <br><br><br><br><br>
 
+<!-- Corps de la page compte adapté à l'utilisateur connecté -->
 <div class="container emp-profile">
     <form method="post">
         <div class="row">
@@ -30,8 +33,7 @@ $objSmarty = new Smarty();
                             <?= $user->getFirst_name() ?>
                             <?= $user->getLast_name() ?>
                         <?php endforeach; ?>
-                    </h5>
-                   
+                    </h5>    
                     
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
@@ -184,10 +186,13 @@ $objSmarty = new Smarty();
     </form>
 </div>
 
+<!-- implémentation du template footer -->
 <?php $objSmarty->display("../vendors/tpl/footer.tpl"); ?>
-<!-- Bootstrap core JS-->
+
+<!-- Implémentation Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
+
+<!-- Implémentation du script JS-->
 <script src="../js/scripts.js"></script>
 
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>

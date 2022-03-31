@@ -1,13 +1,16 @@
+<!-- Appel de smarty pour utiliser les templates -->
 <?php
 include("../vendors/smarty/libs/Smarty.class.php");
 $objSmarty = new Smarty();
 ?>
 
+<!-- Appel du template du head  -->
 <?php $objSmarty->display("../vendors/tpl/head.tpl"); ?>
 
 
 <body>
 
+<!-- Navigation-->
 <?php $objSmarty->display("../vendors/tpl/bandeau_haut.tpl"); ?>
 
 <!-- Contact-->
@@ -24,12 +27,14 @@ $objSmarty = new Smarty();
             <div class="row align-items-stretch mb-5">
                 <div class="col-md-6">
                     <div class="form-group">
+
                         <!-- Name input-->
                         <input class="form-control" id="name" type="text" placeholder="Nom *"
                                data-sb-validations="required"/>
                         <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                     </div>
                     <div class="form-group">
+
                         <!-- Email address input-->
                         <input class="form-control" id="email" type="email" placeholder="Email *"
                                data-sb-validations="required,email"/>
@@ -37,6 +42,7 @@ $objSmarty = new Smarty();
                         <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                     </div>
                     <div class="form-group mb-md-0">
+
                         <!-- Phone number input-->
                         <input class="form-control" id="phone" type="tel" placeholder="N° Téléphone *"
                                data-sb-validations="required"/>
@@ -46,6 +52,7 @@ $objSmarty = new Smarty();
                 </div>
                 <div class="col-md-6">
                     <div class="form-group form-group-textarea mb-md-0">
+
                         <!-- Message input-->
                         <textarea class="form-control" id="message" placeholder="Votre Message *"
                                   data-sb-validations="required"></textarea>
@@ -66,6 +73,7 @@ $objSmarty = new Smarty();
             <div class="d-none" id="submitErrorMessage">
                 <div class="text-center text-danger mb-3">Error sending message!</div>
             </div>
+            
             <!-- Submit Button-->
             <div class="text-center">
                 <button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Envoyer
@@ -76,10 +84,13 @@ $objSmarty = new Smarty();
     </div>
 </section>
 
+<!-- implémentation du template footer -->
 <?php $objSmarty->display("../vendors/tpl/footer.tpl"); ?>
-<!-- Bootstrap core JS-->
+
+<!-- Implémentation Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
+
+<!-- Implémentation du script JS-->
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 <script src="../js/scripts.js"></script>
 </body>
