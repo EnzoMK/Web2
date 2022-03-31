@@ -14,7 +14,6 @@
     </div>
 </div>
 
-
 <div class="portfolio-modal modal fade" id="portfolioModal{$numerotile}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -24,10 +23,10 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="modal-body">
-                            <!-- Project details-->
+
+                            <!-- details-->
                             <h2 class="text-uppercase">{$titre}</h2>
                             <p class="item-intro text-muted">{$secteuractivite}</p>
-
 
                             <ul class="list-inline">
                                 <li>
@@ -39,7 +38,6 @@
                                 <li>
                                     <strong>confiance du pilote:</strong> {$confiancepilot}
                                 </li>
-
 
                             </ul>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"

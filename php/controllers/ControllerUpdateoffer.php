@@ -1,8 +1,10 @@
+<!-- Creer une classe qui va permettre de controler la page de modification d'une offre -->
 <?php
 
 class ControllerUpdateoffer{
 
 
+    // constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -11,6 +13,7 @@ class ControllerUpdateoffer{
             $this->updateoffer();
     }
 
+    // fonction qui execute toutes les nécéssitées :
 private function updateoffer(){
     $this->_updateoffer = new OfferManager();
     $this->_objmodeloffre = new OfferManager();

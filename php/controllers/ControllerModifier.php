@@ -1,3 +1,4 @@
+<!-- Creer une classe qui va permettre de controler la page de modification générale -->
 <?php
 
 class ControllerModifier
@@ -5,7 +6,7 @@ class ControllerModifier
     private $_view;
 
 
-
+// constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -14,7 +15,8 @@ class ControllerModifier
             $this->modifier();
     }
 
-    private function modifier()
+   // fonction qui execute toutes les nécéssitées :
+ private function modifier()
     {
 
         if(isset($_SESSION['email'])){
@@ -26,8 +28,7 @@ class ControllerModifier
                     header("Location: index.php?url=identification");
                 }
             require_once('views/viewModifier.php');
-            require_once('views/viewModifier.php');
-            
+            require_once('views/viewModifier.php');       
 
         }
         else {

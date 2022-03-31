@@ -1,4 +1,4 @@
-
+<!-- Creer une classe qui va permettre de controler la page d'accueil -->
 
 <?php
 
@@ -12,6 +12,7 @@ class ControllerAcceuil
     private $_offer_promotion;
     private $_skill;
 
+    // constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -20,7 +21,7 @@ class ControllerAcceuil
         $this->acceuil();
     }
 
-
+// fonction qui execute toutes les nécéssitées :
     private function acceuil()
     {
         $this->_offer = new OfferManager();

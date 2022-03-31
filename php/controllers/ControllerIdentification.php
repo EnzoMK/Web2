@@ -1,5 +1,4 @@
-
-
+<!-- Creer une classe qui va permettre de controler la page d'idendification -->
 <?php
 
 class ControllerIdentification
@@ -7,10 +6,8 @@ class ControllerIdentification
     private $_userManager;
     private $_view;
 
-    	
-
-
-
+    
+// constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -19,6 +16,7 @@ class ControllerIdentification
             $this->users();
     }
 
+    // fonction qui execute toutes les nécéssitées :
     private function users()
     {
         $this->_userManager = new UserManager;

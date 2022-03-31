@@ -8,7 +8,7 @@ class ControllerCreatecompany
     private $_view;
 
 
-
+// constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -17,11 +17,9 @@ class ControllerCreatecompany
             $this->createcompany();
     }
 
+    // fonction qui execute toutes les nécéssitées :
     private function createcompany()
     {
-
-      
-
 
         if (isset($_SESSION['email'])) {
             if(in_array("3", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){

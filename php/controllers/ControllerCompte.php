@@ -1,5 +1,4 @@
-
-
+<!-- Creer un classe qui va permettre de controler la page compte -->
 <?php
 
 class ControllerCompte
@@ -9,7 +8,7 @@ class ControllerCompte
     private $_view;
     private $_skill;
 
-
+// constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -18,9 +17,9 @@ class ControllerCompte
             $this->compte();
     }
 
+    // fonction qui execute toutes les nécéssitées :
     private function compte()
-    {
-        
+    {   
         
         if(isset($_SESSION['email'])){
 

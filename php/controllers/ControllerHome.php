@@ -1,3 +1,4 @@
+<!-- Creer une classe qui va permettre de controler le home de la page -->
 <?php
 
 class ControllerHome
@@ -6,7 +7,7 @@ class ControllerHome
     private $_view;
 
 
-
+// constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -15,9 +16,9 @@ class ControllerHome
             $this->home();
     }
 
+    // fonction qui execute toutes les nécéssitées :
     private function home()
     {
-
         if(isset($_SESSION['email'])){
 
             if (isset($_POST['deconnexion']))
@@ -26,9 +27,7 @@ class ControllerHome
                     unset($_SESSION['email']);
                     header("Location: index.php?url=identification");
                 }
-            require_once('views/viewHome.php');
-            
-
+            require_once('views/viewHome.php');      
         }
         else {
             header("Location: index.php?url=identification");

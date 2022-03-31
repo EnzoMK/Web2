@@ -1,8 +1,10 @@
+<!-- Creer une classe qui va permettre de controler la page de modification d'un délégué -->
 <?php
 
 class ControllerUpdatedelegate{
 
 
+    // constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -11,6 +13,7 @@ class ControllerUpdatedelegate{
             $this->updatedelegate();
     }
 
+    // fonction qui execute toutes les nécéssitées :
 private function updatedelegate(){
 
     $this->_updatedelegate = new DelegateManager();

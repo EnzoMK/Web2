@@ -1,5 +1,4 @@
-
-
+<!-- Creer une classe qui va permettre de controler la page de recherche avancée -->
 <?php
 
 class ControllerRechercheavancee
@@ -14,6 +13,8 @@ class ControllerRechercheavancee
     private $_pilot;
     private $_promotion;
 
+
+    // constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -22,6 +23,7 @@ class ControllerRechercheavancee
         $this->RechercheAvancee();
     }
 
+    // fonction qui execute toutes les nécéssitées :
     private function RechercheAvancee()
     {
         $this->_offer = new OfferManager();
