@@ -172,6 +172,7 @@ $objSmarty = new Smarty();
 
                 } elseif ($_POST['Fruit'] == "Offer") {
                     foreach ($offers as $offer) {
+                        $objSmarty->assign('idoffre', $offer->getId_offer());
                         $objSmarty->assign('titreoffre', $offer->getName_offer());
                         $objSmarty->assign('description', $offer->getDescription_offer());
                         $objSmarty->assign('remuneration', $offer->getRemuneration());
@@ -228,14 +229,15 @@ $objSmarty = new Smarty();
                     foreach ($users as $user) {
                         foreach ($pilots as $pilot) {
                             if ($user->getId_user() == $pilot->getId_user()) {
-                                $objSmarty->assign('titre', $user->getFirst_name());
-
+                                $objSmarty->assign('titre', $user->getFirst_name() . " " . $user->getLast_name());
+                                $numerotile++;
+                                $objSmarty->assign('numerotile', $numerotile);
+                                $objSmarty->display("../vendors/tpl/tilepilot.tpl");
                             }
 
-                            $numerotile++;
-                            $objSmarty->assign('numerotile', $numerotile);
+
                         }
-                        $objSmarty->display("../vendors/tpl/tilepilot.tpl");
+
 
                     }
 
@@ -243,17 +245,42 @@ $objSmarty = new Smarty();
                 } elseif ($_POST['Fruit'] == "Delegue") {
                     foreach ($users as $user) {
                         foreach ($delegates as $delegate) {
+
                             if ($user->getId_user() == $delegate->getId_user()) {
 
 
-                                $objSmarty->assign('titre', $user->getFirst_name());
+                                $objSmarty->assign('titre', $user->getFirst_name() . " " . $user->getLast_name());
 
+                                $numerotile++;
+                                $objSmarty->assign('numerotile', $numerotile);
+                                $objSmarty->display("../vendors/tpl/tiledelegue.tpl");
                             }
 
-                            $numerotile++;
-                            $objSmarty->assign('numerotile', $numerotile);
+
                         }
-                        $objSmarty->display("../vendors/tpl/tiledelegue.tpl");
+
+
+                    }
+
+
+                } elseif ($_POST['Fruit'] == "Etudiant") {
+                    foreach ($users as $user) {
+
+                        foreach ($students as $student) {
+
+                            if ($user->getId_user() == $student->getId_user()) {
+
+
+                                $objSmarty->assign('titre', $user->getFirst_name() . " " . $user->getLast_name());
+
+                                $numerotile++;
+                                $objSmarty->assign('numerotile', $numerotile);
+                                $objSmarty->display("../vendors/tpl/tileetudiant.tpl");
+                            }
+
+
+                        }
+
 
                     }
 

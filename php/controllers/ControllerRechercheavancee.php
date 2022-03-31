@@ -7,11 +7,12 @@ class ControllerRechercheavancee
     private $_user;
     private $_offer;
     private $_company;
-    private $_place;
+    private $_place; 
     private $_offer_promotion;
     private $_skill;
     private $_pilot;
     private $_promotion;
+    private $_student;
 
 
     // constructeur de la page
@@ -26,9 +27,13 @@ class ControllerRechercheavancee
     // fonction qui execute toutes les nécéssitées :
     private function RechercheAvancee()
     {
+        $numerotile = 1;
+
         $this->_offer = new OfferManager();
         $offers = $this->_offer->getAllOffer();
-        $numerotile = 1;
+
+        $this->_student = new StudentManager();
+        $students = $this->_student->getAllStudent();
 
         $this->_company = new CompanyManager();
         $companys = $this->_company->getAllCompany();
@@ -41,7 +46,7 @@ class ControllerRechercheavancee
         $delegates = $this->_delegate->getAllDelegate();
 
         $this->_user = new UserManager();
-        $users = $this->_user->getAllPilote();
+        $users = $this->_user->getAllUser();
 
         $this->_promotion = new PromotionManager();
         $promotions = $this->_promotion->getAllPromotion();
@@ -59,6 +64,7 @@ class ControllerRechercheavancee
         $this->_skill = new SkillManager();
         $skills = $this->_skill->getAllSkill();
 
+        $this->_addwishlist = new WishlistManager();
 
         if (isset($_SESSION['email'])) {
 
@@ -67,6 +73,10 @@ class ControllerRechercheavancee
                 unset($_SESSION['email']);
                 header("Location: index.php?url=identification");
             }
+
+            if (isset($_POST['wishlist'])) {
+                $this->_addwishlist->AddWishList($_POST['id_offer'], $_POST['email']);
+                echo("ajouté à la wl"); }
 
             $this->_user = new UserManager;
 
@@ -300,6 +310,12 @@ class ControllerRechercheavancee
             header("Location: index.php?url=identification");
         }
     
-}}
+    }
+}
+            
+          
+    
+
+
 
 ?>
