@@ -19,6 +19,12 @@ class CreatePilot extends Model
         $reqpilot = $this->getBdd()->prepare($sqlpilot);
         $reqpilot->execute();
         $reqpilot->closeCursor();
+
+        // $sqlpilot = "INSERT into headed (id_user, name_promotion) values (( select id_user from user where first_name = '" . $first_name . "' and  last_name = '" . $last_name . "'), (SELECT name_promotion from promotion where name_promotion='" . $name_promotion . "' )";
+        // $reqpilot = $this->getBdd()->prepare($sqlpilot);
+        // $reqpilot->execute();
+        // $reqpilot->closeCursor();
+
     }
 
     public function ReqUpdatePilote($last_name_update,$first_name_update,$last_name, $first_name, $mail, $password, $city_location, $name_location, $postal_code, $name_promotion)

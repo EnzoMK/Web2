@@ -11,7 +11,7 @@ $objSmarty = new Smarty();
 
 <!-- Navigation-->
 <?php $objSmarty->display("../vendors/tpl/bandeau_haut.tpl"); ?>
-<br><br><br>
+<br><br><br><br><br><br>
 
 <!-- recherches et filtres -->
 <section class="row align-content-center ">
