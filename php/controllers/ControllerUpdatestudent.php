@@ -1,8 +1,9 @@
+<!-- Creer une classe qui va permettre de controler la page de modification d'un étudiant -->
 <?php
 
 class ControllerUpdatestudent{
 
-
+// constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -11,13 +12,11 @@ class ControllerUpdatestudent{
             $this->updatestudent();
     }
 
+
+ // fonction qui execute toutes les nécéssitées :
 private function updatestudent(){
 
     $this->_updatestudent = new Createstudent();
-
-    
-
-
 
 if (isset($_SESSION['email'])) {
     if(in_array("24", $_SESSION['role']) || in_array("25", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
@@ -41,7 +40,6 @@ if (isset($_SESSION['email'])) {
                 $_POST['error']=true;
             }
 }
-
     if (isset($_POST['supprimer'])) {
         if(in_array("25", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){
         if(!empty($_POST['nomModifier']) && !empty($_POST['prenomModifier'])){

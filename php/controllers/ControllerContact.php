@@ -1,5 +1,4 @@
-
-
+<!-- Creer une classe qui va permettre de controler la page de contact -->
 <?php
 
 class ControllerContact
@@ -8,7 +7,7 @@ class ControllerContact
     private $_view;
 
 
-
+// constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -17,6 +16,7 @@ class ControllerContact
             $this->contact();
     }
 
+    // fonction qui execute toutes les nécéssitées :
     private function contact()
     {
 

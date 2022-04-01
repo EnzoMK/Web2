@@ -1,7 +1,9 @@
+<!-- Creer une classe qui va permettre de controler la page de modification d'un pilote -->
 <?php
 
 class ControllerUpdatepilot{
 
+    // constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -10,6 +12,7 @@ class ControllerUpdatepilot{
             $this->updatepilote();
     }
 
+        // fonction qui execute toutes les nécéssitées :
 private function updatepilote(){
 
     $this->_updatepilote = new CreatePilot();

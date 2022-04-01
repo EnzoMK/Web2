@@ -1,5 +1,4 @@
-
-
+<!-- Creer une classe qui va permettre de controler la page création offre-->
 <?php
 
 class ControllerCreateoffer
@@ -8,7 +7,7 @@ class ControllerCreateoffer
     private $_view;
 
 
-
+// constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -17,6 +16,8 @@ class ControllerCreateoffer
             $this->createoffer();
     }
 
+
+    // fonction qui execute toutes les nécéssitées :
     private function createoffer()
     {
         $this->_objmodeloffre = new OfferManager();

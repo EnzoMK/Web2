@@ -1,8 +1,11 @@
+<!-- Creer une classe qui va permettre de controler la page de modification d'une entreprise -->
+
 <?php
 
 class ControllerUpdatecompany{
 
 
+    // constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -11,13 +14,10 @@ class ControllerUpdatecompany{
             $this->updatecompany();
     }
 
+    // fonction qui execute toutes les nécéssitées :
 private function updatecompany(){
 
     $this->_updatecompany = new CompanyManager();
-
-    
-
-
 
 if (isset($_SESSION['email'])) {
     if(in_array("4", $_SESSION['role']) || in_array("6", $_SESSION['role']) || in_array("40", $_SESSION['role']) || in_array("30", $_SESSION['role'])){

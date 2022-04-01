@@ -9,10 +9,11 @@
         </a>
         <div class="portfolio-caption">
             <div class="portfolio-caption-heading">{$titre}</div>
-            <div class="portfolio-caption-subheading text-muted">{$secteuractivite}</div>
+
         </div>
     </div>
 </div>
+
 
 <div class="portfolio-modal modal fade" id="portfolioModal{$numerotile}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
@@ -23,21 +24,12 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="modal-body">
-
-                            <!-- details-->
+                            <!-- Project details-->
                             <h2 class="text-uppercase">{$titre}</h2>
-                            <p class="item-intro text-muted">{$secteuractivite}</p>
+
 
                             <ul class="list-inline">
-                                <li>
-                                    <strong>Lieu:</strong> {$lieu}
-                                </li>
-                                <li>
-                                    <strong>Nombre d'etudiant déjà pris en stage:</strong> {$etudiantdejastage}
-                                </li>
-                                <li>
-                                    <strong>confiance du pilote:</strong> {$confiancepilot}
-                                </li>
+
 
                             </ul>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"

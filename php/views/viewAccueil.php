@@ -58,7 +58,7 @@ $objSmarty = new Smarty();
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Meilleurs Offres</h2>
-            <h3 class="section-subheading text-muted">Vous pouvez retrouver nos offres les plus interressantes</h3>
+            <h3 class="section-subheading text-muted">Vous pouvez retrouver nos offres les plus intéressantes</h3>
         </div>
         <div class="row">
             <?php
@@ -159,7 +159,7 @@ $objSmarty = new Smarty();
             <div class="col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="../assets/img/team/3.webp" alt="..."/>
-                    <h4>Enzo miragliotta</h4>
+                    <h4>Enzo Miragliotta</h4>
                     <p class="text-muted">Développeur Frontend</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>

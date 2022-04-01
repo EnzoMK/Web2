@@ -1,5 +1,5 @@
 <div class="col-lg-4 col-sm-6 mb-4">
-    <!--item1-->
+    <!--item exemple-->
     <div class="portfolio-item">
         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal{$numerotile}">
             <div class="portfolio-hover">
@@ -24,7 +24,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="modal-body">
-                            <!-- Project details-->
+
+                            <!-- details-->
                             <h2 class="text-uppercase">{$titre}</h2>
 
 

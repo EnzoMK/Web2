@@ -1,5 +1,4 @@
-
-
+<!-- Creer une classe qui va permettre de controler la page création délégué -->
 <?php
 
 class ControllerCreatedelegate
@@ -8,7 +7,7 @@ class ControllerCreatedelegate
     private $_view;
 
 
-
+// constructeur de la page
     public function __construct($url)
     {
         /*if (isset($url) && count($url)>1)
@@ -17,6 +16,7 @@ class ControllerCreatedelegate
             $this->createdelegate();
     }
 
+    // fonction qui execute toutes les nécéssitées :
     private function createdelegate()
     {
         $this->_createdelegate = new DelegateManager();
@@ -29,8 +29,6 @@ class ControllerCreatedelegate
                     unset($_SESSION['email']);
                     header("Location: index.php?url=identification");
                 }
-
-                
 
                 
 if (isset($_POST['submitCreate'])) {

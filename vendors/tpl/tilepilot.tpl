@@ -1,11 +1,10 @@
 <div class="col-lg-4 col-sm-6 mb-4">
-    <!--item1-->
+    <!--item exemple-->
     <div class="portfolio-item">
         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal{$numerotile}">
             <div class="portfolio-hover">
                 <div class="portfolio-hover-content"><i id="plusaccueil" class="fas fa-plus fa-3x"></i></div>
             </div>
-
         </a>
         <div class="portfolio-caption">
             <div class="portfolio-caption-heading">{$titre}</div>
@@ -13,7 +12,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="portfolio-modal modal fade" id="portfolioModal{$numerotile}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
@@ -24,12 +22,10 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="modal-body">
-                            <!-- Project details-->
+                            <!--details-->
                             <h2 class="text-uppercase">{$titre}</h2>
 
-
                             <ul class="list-inline">
-
 
                             </ul>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"

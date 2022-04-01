@@ -1,10 +1,11 @@
+<!-- Creer une classe qui va permettre de controler la page création pilote-->
 <?php
 
 class ControllerCreatepilot
 {
     private $_ceratePilot;
 
-
+// constructeur de la page
     public function __construct($url)
     {
         /* if (isset($url) && count($url)>1)
@@ -13,11 +14,10 @@ class ControllerCreatepilot
         $this->createusers();
     }
 
+
+    // fonction qui execute toutes les nécéssitées :
     private function createusers()
     {
-        
-       
-
         if(isset($_SESSION['email'])){
 
             if(in_array("14", $_SESSION['role']) || in_array("30", $_SESSION['role'])) {
@@ -57,6 +57,5 @@ class ControllerCreatepilot
         }
 
     }
-
 
 }

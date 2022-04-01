@@ -1,25 +1,44 @@
+<?php
+/* Smarty version 4.1.0, created on 2022-03-31 16:38:26
+  from 'C:\xampp\htdocs\Web2\vendors\tpl\head.tpl' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.1.0',
+  'unifunc' => 'content_6245bce200bef4_35148555',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '19e7af6fba4fc1cdcd544be1301bd1daea35033a' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Web2\\vendors\\tpl\\head.tpl',
+      1 => 1648557082,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6245bce200bef4_35148555 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-{* balises meta indispensable pour le référencement et pour le bon affichage *}
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content="descriptionn"/>
-    <meta name="author" content="kimbo"/> 
-    {* nom de la page *}
+    <meta name="author" content="kimbo"/>
     <title>SuperStage</title>
-    <!-- icone pour le title -->
+    <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="../assets/img/logo/logo.png"/>
     <!-- Font Awesome icons (free version)-->
     <link rel="stylesheet" href="../vendors/fontawesome/css/all.min.css">
     <!-- Google fonts
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
-    {* <link rel="stylesheet" href="../vendors/google/Font_Montserrat.css">
-    <link rel="stylesheet" href="../vendors/google/Font_Roboto.css"> *}
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>-->
-    <!-- Lien du style CSS (incluant Bootstrap)-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>-->
+    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/styles.css" rel="stylesheet"/>
     <!-- PWA -->
     <link rel="manifest" href="../manifest.json">
@@ -28,10 +47,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="white">
 
-{* appel du service worker permettant d'avoir accès au site meme en mode hors ligne grace à la mise en cache des données *}
-    <script>
+    <?php echo '<script'; ?>
+>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("../sw.js");
         }
-    </script>
+    <?php echo '</script'; ?>
+>
 </head>
+<?php }
+}

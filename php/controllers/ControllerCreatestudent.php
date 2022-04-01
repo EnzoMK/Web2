@@ -1,3 +1,4 @@
+<!-- Creer une classe qui va permettre de controler la page d'accueil -->
 <?php
 
 class ControllerCreatestudent
@@ -5,6 +6,8 @@ class ControllerCreatestudent
     private $_student;
     private $_createStudent;
 
+
+    // constructeur de la page
     public function __construct($url)
     {
         /* if (isset($url) && count($url)>1)
@@ -13,6 +16,7 @@ class ControllerCreatestudent
         $this->createusers();
     }
 
+    // fonction qui execute toutes les nécéssitées :
     private function createusers()
     {
 
